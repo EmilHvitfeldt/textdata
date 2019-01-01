@@ -17,22 +17,23 @@ dataset_afinn <- function() {
 
 #' @importFrom utils download.file
 download_afinn <- function(folder_path) {
-  if(!file_exists(paste0(folder_path, "imm6010.zip", collapse = ""))) {
+  file_path <- paste0(folder_path, "imm6010.zip", collapse = "")
+  if(file_exists(file_path)) {
     return(invisible())
   }
   download.file(url = "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
-                destfile = "~/.textdata/afinn/imm6010.zip")
+                destfile = file_path)
   cat("Download of AFINN completed.")
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
-process_afinn <- function() {
-  data <- read_tsv(unz("~/.textdata/afinn/imm6010.zip", "AFINN/AFINN-111.txt"),
+process_afinn <- function(folder_path, name_path) {
+  data <- read_tsv(unz(paste0(folder_path, "imm6010.zip", collapse = TRUE), "AFINN/AFINN-111.txt"),
                    col_types = cols(
                      word = col_character(),
                      value = col_double()
                    ) ,
                    col_names = c("word", "value"))
-  write_rds(data, "~/.textdata/afinn/afinn_111.rds")
+  write_rds(data, name_path)
 }
 

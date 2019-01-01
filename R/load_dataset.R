@@ -18,6 +18,6 @@ load_dataset <- function(data_name, name, dir = "~/.textdata/") {
 
   download_functions[[data_name]](folder_path)
 
-  process_functions[[data_name]]()
+  process_functions[[data_name]](folder_path, name_path)
   read_rds(name_path)
 }
