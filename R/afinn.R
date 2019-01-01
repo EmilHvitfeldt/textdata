@@ -36,4 +36,3 @@ process_afinn <- function(folder_path, name_path) {
                    col_names = c("word", "value"))
   write_rds(data, name_path)
 }
-

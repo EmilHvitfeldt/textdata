@@ -1,3 +1,8 @@
+#' Internal Functions
+#'
+#' These are not to be used directly by the users.
+#' @export
+#' @keywords internal
 load_dataset <- function(data_name, name, dir = "~/.textdata/") {
   name_path <- paste0(dir, data_name, "/", name, collapse = "")
   folder_path <- paste0(dir, data_name, "/", collapse = "")

@@ -13,5 +13,13 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     fs,
-    readr
+    readr,
+    tibble
 RoxygenNote: 6.1.1
+Collate: 
+    'afinn.R'
+    'sentence_polarity.R'
+    'download_functions.R'
+    'load_dataset.R'
+    'process_functions.R'
+    'read_text.R'
