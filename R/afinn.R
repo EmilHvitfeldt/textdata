@@ -12,29 +12,7 @@
 #' @importFrom utils menu
 #' @export
 dataset_afinn <- function() {
-  dir <- "~/.textdata/"
-  folder <- "afinn/"
-  name <- "afinn_111.rds"
-  name_path <- paste0(dir, folder, name, collapse = "")
-  folder_path <- paste0(dir, folder, collapse = "")
-
-  if(file_exists(name_path)) {
-    return(read_rds(name_path))
-  }
-
-  if(menu(choices = c('Yes', "No"),
-          title = "Do you want to downlaod afinn?") == 2) {
-    return(invisible())
-  }
-
-  if(!dir_exists(folder_path)) {
-    dir_create(folder_path)
-  }
-
-  download_afinn(folder_path)
-
-  process_afinn()
-  read_rds(name_path)
+  load_dataset(data_name = "afinn", name = "afinn_111.rds")
 }
 
 #' @importFrom utils download.file
