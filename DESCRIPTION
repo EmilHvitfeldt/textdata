@@ -1,0 +1,17 @@
+Package: textdata
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Emil",
+           family = "Hvitfeldt",
+           role = c("aut", "cre"),
+           email = "emilhhvitfeldt@gmail.com")
+Description: Allows for loading of various text related datasets by downloading
+    to disk and loading when needed.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    fs,
+    readr
+RoxygenNote: 6.1.1
