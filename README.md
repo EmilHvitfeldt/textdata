@@ -26,21 +26,4 @@ devtools::install_github("EmilHvitfeldt/textdata")
 Example
 -------
 
-``` r
-library(textdata)
-dataset_afinn()
-#> # A tibble: 2,477 x 2
-#>    word       value
-#>    <chr>      <dbl>
-#>  1 abandon       -2
-#>  2 abandoned     -2
-#>  3 abandons      -2
-#>  4 abducted      -2
-#>  5 abduction     -2
-#>  6 abductions    -2
-#>  7 abhor         -3
-#>  8 abhorred      -3
-#>  9 abhorrent     -3
-#> 10 abhors        -3
-#> # ... with 2,467 more rows
-```
+![](man/figures/screen-shot.png)

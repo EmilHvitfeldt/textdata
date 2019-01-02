@@ -23,7 +23,6 @@ download_afinn <- function(folder_path) {
   }
   download.file(url = "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
                 destfile = file_path)
-  cat("Download of AFINN completed.")
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double

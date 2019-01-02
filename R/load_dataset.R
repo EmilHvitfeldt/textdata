@@ -11,9 +11,7 @@ load_dataset <- function(data_name, name, dir = "~/.textdata/") {
     return(read_rds(name_path))
   }
 
-  if(menu(choices = c('Yes', "No"),
-          title = paste0("Do you want to downlaod", data_name,
-                         " ?", collapse = "")) == 2) {
+  if(printer(data_name) == 2) {
     return(invisible())
   }
 

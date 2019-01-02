@@ -20,6 +20,8 @@ Collate:
     'afinn.R'
     'sentence_polarity.R'
     'download_functions.R'
+    'info.R'
     'load_dataset.R'
+    'printer.R'
     'process_functions.R'
     'read_text.R'
