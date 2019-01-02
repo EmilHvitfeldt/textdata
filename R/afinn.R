@@ -28,7 +28,7 @@ download_afinn <- function(folder_path) {
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 process_afinn <- function(folder_path, name_path) {
-  data <- read_tsv(unz(paste0(folder_path, "imm6010.zip", collapse = TRUE), "AFINN/AFINN-111.txt"),
+  data <- read_tsv(unz(paste0(folder_path, "imm6010.zip", collapse = ""), "AFINN/AFINN-111.txt"),
                    col_types = cols(
                      word = col_character(),
                      value = col_double()
