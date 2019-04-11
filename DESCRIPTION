@@ -17,8 +17,8 @@ Imports:
     tibble
 RoxygenNote: 6.1.1
 Collate: 
-    'afinn.R'
-    'sentence_polarity.R'
+    'dataset_afinn.R'
+    'dataset_sentence_polarity.R'
     'download_functions.R'
     'info.R'
     'load_dataset.R'
