@@ -25,3 +25,7 @@ Collate:
     'printer.R'
     'process_functions.R'
     'read_text.R'
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
