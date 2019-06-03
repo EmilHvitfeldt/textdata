@@ -11,7 +11,5 @@ printer <- function(name) {
                   "License:", print_info[[name]][["license"]], "\n",
                   "Size:", print_info[[name]][["size"]], "\n")
 
-  menu(choices = c('Yes', "No"), title = title)
+  menu(choices = c("Yes", "No"), title = title)
 }
-
-

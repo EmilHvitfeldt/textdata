@@ -16,7 +16,7 @@ dataset_sentence_polarity <- function(...) {
 #' @importFrom utils download.file
 download_sentence_polarity <- function(folder_path) {
   file_path <- paste0(folder_path, "rt-polaritydata.tar.gz", collapse = "")
-  if(file_exists(file_path)) {
+  if (file_exists(file_path)) {
     return(invisible())
   }
   download.file(url = "http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz",
