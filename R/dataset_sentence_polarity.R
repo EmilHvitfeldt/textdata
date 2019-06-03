@@ -3,13 +3,14 @@
 #' 5331 positive and 5331 negative processed sentences / snippets.
 #' Introduced in Pang/Lee ACL 2005. Released July 2005.
 #'
+#' @param ... Additional arguments passed to [load_dataset()].
 #' @return A tibble with 2 columns.
 #' @importFrom fs file_exists dir_exists dir_create
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-dataset_sentence_polarity <- function() {
-  load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds")
+dataset_sentence_polarity <- function(...) {
+  load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds", ...)
 }
 
 #' @importFrom utils download.file

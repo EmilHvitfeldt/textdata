@@ -6,13 +6,14 @@
 #'
 #' This dataset is the newest version with 2477 words and phrases.
 #'
+#' @param ... Additional arguments passed to [load_dataset()].
 #' @return A tibble with 2 columns.
 #' @importFrom fs file_exists dir_exists dir_create
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-dataset_afinn <- function() {
-  load_dataset(data_name = "afinn", name = "afinn_111.rds")
+dataset_afinn <- function(...) {
+  load_dataset(data_name = "afinn", name = "afinn_111.rds", ...)
 }
 
 #' @importFrom utils download.file

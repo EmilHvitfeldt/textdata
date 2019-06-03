@@ -4,7 +4,10 @@
 \alias{dataset_sentence_polarity}
 \title{v1.0 sentence polarity dataset}
 \usage{
-dataset_sentence_polarity()
+dataset_sentence_polarity(...)
+}
+\arguments{
+\item{...}{Additional arguments passed to [load_dataset()].}
 }
 \value{
 A tibble with 2 columns.

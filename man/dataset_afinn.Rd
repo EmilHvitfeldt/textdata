@@ -4,7 +4,10 @@
 \alias{dataset_afinn}
 \title{AFINN-111 dataset}
 \usage{
-dataset_afinn()
+dataset_afinn(...)
+}
+\arguments{
+\item{...}{Additional arguments passed to [load_dataset()].}
 }
 \value{
 A tibble with 2 columns.
