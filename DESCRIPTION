@@ -24,7 +24,6 @@ Collate:
     'load_dataset.R'
     'printer.R'
     'process_functions.R'
-    'read_text.R'
 Suggests: 
     knitr,
     rmarkdown

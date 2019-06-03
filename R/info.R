@@ -8,3 +8,9 @@ print_info <- list(
                            license = "Unknown",
                            size = "2 MB")
 )
+
+#' Catalogue of all available data sources
+#' @export
+"catalogue"
+catalogue <- Reduce(rbind, lapply(print_info, as.data.frame,
+                                  stringsAsFactors = FALSE))
