@@ -4,7 +4,10 @@
 #' @export
 #' @importFrom fs dir_delete path
 #' @keywords internal
-load_dataset <- function(data_name, name, dir = "~/.textdata/", delete = FALSE) {
+load_dataset <- function(data_name, name, dir = NULL, delete = FALSE) {
+
+  dir <- ifelse(is.null(dir), rappdirs::user_cache_dir("textdata"), dir)
+
   name_path <- path(dir, data_name, name)
   folder_path <- path(dir, data_name)
 
