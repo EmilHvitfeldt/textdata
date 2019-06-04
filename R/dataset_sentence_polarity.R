@@ -19,7 +19,7 @@ download_sentence_polarity <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz",
+  download.file(url = "https://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz",
                 destfile = file_path)
 }
 
