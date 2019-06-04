@@ -2,11 +2,11 @@
 #'
 #' These are not to be used directly by the users.
 #' @export
-#' @importFrom fs dir_delete
+#' @importFrom fs dir_delete path
 #' @keywords internal
 load_dataset <- function(data_name, name, dir = "~/.textdata/", delete = FALSE) {
-  name_path <- paste0(dir, data_name, "/", name, collapse = "")
-  folder_path <- paste0(dir, data_name, "/", collapse = "")
+  name_path <- path(dir, data_name, name)
+  folder_path <- path(dir, data_name)
 
   if (delete) {
     dir_delete(folder_path)
