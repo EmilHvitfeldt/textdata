@@ -23,3 +23,5 @@ knitr::opts_chunk$set(
 - Add the `download_*()` function to the named list `download_functions` in the file download_functions.R.
 - Modify the `print_info` list in the info.R file.
 - Add dataset_*.R to the beginning of the Collate in the DESCRIPTION file.
+
+Data must be downloaded via https per CRAN policy.
