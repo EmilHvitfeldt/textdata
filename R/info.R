@@ -10,7 +10,11 @@ print_info <- list(
   loughran = list(name = "Loughran-McDonald Sentiment lexicon",
                   url = "https://sraf.nd.edu/textual-analysis/resources/",
                   license = "License required for commercial use. Please contact tloughra@nd.edu.",
-                  size = "6.7 MB")
+                  size = "6.7 MB"),
+  bing = list(name = "Bing Sentiment Lexicon",
+              url = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html",
+              license = "TBD",
+              size = "70 KB")
 )
 
 #' Catalogue of all available data sources

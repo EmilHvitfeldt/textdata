@@ -6,5 +6,6 @@
 download_functions <- list(
   afinn = download_afinn,
   sentence_polarity = download_sentence_polarity,
-  loughran = download_loughran
+  loughran = download_loughran,
+  bing = download_bing
 )
