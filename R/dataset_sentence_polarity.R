@@ -3,12 +3,34 @@
 #' 5331 positive and 5331 negative processed sentences / snippets.
 #' Introduced in Pang/Lee ACL 2005. Released July 2005.
 #'
+#' Citation Info:
+#'
+#' This data was first used in Bo Pang and Lillian Lee,
+#' ``Seeing stars: Exploiting class relationships for sentiment categorization
+#' with respect to rating scales.'', Proceedings of the ACL, 2005.
+#'
+#' InProceedings\{Pang+Lee:05a, \cr
+#' author    = \{Bo Pang and Lillian Lee\}, \cr
+#' title     = \{Seeing stars: Exploiting class relationships for sentiment \cr
+#'               categorization with respect to rating scales\}, \cr
+#' booktitle = \{Proceedings of the ACL\}, \cr
+#' year      = 2005 \cr
+#' \}
+#'
 #' @param ... Additional arguments passed to \code{\link{load_dataset}}.
-#' @return A tibble with 2 columns.
+#' @return A tibble with 10662 rows and 2 variables:
+#' \describe{
+#'   \item{text}{Sentences or snippets}
+#'   \item{sentiment}{Indicator for sentiment, "neg" for negative and "pos"
+#'                    for positive}
+#' }
+#' @source \url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
+#' @keywords datasets
+#' @export
+#'
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds
 #' @importFrom utils menu
-#' @export
 dataset_sentence_polarity <- function(...) {
   load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds", ...)
 }
@@ -27,11 +49,7 @@ download_sentence_polarity <- function(folder_path) {
 #' @importFrom tibble tibble
 process_sentence_polarity <- function(folder_path, name_path) {
 
-  con <- gzfile(paste0(folder_path, "rt-polaritydata.tar.gz", collapse = ""))
-
-  full_text <- readLines(con, skipNul = TRUE)
-
-  close(con)
+  full_text <- read_lines(path(folder_path, "rt-polaritydata.tar.gz"))
 
   neq_text <- full_text[55:5385]
   neq_text[1] <- "simplistic , silly and tedious . "

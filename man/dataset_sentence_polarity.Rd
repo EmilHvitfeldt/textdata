@@ -3,6 +3,9 @@
 \name{dataset_sentence_polarity}
 \alias{dataset_sentence_polarity}
 \title{v1.0 sentence polarity dataset}
+\source{
+\url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
+}
 \usage{
 dataset_sentence_polarity(...)
 }
@@ -10,9 +13,30 @@ dataset_sentence_polarity(...)
 \item{...}{Additional arguments passed to \code{\link{load_dataset}}.}
 }
 \value{
-A tibble with 2 columns.
+A tibble with 10662 rows and 2 variables:
+\describe{
+  \item{text}{Sentences or snippets}
+  \item{sentiment}{Indicator for sentiment, "neg" for negative and "pos"
+                   for positive}
+}
 }
 \description{
 5331 positive and 5331 negative processed sentences / snippets.
 Introduced in Pang/Lee ACL 2005. Released July 2005.
 }
+\details{
+Citation Info:
+
+This data was first used in Bo Pang and Lillian Lee,
+``Seeing stars: Exploiting class relationships for sentiment categorization
+with respect to rating scales.'', Proceedings of the ACL, 2005.
+
+InProceedings\{Pang+Lee:05a, \cr
+author    = \{Bo Pang and Lillian Lee\}, \cr
+title     = \{Seeing stars: Exploiting class relationships for sentiment \cr
+              categorization with respect to rating scales\}, \cr
+booktitle = \{Proceedings of the ACL\}, \cr
+year      = 2005 \cr
+\}
+}
+\keyword{datasets}

@@ -9,10 +9,10 @@ print_info <- list(
   sentence_polarity =
     list(name = "v1.0 sentence polarity",
          url = "http://www.cs.cornell.edu/people/pabo/movie-review-data",
-         license = "Unknown",
+         license = "Cite the paper when used.",
          size = "2 MB",
          type = "dataset",
-         description = ""),
+         description = "Dataset with sentences labeled with negative or positive sentiment."),
   loughran =
     list(name = "Loughran-McDonald Sentiment lexicon",
          url = "https://sraf.nd.edu/textual-analysis/resources/",
