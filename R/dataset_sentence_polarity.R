@@ -5,7 +5,7 @@
 #'
 #' @param ... Additional arguments passed to [load_dataset()].
 #' @return A tibble with 2 columns.
-#' @importFrom fs file_exists dir_exists dir_create
+#' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
@@ -15,7 +15,7 @@ dataset_sentence_polarity <- function(...) {
 
 #' @importFrom utils download.file
 download_sentence_polarity <- function(folder_path) {
-  file_path <- paste0(folder_path, "rt-polaritydata.tar.gz", collapse = "")
+  file_path <- path(folder_path, "rt-polaritydata.tar.gz")
   if (file_exists(file_path)) {
     return(invisible())
   }

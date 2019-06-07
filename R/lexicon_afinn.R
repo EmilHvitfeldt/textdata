@@ -18,7 +18,7 @@ lexicon_afinn <- function(...) {
 
 #' @importFrom utils download.file
 download_afinn <- function(folder_path) {
-  file_path <- paste0(folder_path, "imm6010.zip", collapse = "")
+  file_path <- path(folder_path, "imm6010.zip")
   if (file_exists(file_path)) {
     return(invisible())
   }
