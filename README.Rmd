@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
 # textdata
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/EmilHvitfeldt/textdata.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/textdata)
 <!-- badges: end -->
 
 The goal of textdata is to build a repository of text related data sets for easy access without bundling them inside a package. This is done by downloading and storing the datasets on the disk and loading them when needed.

@@ -2,3 +2,4 @@
 ^LICENSE\.md$
 ^textdata\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
