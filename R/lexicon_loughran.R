@@ -6,7 +6,7 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-dataset_loughran <- function(...) {
+lexicon_loughran <- function(...) {
   load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", ...)
 }
 

@@ -6,7 +6,7 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-dataset_bing <- function(...) {
+lexicon_bing <- function(...) {
   load_dataset(data_name = "bing", name = "bing.rds", ...)
 }
 

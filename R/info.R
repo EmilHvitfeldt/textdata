@@ -1,20 +1,32 @@
 print_info <- list(
-  afinn = list(name = "AFINN-111",
-               url = "http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010",
-               license = "Open Database License (ODbL) v1.0",
-               size = "78 KB"),
-  sentence_polarity = list(name = "v1.0 sentence polarity",
-                           url = "http://www.cs.cornell.edu/people/pabo/movie-review-data",
-                           license = "Unknown",
-                           size = "2 MB"),
-  loughran = list(name = "Loughran-McDonald Sentiment lexicon",
-                  url = "https://sraf.nd.edu/textual-analysis/resources/",
-                  license = "License required for commercial use. Please contact tloughra@nd.edu.",
-                  size = "6.7 MB"),
-  bing = list(name = "Bing Sentiment Lexicon",
-              url = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html",
-              license = "TBD",
-              size = "70 KB")
+  afinn =
+    list(name = "AFINN-111",
+         url = "http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010",
+         license = "Open Database License (ODbL) v1.0",
+         size = "78 KB",
+         type = "lexicon",
+         description = ""),
+  sentence_polarity =
+    list(name = "v1.0 sentence polarity",
+         url = "http://www.cs.cornell.edu/people/pabo/movie-review-data",
+         license = "Unknown",
+         size = "2 MB",
+         type = "dataset",
+         description = ""),
+  loughran =
+    list(name = "Loughran-McDonald Sentiment lexicon",
+         url = "https://sraf.nd.edu/textual-analysis/resources/",
+         license = "License required for commercial use. Please contact tloughra@nd.edu.",
+         size = "6.7 MB",
+         type = "lexicon",
+         description = ""),
+  bing =
+    list(name = "Bing Sentiment Lexicon",
+         url = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html",
+         license = "TBD",
+         size = "70 KB",
+         type = "lexicon",
+         description = "")
 )
 
 #' Catalogue of all available data sources

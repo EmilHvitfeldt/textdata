@@ -12,7 +12,7 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-dataset_afinn <- function(...) {
+lexicon_afinn <- function(...) {
   load_dataset(data_name = "afinn", name = "afinn_111.rds", ...)
 }
 

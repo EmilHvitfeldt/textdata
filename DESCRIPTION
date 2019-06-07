@@ -18,10 +18,10 @@ Imports:
     rappdirs
 RoxygenNote: 6.1.1
 Collate: 
-    'dataset_afinn.R'
-    'dataset_bing.R'
-    'dataset_loughran.R'
     'dataset_sentence_polarity.R'
+    'lexicon_bing.R'
+    'lexicon_loughran.R'
+    'lexicon_afinn.R'
     'download_functions.R'
     'info.R'
     'load_dataset.R'
