@@ -30,5 +30,6 @@ Collate:
 Suggests: 
     knitr,
     rmarkdown,
-    googledrive
+    googledrive,
+    testthat (>= 2.1.0)
 VignetteBuilder: knitr
