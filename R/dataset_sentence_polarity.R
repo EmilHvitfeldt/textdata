@@ -3,7 +3,7 @@
 #' 5331 positive and 5331 negative processed sentences / snippets.
 #' Introduced in Pang/Lee ACL 2005. Released July 2005.
 #'
-#' @param ... Additional arguments passed to [load_dataset()].
+#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
 #' @return A tibble with 2 columns.
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds

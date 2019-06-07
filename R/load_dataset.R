@@ -2,8 +2,13 @@
 #'
 #' These are not to be used directly by the users.
 #' @export
+#' @param dir Character, path to directory where data will be stored. If left
+#'     unchanged [rappdirs::user_cache_dir] will be used to determine path.
+#' @param delete Logical, set TRUE to delete dataset.
+#' @param return_path Logical, set TRUE to return the path of the dataset.
 #' @importFrom fs dir_delete path
 #' @keywords internal
+#' @export
 load_dataset <- function(data_name, name, dir = NULL, delete = FALSE,
                          return_path = FALSE) {
 

@@ -1,6 +1,6 @@
 #' Bing Sentiment Lexicon
 #'
-#' @param ... Additional arguments passed to [load_dataset()].
+#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
 #' @return A tibble with 2 columns.
 #' @importFrom fs file_exists dir_exists dir_create
 #' @importFrom readr read_rds

@@ -7,6 +7,14 @@
 load_dataset(data_name, name, dir = NULL, delete = FALSE,
   return_path = FALSE)
 }
+\arguments{
+\item{dir}{Character, path to directory where data will be stored. If left
+unchanged [rappdirs::user_cache_dir] will be used to determine path.}
+
+\item{delete}{Logical, set TRUE to delete dataset.}
+
+\item{return_path}{Logical, set TRUE to return the path of the dataset.}
+}
 \description{
 These are not to be used directly by the users.
 }

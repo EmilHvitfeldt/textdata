@@ -7,7 +7,7 @@
 lexicon_loughran(...)
 }
 \arguments{
-\item{...}{Additional arguments passed to [load_dataset()].}
+\item{...}{Additional arguments passed to \code{\link{load_dataset}}.}
 }
 \value{
 A tibble with 2 columns.
