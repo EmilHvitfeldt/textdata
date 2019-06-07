@@ -24,4 +24,7 @@ knitr::opts_chunk$set(
 - Modify the `print_info` list in the info.R file.
 - Add dataset_*.R to the beginning of the Collate in the DESCRIPTION file.
 
-Data must be downloaded via https per CRAN policy.
+# General rules
+- Data must be downloaded via https per CRAN policy.
+- Data should be a vector or tibble.
+- Use "word" instead of "words" for column names.
