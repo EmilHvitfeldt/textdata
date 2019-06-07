@@ -5,5 +5,6 @@
 "process_functions"
 process_functions <- list(
   afinn = process_afinn,
-  sentence_polarity = process_sentence_polarity
+  sentence_polarity = process_sentence_polarity,
+  loughran = process_loughran
 )

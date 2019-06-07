@@ -19,6 +19,8 @@ Imports:
 RoxygenNote: 6.1.1
 Collate: 
     'dataset_afinn.R'
+    'dataset_bing.R'
+    'dataset_loughran.R'
     'dataset_sentence_polarity.R'
     'download_functions.R'
     'info.R'
@@ -27,5 +29,6 @@ Collate:
     'process_functions.R'
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    googledrive
 VignetteBuilder: knitr

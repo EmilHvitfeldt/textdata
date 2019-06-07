@@ -6,7 +6,11 @@ print_info <- list(
   sentence_polarity = list(name = "v1.0 sentence polarity",
                            url = "http://www.cs.cornell.edu/people/pabo/movie-review-data",
                            license = "Unknown",
-                           size = "2 MB")
+                           size = "2 MB"),
+  loughran = list(name = "Loughran-McDonald Sentiment lexicon",
+                  url = "https://sraf.nd.edu/textual-analysis/resources/",
+                  license = "License required for commercial use. Please contact tloughra@nd.edu.",
+                  size = "6.7 MB")
 )
 
 #' Catalogue of all available data sources
