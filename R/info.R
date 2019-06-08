@@ -23,7 +23,7 @@ print_info <- list(
   bing =
     list(name = "Bing Sentiment Lexicon",
          url = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html",
-         license = "TBD",
+         license = "May be used (research, commercial, etc) with attribution.",
          size = "70 KB",
          type = "lexicon",
          description = "")
