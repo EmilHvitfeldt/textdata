@@ -1,5 +1,10 @@
 ---
-title: "How to add a data set"
+title: "How-to-add-a-data-set"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How-to-add-a-data-set}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -7,6 +12,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+```
+
+```{r setup}
+library(textdata)
 ```
 
 This package provides infrastructure to make text datasets available within R, even when they are too large to store within an R package or are licensed in such a way that prevents them from being included in OSS-licensed packages.
