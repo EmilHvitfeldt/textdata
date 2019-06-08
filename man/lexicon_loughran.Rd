@@ -34,16 +34,16 @@ This dataset was published in Loughran, T. and McDonald, B. (2011),
 10‐Ks.'' The Journal of Finance, 66: 35-65.
 
 article\{loughran11, \cr
-author = {Loughran, Tim and McDonald, Bill}, \cr
-title = {When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks}, \cr
-journal = {The Journal of Finance}, \cr
-volume = {66}, \cr
-number = {1}, \cr
-pages = {35-65}, \cr
-doi = {10.1111/j.1540-6261.2010.01625.x}, \cr
-url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x}, \cr
-eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.01625.x}, \cr
-year = {2011} \cr
+author  = \{Loughran, Tim and McDonald, Bill\}, \cr
+title   = \{When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks\}, \cr
+journal = \{The Journal of Finance\}, \cr
+volume  = \{66\}, \cr
+number  = \{1\}, \cr
+pages   = \{35-65\}, \cr
+doi     = \{10.1111/j.1540-6261.2010.01625.x\}, \cr
+url     = \{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x\}, \cr
+eprint  = \{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.01625.x\}, \cr
+year    = \{2011\} \cr
 \}
 }
 \keyword{datasets}

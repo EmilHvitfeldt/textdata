@@ -3,7 +3,7 @@
 #' 5331 positive and 5331 negative processed sentences / snippets.
 #' Introduced in Pang/Lee ACL 2005. Released July 2005.
 #'
-#' Citation Info:
+#' Citation info:
 #'
 #' This data was first used in Bo Pang and Lillian Lee,
 #' ``Seeing stars: Exploiting class relationships for sentiment categorization

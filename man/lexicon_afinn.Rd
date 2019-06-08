@@ -32,16 +32,16 @@ microblogs'', Proceedings of the ESWC2011 Workshop on
 'Making Sense of Microposts': Big things come in small packages (2011) 93-98.
 
 article\{nielsen11, \cr
-author    = {Finn Äruprup Nielsen}, \cr
-title     = {A new {ANEW:} Evaluation of a word list for sentiment analysis in microblogs}, \cr
-journal   = {CoRR}, \cr
-volume    = {abs/1103.2903}, \cr
-year      = {2011}, \cr
-url       = {http://arxiv.org/abs/1103.2903}, \cr
-archivePrefix = {arXiv}, \cr
-eprint    = {1103.2903}, \cr
-biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1103-2903}, \cr
-bibsource = {dblp computer science bibliography, https://dblp.org} \cr
+author    = \{Finn Äruprup Nielsen\}, \cr
+title     = \{A new {ANEW:} Evaluation of a word list for sentiment analysis in microblogs\}, \cr
+journal   = \{CoRR\}, \cr
+volume    = \{abs/1103.2903\}, \cr
+year      = \{2011\}, \cr
+url       = \{http://arxiv.org/abs/1103.2903\}, \cr
+archivePrefix = \{arXiv\}, \cr
+eprint    = \{1103.2903\}, \cr
+biburl    = \{https://dblp.org/rec/bib/journals/corr/abs-1103-2903\}, \cr
+bibsource = \{dblp computer science bibliography, https://dblp.org\} \cr
 \}
 }
 \keyword{datasets}

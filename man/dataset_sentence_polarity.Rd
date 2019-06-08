@@ -25,7 +25,7 @@ A tibble with 10,662 rows and 2 variables:
 Introduced in Pang/Lee ACL 2005. Released July 2005.
 }
 \details{
-Citation Info:
+Citation info:
 
 This data was first used in Bo Pang and Lillian Lee,
 ``Seeing stars: Exploiting class relationships for sentiment categorization
