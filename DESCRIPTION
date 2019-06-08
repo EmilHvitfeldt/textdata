@@ -11,8 +11,8 @@ Authors@R: c(person(given = "Emil",
                     role = c("ctb"), 
                     email = "julia.silge@gmail.com", 
                     comment = c(ORCID = "0000-0002-3671-836X")))
-Description: Provides access to various text-related datasets by downloading
-    to disk and loading when needed.
+Description: Provides a framework to download, parse, and store the datasets 
+    on the disk and load them when needed.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -37,3 +37,5 @@ Suggests:
     rmarkdown,
     testthat (>= 2.1.0)
 VignetteBuilder: knitr
+URL: https://github.com/EmilHvitfeldt/textdata
+BugReports: https://github.com/EmilHvitfeldt/textdata/issues
