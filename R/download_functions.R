@@ -3,6 +3,7 @@
 #' @format Named list of all download functions
 #' @include lexicon_afinn.R lexicon_loughran.R lexicon_bing.R
 #' @include dataset_sentence_polarity.R
+#' @noRd
 "download_functions"
 download_functions <- list(
   afinn = download_afinn,
