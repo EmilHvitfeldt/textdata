@@ -1,10 +1,5 @@
 ---
-title: "How to add a data set to textdata"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{How to add a data set to textdata}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+title: "How to add a data set"
 ---
 
 ```{r, include = FALSE}
