@@ -1,1 +1,14 @@
 destination: docs
+
+reference:
+  - title: Lexicons
+    contents:
+    - lexicon_afinn
+    - lexicon_bing
+    - lexicon_loughran
+  title: Data Sets
+    contents:
+    - dataset_sentence_polarity
+  title: Other
+    contents:
+    - catalogue
