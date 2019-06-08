@@ -13,7 +13,7 @@ dataset_sentence_polarity(...)
 \item{...}{Additional arguments passed to \code{\link{load_dataset}}.}
 }
 \value{
-A tibble with 10662 rows and 2 variables:
+A tibble with 10,662 rows and 2 variables:
 \describe{
   \item{text}{Sentences or snippets}
   \item{sentiment}{Indicator for sentiment, "neg" for negative and "pos"
@@ -25,13 +25,13 @@ A tibble with 10662 rows and 2 variables:
 Introduced in Pang/Lee ACL 2005. Released July 2005.
 }
 \details{
-Citation Info:
+Citation info:
 
 This data was first used in Bo Pang and Lillian Lee,
 ``Seeing stars: Exploiting class relationships for sentiment categorization
 with respect to rating scales.'', Proceedings of the ACL, 2005.
 
-InProceedings\{Pang+Lee:05a, \cr
+InProceedings\{pang05, \cr
 author    = \{Bo Pang and Lillian Lee\}, \cr
 title     = \{Seeing stars: Exploiting class relationships for sentiment \cr
               categorization with respect to rating scales\}, \cr

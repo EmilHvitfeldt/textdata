@@ -1,8 +1,8 @@
 #' Internal Functions
 #'
 #' These are not to be used directly by the users.
-#' @export
 #' @keywords internal
+#' @noRd
 printer <- function(name) {
 
   title <- cat("Do you want to downlaod:\n",

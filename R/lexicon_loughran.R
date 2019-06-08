@@ -1,7 +1,40 @@
-#' Loughran-McDonald Sentiment Word Lists
+#' Loughran-McDonald sentiment lexicon
+#'
+#' English sentiment lexicon created for use with financial documents. This
+#' lexicon labels words with six possible sentiments important in financial
+#' contexts: "negative", "positive", "litigious", "uncertainty", "constraining",
+#' or "superfluous".
+#'
+#' Citation info:
+#'
+#' This dataset was published in Loughran, T. and McDonald, B. (2011),
+#' ``When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and
+#' 10‐Ks.'' The Journal of Finance, 66: 35-65.
+#'
+#' article\{loughran11, \cr
+#' author  = \{Loughran, Tim and McDonald, Bill\}, \cr
+#' title   = \{When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks\}, \cr
+#' journal = \{The Journal of Finance\}, \cr
+#' volume  = \{66\}, \cr
+#' number  = \{1\}, \cr
+#' pages   = \{35-65\}, \cr
+#' doi     = \{10.1111/j.1540-6261.2010.01625.x\}, \cr
+#' url     = \{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x\}, \cr
+#' eprint  = \{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.01625.x\}, \cr
+#' year    = \{2011\} \cr
+#' \}
+#'
 #'
 #' @param ... Additional arguments passed to \code{\link{load_dataset}}.
-#' @return A tibble with 2 columns.
+#' @return A tibble with 4,150 rows and 2 variables:
+#' \describe{
+#'   \item{word}{An English word}
+#'   \item{sentiment}{Indicator for sentiment: "negative", "positive",
+#'   "litigious", "uncertainty", "constraining", or "superfluous"}
+#' }
+#'
+#' @source \url{https://sraf.nd.edu/textual-analysis/resources/}
+#' @keywords datasets
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds
 #' @importFrom utils menu
