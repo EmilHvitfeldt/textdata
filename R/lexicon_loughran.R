@@ -56,9 +56,16 @@ download_loughran <- function(folder_path) {
   download.file(url = "https://drive.google.com/uc?id=12ECPJMxV2wSalXG8ykMmkpa1fq_ur0Rf&export=download",
                 destfile = file_path)
 }
-
+#' @importFrom readr read_csv cols_only col_character col_double
 process_loughran <- function(folder_path, name_path) {
-  data <- read_csv(path(folder_path, "LoughranMcDonald_MasterDictionary_2018 - LoughranMcDonald_MasterDictionary_2018.csv"))
+  data <- read_csv(path(folder_path, "LoughranMcDonald_MasterDictionary_2018 - LoughranMcDonald_MasterDictionary_2018.csv"),
+                   col_types = cols_only(Word = col_character(),
+                                         Negative = col_double(),
+                                         Positive = col_double(),
+                                         Uncertainty = col_double(),
+                                         Litigious = col_double(),
+                                         Constraining = col_double(),
+                                         Superfluous = col_double()))
 
   types <- c("Negative", "Positive", "Uncertainty", "Litigious", "Constraining", "Superfluous")
 
