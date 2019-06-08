@@ -11,12 +11,12 @@ dataset_sentence_polarity(dir = NULL, delete = FALSE,
   return_path = FALSE)
 }
 \arguments{
-\item{dir}{Character, path to directory where data will be stored. If left
-unchanged \link[rappdirs]{user_cache_dir} will be used to determine path.}
+\item{dir}{Character, path to directory where data will be stored. If
+\code{NULL}, \link[rappdirs]{user_cache_dir} will be used to determine path.}
 
-\item{delete}{Logical, set TRUE to delete dataset.}
+\item{delete}{Logical, set \code{TRUE} to delete dataset.}
 
-\item{return_path}{Logical, set TRUE to return the path of the dataset.}
+\item{return_path}{Logical, set \code{TRUE} to return the path of the dataset.}
 }
 \value{
 A tibble with 10,662 rows and 2 variables:

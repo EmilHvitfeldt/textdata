@@ -1,6 +1,3 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -29,11 +26,11 @@ remotes::install_github("EmilHvitfeldt/textdata")
 ```
 ## Example
 
-The first time you use one of the functions for accessing an included text dataset, such as `lexicon_bing()` or `dataset_sentence_polarity()`, the function will prompt you to agree that you understand the dataset's license or terms of use and then download the dataset to your computer.
+The first time you use one of the functions for accessing an included text dataset, such as `lexicon_afinn()` or `dataset_sentence_polarity()`, the function will prompt you to agree that you understand the dataset's license or terms of use and then download the dataset to your computer.
 
 ![](man/figures/textdata_demo.gif)
 
-After the first use, each time you use a function like `lexicon_bing()`, the function will load the dataset from disk.
+After the first use, each time you use a function like `lexicon_afinn()`, the function will load the dataset from disk.
 
 ## Included text datasets
 

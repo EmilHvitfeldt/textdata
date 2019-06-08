@@ -26,10 +26,10 @@
 #' bibsource = \{dblp computer science bibliography, https://dblp.org\} \cr
 #' \}
 #'
-#' @param dir Character, path to directory where data will be stored. If left
-#'     unchanged \link[rappdirs]{user_cache_dir} will be used to determine path.
-#' @param delete Logical, set TRUE to delete dataset.
-#' @param return_path Logical, set TRUE to return the path of the dataset.
+#' @param dir Character, path to directory where data will be stored. If
+#'     \code{NULL}, \link[rappdirs]{user_cache_dir} will be used to determine path.
+#' @param delete Logical, set \code{TRUE} to delete dataset.
+#' @param return_path Logical, set \code{TRUE} to return the path of the dataset.
 #' @return A tibble with 2,477 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
