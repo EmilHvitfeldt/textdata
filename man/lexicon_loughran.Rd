@@ -36,7 +36,7 @@ Citation info:
 
 This dataset was published in Loughran, T. and McDonald, B. (2011),
 ``When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and
-10‐Ks.'' The Journal of Finance, 66: 35-65.
+10-Ks.'' The Journal of Finance, 66: 35-65.
 
 article\{loughran11, \cr
 author  = \{Loughran, Tim and McDonald, Bill\}, \cr
