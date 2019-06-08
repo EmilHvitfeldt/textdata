@@ -1,0 +1,6 @@
+pandoc: '2.2'
+pkgdown: 1.3.0
+pkgdown_sha: ~
+articles:
+  How-to-add-a-data-set: How-to-add-a-data-set.html
+
