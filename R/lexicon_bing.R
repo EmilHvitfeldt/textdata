@@ -28,7 +28,7 @@
 #' keywords  = \{reviews, sentiment classification, summarization, text mining\}, \cr
 #' \}
 #'
-#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
+#' @inheritParams lexicon_afinn
 #' @return A tibble with 6,787 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
@@ -41,8 +41,9 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-lexicon_bing <- function(...) {
-  load_dataset(data_name = "bing", name = "bing.rds", ...)
+lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+  load_dataset(data_name = "bing", name = "bing.rds", dir = dir,
+               delete = delete, return_path = return_path)
 }
 
 

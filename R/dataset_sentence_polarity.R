@@ -17,7 +17,7 @@
 #' year      = 2005 \cr
 #' \}
 #'
-#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
+#' @inheritParams lexicon_afinn
 #' @return A tibble with 10,662 rows and 2 variables:
 #' \describe{
 #'   \item{text}{Sentences or snippets}
@@ -31,8 +31,9 @@
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds
 #' @importFrom utils menu
-dataset_sentence_polarity <- function(...) {
-  load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds", ...)
+dataset_sentence_polarity <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+  load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds", dir = dir,
+               delete = delete, return_path = return_path)
 }
 
 #' @importFrom utils download.file

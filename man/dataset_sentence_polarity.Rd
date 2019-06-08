@@ -7,10 +7,16 @@
 \url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
 }
 \usage{
-dataset_sentence_polarity(...)
+dataset_sentence_polarity(dir = NULL, delete = FALSE,
+  return_path = FALSE)
 }
 \arguments{
-\item{...}{Additional arguments passed to \code{\link{load_dataset}}.}
+\item{dir}{Character, path to directory where data will be stored. If left
+unchanged \link[rappdirs]{user_cache_dir} will be used to determine path.}
+
+\item{delete}{Logical, set TRUE to delete dataset.}
+
+\item{return_path}{Logical, set TRUE to return the path of the dataset.}
 }
 \value{
 A tibble with 10,662 rows and 2 variables:

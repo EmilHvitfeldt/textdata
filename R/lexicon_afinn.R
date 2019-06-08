@@ -26,7 +26,10 @@
 #' bibsource = \{dblp computer science bibliography, https://dblp.org\} \cr
 #' \}
 #'
-#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
+#' @param dir Character, path to directory where data will be stored. If left
+#'     unchanged \link[rappdirs]{user_cache_dir} will be used to determine path.
+#' @param delete Logical, set TRUE to delete dataset.
+#' @param return_path Logical, set TRUE to return the path of the dataset.
 #' @return A tibble with 2,477 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
@@ -38,8 +41,9 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-lexicon_afinn <- function(...) {
-  load_dataset(data_name = "afinn", name = "afinn_111.rds", ...)
+lexicon_afinn <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+  load_dataset(data_name = "afinn", name = "afinn_111.rds", dir = dir,
+               delete = delete, return_path = return_path)
 }
 
 #' @importFrom utils download.file

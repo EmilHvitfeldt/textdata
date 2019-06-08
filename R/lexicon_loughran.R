@@ -25,7 +25,7 @@
 #' \}
 #'
 #'
-#' @param ... Additional arguments passed to \code{\link{load_dataset}}.
+#' @inheritParams lexicon_afinn
 #' @return A tibble with 4,150 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
@@ -39,8 +39,9 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
-lexicon_loughran <- function(...) {
-  load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", ...)
+lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+  load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", dir = dir,
+               delete = delete, return_path = return_path)
 }
 
 #' @importFrom utils download.file
