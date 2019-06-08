@@ -58,7 +58,7 @@ Check out each function's documentation for detailed information (including cita
 ## Community Guidelines
 
 Note that this project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+[Contributor Code of Conduct](https://github.com/EmilHvitfeldt/textdata/blob/master/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms. 
 Feedback, bug reports (and fixes!), and feature requests are welcome; file 
 issues or seek support [here](http://github.com/EmilHvitfeldt/textdata/issues).
