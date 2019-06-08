@@ -1,12 +1,16 @@
 Package: textdata
-Title: What the Package Does (One Line, Title Case)
+Title: Download and Load Various Text Datasets
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Emil",
-           family = "Hvitfeldt",
-           role = c("aut", "cre"),
-           email = "emilhhvitfeldt@gmail.com")
-Description: Allows for loading of various text related datasets by downloading
+Authors@R: c(person(given = "Emil",
+                    family = "Hvitfeldt",
+                    role = c("aut", "cre"),
+                    email = "emilhhvitfeldt@gmail.com"),
+             person(given = "Julia", 
+                    family = "Silge", 
+                    role = c("ctb"), 
+                    email = "julia.silge@gmail.com", 
+                    comment = c(ORCID = "0000-0002-3671-836X")))
+Description: Provides access to various text-related datasets by downloading
     to disk and loading when needed.
 License: MIT + file LICENSE
 Encoding: UTF-8

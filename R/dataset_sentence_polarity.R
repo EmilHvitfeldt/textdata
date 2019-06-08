@@ -9,7 +9,7 @@
 #' ``Seeing stars: Exploiting class relationships for sentiment categorization
 #' with respect to rating scales.'', Proceedings of the ACL, 2005.
 #'
-#' InProceedings\{Pang+Lee:05a, \cr
+#' InProceedings\{pang05, \cr
 #' author    = \{Bo Pang and Lillian Lee\}, \cr
 #' title     = \{Seeing stars: Exploiting class relationships for sentiment \cr
 #'               categorization with respect to rating scales\}, \cr
@@ -18,7 +18,7 @@
 #' \}
 #'
 #' @param ... Additional arguments passed to \code{\link{load_dataset}}.
-#' @return A tibble with 10662 rows and 2 variables:
+#' @return A tibble with 10,662 rows and 2 variables:
 #' \describe{
 #'   \item{text}{Sentences or snippets}
 #'   \item{sentiment}{Indicator for sentiment, "neg" for negative and "pos"

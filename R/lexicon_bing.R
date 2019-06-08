@@ -1,7 +1,17 @@
-#' Bing Sentiment Lexicon
+#' Bing sentiment lexicon
+#'
+#' General purpose English sentiment lexicon that categorizes words in a
+#' binary fashion, either positive or negative
 #'
 #' @param ... Additional arguments passed to \code{\link{load_dataset}}.
-#' @return A tibble with 2 columns.
+#' @return A tibble with 6,787 rows and 2 variables:
+#' \describe{
+#'   \item{word}{An English word}
+#'   \item{sentiment}{Indicator for sentiment: "negative" or "positive"}
+#' }
+#'
+#' @source \url{https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html}
+#' @keywords datasets
 #' @importFrom fs file_exists dir_exists dir_create
 #' @importFrom readr read_rds
 #' @importFrom utils menu

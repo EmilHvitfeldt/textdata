@@ -2,7 +2,10 @@
 % Please edit documentation in R/lexicon_bing.R
 \name{lexicon_bing}
 \alias{lexicon_bing}
-\title{Bing Sentiment Lexicon}
+\title{Bing sentiment lexicon}
+\source{
+\url{https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html}
+}
 \usage{
 lexicon_bing(...)
 }
@@ -10,8 +13,14 @@ lexicon_bing(...)
 \item{...}{Additional arguments passed to \code{\link{load_dataset}}.}
 }
 \value{
-A tibble with 2 columns.
+A tibble with 6,787 rows and 2 variables:
+\describe{
+  \item{word}{An English word}
+  \item{sentiment}{Indicator for sentiment: "negative" or "positive"}
+}
 }
 \description{
-Bing Sentiment Lexicon
+General purpose English sentiment lexicon that categorizes words in a
+binary fashion, either positive or negative
 }
+\keyword{datasets}
