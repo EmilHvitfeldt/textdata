@@ -1,4 +1,5 @@
-destination: docs
+development:
+  mode: auto
 
 reference:
   - title: Lexicons
@@ -6,9 +7,9 @@ reference:
     - lexicon_afinn
     - lexicon_bing
     - lexicon_loughran
-  title: Data Sets
+  - title: Data Sets
     contents:
     - dataset_sentence_polarity
-  title: Other
+  - title: Other
     contents:
     - catalogue

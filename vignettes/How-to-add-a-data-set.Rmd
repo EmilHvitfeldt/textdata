@@ -34,6 +34,7 @@ Do you want to add a new dataset to the textdata package?
 - Modify the `print_info` list in the info.R file.
 - Add `dataset_*.R` to the @include tags in `download_functions.R`.
 - Add the dataset to the table in `README.Rmd`.
+- Add the dataset to `_pkgdown.yml`.
 
 What are the guidelines for adding datasets?
 
