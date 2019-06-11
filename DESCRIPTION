@@ -12,7 +12,8 @@ Authors@R: c(person(given = "Emil",
                     email = "julia.silge@gmail.com", 
                     comment = c(ORCID = "0000-0002-3671-836X")))
 Description: Provides a framework to download, parse, and store text datasets
-    on the disk and load them when needed.
+    on the disk and load them when needed. Includes various sentiment lexicons
+    and labeled text data sets for classification and analysis.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
