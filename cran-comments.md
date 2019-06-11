@@ -1,3 +1,9 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Added examples in \donttest{} for all userfacing functions.
+* Added vignette index to stop error "Package has a VignetteBuilder field but no prebuilt vignette index."
+
 ## Test environments
 * local OS X install, R 3.5.3
 * ubuntu 14.04 (on travis-ci), R 3.5.3

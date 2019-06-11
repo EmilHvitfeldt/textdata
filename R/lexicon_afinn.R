@@ -41,6 +41,19 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
+#' @examples
+#' \donttest{
+#' lexicon_afinn()
+#'
+#' # Custom directory
+#' lexicon_afinn(dir = "data/")
+#'
+#' # Deleting dataset
+#' lexicon_afinn(delete = TRUE)
+#'
+#' # Returning filepath of data
+#' lexicon_afinn(return_path = TRUE)
+#' }
 lexicon_afinn <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
   load_dataset(data_name = "afinn", name = "afinn_111.rds", dir = dir,
                delete = delete, return_path = return_path)

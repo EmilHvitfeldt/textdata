@@ -5,7 +5,7 @@
 ^\.travis\.yml$
 ^CODE_OF_CONDUCT\.md$
 ^cran-comments\.md$
-^vignettes/How-to-add-a-data-set\.Rmd$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^CRAN-RELEASE$

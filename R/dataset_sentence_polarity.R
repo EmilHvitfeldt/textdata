@@ -27,6 +27,19 @@
 #' @source \url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
 #' @keywords datasets
 #' @export
+#' @examples
+#' \donttest{
+#' dataset_sentence_polarity()
+#'
+#' # Custom directory
+#' dataset_sentence_polarity(dir = "data/")
+#'
+#' # Deleting dataset
+#' dataset_sentence_polarity(delete = TRUE)
+#'
+#' # Returning filepath of data
+#' dataset_sentence_polarity(return_path = TRUE)
+#' }
 #'
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds

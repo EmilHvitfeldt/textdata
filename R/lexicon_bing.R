@@ -41,6 +41,19 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
+#' @examples
+#' \donttest{
+#' lexicon_bing()
+#'
+#' # Custom directory
+#' lexicon_bing(dir = "data/")
+#'
+#' # Deleting dataset
+#' lexicon_bing(delete = TRUE)
+#'
+#' # Returning filepath of data
+#' lexicon_bing(return_path = TRUE)
+#' }
 lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
   load_dataset(data_name = "bing", name = "bing.rds", dir = dir,
                delete = delete, return_path = return_path)

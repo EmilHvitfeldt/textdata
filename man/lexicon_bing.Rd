@@ -54,4 +54,18 @@ address   = \{New York, NY, USA\}, \cr
 keywords  = \{reviews, sentiment classification, summarization, text mining\}, \cr
 \}
 }
+\examples{
+\donttest{
+lexicon_bing()
+
+# Custom directory
+lexicon_bing(dir = "data/")
+
+# Deleting dataset
+lexicon_bing(delete = TRUE)
+
+# Returning filepath of data
+lexicon_bing(return_path = TRUE)
+}
+}
 \keyword{datasets}

@@ -51,4 +51,18 @@ eprint  = \{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.016
 year    = \{2011\} \cr
 \}
 }
+\examples{
+\donttest{
+lexicon_loughran()
+
+# Custom directory
+lexicon_loughran(dir = "data/")
+
+# Deleting dataset
+lexicon_loughran(delete = TRUE)
+
+# Returning filepath of data
+lexicon_loughran(return_path = TRUE)
+}
+}
 \keyword{datasets}

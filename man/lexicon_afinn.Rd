@@ -49,4 +49,18 @@ biburl    = \{https://dblp.org/rec/bib/journals/corr/abs-1103-2903\}, \cr
 bibsource = \{dblp computer science bibliography, https://dblp.org\} \cr
 \}
 }
+\examples{
+\donttest{
+lexicon_afinn()
+
+# Custom directory
+lexicon_afinn(dir = "data/")
+
+# Deleting dataset
+lexicon_afinn(delete = TRUE)
+
+# Returning filepath of data
+lexicon_afinn(return_path = TRUE)
+}
+}
 \keyword{datasets}

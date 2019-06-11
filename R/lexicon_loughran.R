@@ -39,6 +39,19 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 #' @export
+#' @examples
+#' \donttest{
+#' lexicon_loughran()
+#'
+#' # Custom directory
+#' lexicon_loughran(dir = "data/")
+#'
+#' # Deleting dataset
+#' lexicon_loughran(delete = TRUE)
+#'
+#' # Returning filepath of data
+#' lexicon_loughran(return_path = TRUE)
+#' }
 lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
   load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", dir = dir,
                delete = delete, return_path = return_path)

@@ -45,4 +45,19 @@ booktitle = \{Proceedings of the ACL\}, \cr
 year      = 2005 \cr
 \}
 }
+\examples{
+\donttest{
+dataset_sentence_polarity()
+
+# Custom directory
+dataset_sentence_polarity(dir = "data/")
+
+# Deleting dataset
+dataset_sentence_polarity(delete = TRUE)
+
+# Returning filepath of data
+dataset_sentence_polarity(return_path = TRUE)
+}
+
+}
 \keyword{datasets}
