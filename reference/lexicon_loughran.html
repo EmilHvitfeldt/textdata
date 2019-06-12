@@ -66,7 +66,7 @@ or &quot;superfluous&quot;." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">textdata</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -92,6 +92,9 @@ or &quot;superfluous&quot;." />
       <a href="../articles/How-to-add-a-data-set.html">How-to-add-a-data-set</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -181,6 +184,22 @@ year    = {2011} <br />
 }</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>lexicon_loughran</span>()</div><div class='output co'>#&gt; Do you want to downlaod:
+#&gt;  Name: Loughran-McDonald Sentiment lexicon 
+#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
+#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
+#&gt;  Size: 6.7 MB </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+<span class='co'># Custom directory</span>
+<span class='fu'>lexicon_loughran</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to downlaod:
+#&gt;  Name: Loughran-McDonald Sentiment lexicon 
+#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
+#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
+#&gt;  Size: 6.7 MB </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+<span class='co'># Deleting dataset</span>
+<span class='fu'>lexicon_loughran</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/loughran': no such file or directory</span></div><div class='input'>
+<span class='co'># Returning filepath of data</span>
+<span class='fu'>lexicon_loughran</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/loughran</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -192,7 +211,9 @@ year    = {2011} <br />
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
