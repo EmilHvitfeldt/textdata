@@ -8,5 +8,6 @@ process_functions <- list(
   afinn = process_afinn,
   sentence_polarity = process_sentence_polarity,
   loughran = process_loughran,
-  bing = process_bing
+  bing = process_bing,
+  nrc = process_nrc
 )

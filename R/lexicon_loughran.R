@@ -58,7 +58,6 @@ lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
 }
 
 #' @importFrom utils download.file
-#' @importFrom readr read_csv
 download_loughran <- function(folder_path) {
 
   file_path <- path(folder_path,
