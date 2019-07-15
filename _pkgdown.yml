@@ -6,6 +6,7 @@ reference:
     contents:
     - lexicon_afinn
     - lexicon_bing
+    - lexicon_nrc
     - lexicon_loughran
   - title: Data Sets
     contents:

@@ -50,6 +50,7 @@ As of today, the datasets included in textdata are:
 | v1.0 sentence polarity dataset | `dataset_sentence_polarity()` |
 | AFINN-111 sentiment lexicon    | `lexicon_afinn()`             |
 | Hu and Liu's opinion lexicon   | `lexicon_bing()`              |
+| NRC word-emotion association lexicon | `lexicon_nrc()`         |
 | Loughran and McDonald's opinion lexicon for financial documents | `lexicon_loughran()` |
 
 

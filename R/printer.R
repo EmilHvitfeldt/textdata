@@ -5,7 +5,7 @@
 #' @noRd
 printer <- function(name) {
 
-  title <- cat("Do you want to downlaod:\n",
+  title <- cat("Do you want to download:\n",
                   "Name:", print_info[[name]][["name"]], "\n",
                   "URL:", print_info[[name]][["url"]], "\n",
                   "License:", print_info[[name]][["license"]], "\n",

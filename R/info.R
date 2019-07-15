@@ -26,6 +26,13 @@ print_info <- list(
          license = "May be used (research, commercial, etc) with attribution.",
          size = "70 KB",
          type = "lexicon",
+         description = ""),
+  nrc =
+    list(name = "NRC Word-Emotion Association Lexicon",
+         url = "http://saifmohammad.com/WebPages/lexicons.html",
+         license = "License required for commercial use. Please contact Pierre.Charron@nrc-cnrc.gc.ca.",
+         size = "22.8 MB",
+         type = "lexicon",
          description = "")
 )
 

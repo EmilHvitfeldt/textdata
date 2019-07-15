@@ -25,6 +25,7 @@ Imports:
 RoxygenNote: 6.1.1
 Collate: 
     'dataset_sentence_polarity.R'
+    'lexicon_nrc.R'
     'lexicon_bing.R'
     'lexicon_loughran.R'
     'lexicon_afinn.R'
