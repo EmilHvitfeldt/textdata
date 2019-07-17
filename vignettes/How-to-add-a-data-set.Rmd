@@ -40,7 +40,6 @@ What are the guidelines for adding datasets?
 
 # Guidelines for textdata datasets
 
-- Data must be downloaded via https per CRAN policy.
 - All datasets must have a license or terms of use clearly specified.
 - Data should be a vector or tibble.
 - Use `word` instead of `words` for column names.

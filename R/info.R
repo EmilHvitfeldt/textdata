@@ -5,6 +5,7 @@ print_info <- list(
          license = "Open Database License (ODbL) v1.0",
          size = "78 KB",
          type = "lexicon",
+         download_mech = "https",
          description = ""),
   sentence_polarity =
     list(name = "v1.0 sentence polarity",
@@ -12,6 +13,7 @@ print_info <- list(
          license = "Cite the paper when used.",
          size = "2 MB",
          type = "dataset",
+         download_mech = "https",
          description = "Dataset with sentences labeled with negative or positive sentiment."),
   loughran =
     list(name = "Loughran-McDonald Sentiment lexicon",
@@ -19,6 +21,7 @@ print_info <- list(
          license = "License required for commercial use. Please contact tloughra@nd.edu.",
          size = "6.7 MB",
          type = "lexicon",
+         download_mech = "https",
          description = ""),
   bing =
     list(name = "Bing Sentiment Lexicon",
@@ -26,6 +29,7 @@ print_info <- list(
          license = "May be used (research, commercial, etc) with attribution.",
          size = "70 KB",
          type = "lexicon",
+         download_mech = "http",
          description = ""),
   nrc =
     list(name = "NRC Word-Emotion Association Lexicon",
@@ -33,6 +37,7 @@ print_info <- list(
          license = "License required for commercial use. Please contact Pierre.Charron@nrc-cnrc.gc.ca.",
          size = "22.8 MB",
          type = "lexicon",
+         download_mech = "http",
          description = "")
 )
 
