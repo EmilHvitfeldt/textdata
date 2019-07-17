@@ -9,5 +9,6 @@ process_functions <- list(
   sentence_polarity = process_sentence_polarity,
   loughran = process_loughran,
   bing = process_bing,
-  nrc = process_nrc
+  nrc = process_nrc,
+  ag_news = process_ag_news
 )

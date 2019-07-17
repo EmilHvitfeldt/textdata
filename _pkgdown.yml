@@ -11,6 +11,7 @@ reference:
   - title: Data Sets
     contents:
     - dataset_sentence_polarity
+    - dataset_ag_news
   - title: Other
     contents:
     - catalogue

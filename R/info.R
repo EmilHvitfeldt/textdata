@@ -38,6 +38,14 @@ print_info <- list(
          size = "22.8 MB",
          type = "lexicon",
          download_mech = "http",
+         description = ""),
+  ag_news =
+    list(name = "AG News",
+         url = "https://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",
+         license = "You are encouraged to download this corpus for any non-commercial use.",
+         size = "64.4 MB",
+         type = "dataset",
+         download_mech = "https",
          description = "")
 )
 
