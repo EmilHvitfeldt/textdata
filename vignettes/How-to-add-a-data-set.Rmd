@@ -43,3 +43,7 @@ What are the guidelines for adding datasets?
 - All datasets must have a license or terms of use clearly specified.
 - Data should be a vector or tibble.
 - Use `word` instead of `words` for column names.
+
+# Classification datasets
+
+For datasets that comes with a testing and training dataset. Let the user pick whick one to retrive with a `split` argument similar to how `dataset_ag_news()` is doing.
