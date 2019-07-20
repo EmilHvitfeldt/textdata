@@ -62,6 +62,7 @@ are:
 | NRC word-emotion association lexicon                            | `lexicon_nrc()`               |
 | Loughran and McDonald’s opinion lexicon for financial documents | `lexicon_loughran()`          |
 | AG’s News                                                       | `dataset_ag_news()`           |
+| DBpedia ontology                                                | `dataset_dbpedia()`           |
 
 Check out each function’s documentation for detailed information
 (including citations) for the relevant dataset.

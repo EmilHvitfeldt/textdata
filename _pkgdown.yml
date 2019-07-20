@@ -12,6 +12,7 @@ reference:
     contents:
     - dataset_sentence_polarity
     - dataset_ag_news
+    - dataset_dbpedia
   - title: Other
     contents:
     - catalogue

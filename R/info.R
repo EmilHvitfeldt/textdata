@@ -46,6 +46,14 @@ print_info <- list(
          size = "64.4 MB",
          type = "dataset",
          download_mech = "https",
+         description = ""),
+  dbpedia =
+    list(name = "DBpedia",
+         url = "https://wiki.dbpedia.org/",
+         license = "Creative Commons Attribution-ShareAlike 3.0 License",
+         size = "279.5 MB",
+         type = "dataset",
+         download_mech = "https",
          description = "")
 )
 

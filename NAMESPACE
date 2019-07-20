@@ -2,6 +2,7 @@
 
 export(catalogue)
 export(dataset_ag_news)
+export(dataset_dbpedia)
 export(dataset_sentence_polarity)
 export(lexicon_afinn)
 export(lexicon_bing)
@@ -25,4 +26,5 @@ importFrom(readr,write_rds)
 importFrom(tibble,tibble)
 importFrom(utils,download.file)
 importFrom(utils,menu)
+importFrom(utils,untar)
 importFrom(utils,unzip)

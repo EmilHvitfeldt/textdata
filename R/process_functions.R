@@ -10,5 +10,6 @@ process_functions <- list(
   loughran = process_loughran,
   bing = process_bing,
   nrc = process_nrc,
-  ag_news = process_ag_news
+  ag_news = process_ag_news,
+  dbpedia = process_dbpedia
 )
