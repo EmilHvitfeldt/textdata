@@ -60,8 +60,6 @@ dataset_ag_news <- function(dir = NULL, split = c("train", "test"),
 
 #' @importFrom utils download.file
 download_ag_news <- function(folder_path) {
-  file_path <- path(folder_path, "rt-polaritydata.tar.gz")
-
   file_path_test <- path(folder_path, "ag_news_test.csv")
   file_path_train <- path(folder_path, "ag_news_train.csv")
 
