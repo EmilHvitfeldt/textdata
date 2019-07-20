@@ -61,6 +61,7 @@ are:
 | Hu and Liu’s opinion lexicon                                    | `lexicon_bing()`              |
 | NRC word-emotion association lexicon                            | `lexicon_nrc()`               |
 | Loughran and McDonald’s opinion lexicon for financial documents | `lexicon_loughran()`          |
+| AG’s News                                                       | `dataset_ag_news()`           |
 
 Check out each function’s documentation for detailed information
 (including citations) for the relevant dataset.
