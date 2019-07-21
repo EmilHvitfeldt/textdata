@@ -27,6 +27,7 @@ Collate:
     'dataset_ag_news.R'
     'dataset_dbpedia.R'
     'dataset_sentence_polarity.R'
+    'dataset_trec.R'
     'lexicon_nrc.R'
     'lexicon_bing.R'
     'lexicon_loughran.R'

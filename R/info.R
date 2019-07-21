@@ -54,6 +54,14 @@ print_info <- list(
          size = "279.5 MB",
          type = "dataset",
          download_mech = "https",
+         description = ""),
+  trec =
+    list(name = "TREC-6 & TREC-50",
+         url = "https://cogcomp.seas.upenn.edu/Data/QA/QC/",
+         license = "Freely reusable public information licence",
+         size = "1.2 MB",
+         type = "dataset",
+         download_mech = "https",
          description = "")
 )
 

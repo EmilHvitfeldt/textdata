@@ -4,7 +4,7 @@
 \name{catalogue}
 \alias{catalogue}
 \title{Catalogue of all available data sources}
-\format{An object of class \code{data.frame} with 7 rows and 7 columns.}
+\format{An object of class \code{data.frame} with 8 rows and 7 columns.}
 \usage{
 catalogue
 }
