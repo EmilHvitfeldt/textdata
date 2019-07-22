@@ -78,4 +78,9 @@ test_50 <- dataset_trec(split = "test", version = "50")
 }
 
 }
+\seealso{
+Other topic: \code{\link{dataset_ag_news}},
+  \code{\link{dataset_dbpedia}}
+}
+\concept{topic}
 \keyword{datasets}

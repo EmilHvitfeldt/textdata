@@ -26,6 +26,7 @@
 #' }
 #' @source \url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
 #' @keywords datasets
+#' @family sentiment
 #' @export
 #' @examples
 #' \donttest{

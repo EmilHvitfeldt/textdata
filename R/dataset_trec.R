@@ -34,6 +34,7 @@
 #'   \item{text}{Character, question text}
 #' }
 #' @keywords datasets
+#' @family topic
 #' @export
 #' @examples
 #' \donttest{

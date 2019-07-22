@@ -78,4 +78,9 @@ test <- dataset_dbpedia(split = "test")
 }
 
 }
+\seealso{
+Other topic: \code{\link{dataset_ag_news}},
+  \code{\link{dataset_trec}}
+}
+\concept{topic}
 \keyword{datasets}

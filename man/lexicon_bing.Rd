@@ -68,4 +68,9 @@ lexicon_bing(delete = TRUE)
 lexicon_bing(return_path = TRUE)
 }
 }
+\seealso{
+Other lexicon: \code{\link{lexicon_afinn}},
+  \code{\link{lexicon_loughran}}, \code{\link{lexicon_nrc}}
+}
+\concept{lexicon}
 \keyword{datasets}

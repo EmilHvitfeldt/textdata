@@ -37,6 +37,7 @@
 #'
 #' @source \url{https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html}
 #' @keywords datasets
+#' @family lexicon
 #' @importFrom fs file_exists dir_exists dir_create
 #' @importFrom readr read_rds
 #' @importFrom utils menu

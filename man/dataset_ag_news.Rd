@@ -66,4 +66,9 @@ test <- dataset_ag_news(split = "test")
 }
 
 }
+\seealso{
+Other topic: \code{\link{dataset_dbpedia}},
+  \code{\link{dataset_trec}}
+}
+\concept{topic}
 \keyword{datasets}

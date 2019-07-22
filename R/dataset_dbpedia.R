@@ -37,6 +37,7 @@
 #'   \item{description}{Character, description of article}
 #' }
 #' @keywords datasets
+#' @family topic
 #' @export
 #' @examples
 #' \donttest{

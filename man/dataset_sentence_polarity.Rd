@@ -60,4 +60,5 @@ dataset_sentence_polarity(return_path = TRUE)
 }
 
 }
+\concept{sentiment}
 \keyword{datasets}

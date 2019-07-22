@@ -27,6 +27,7 @@
 #' @source \url{http://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html}
 #' @source \url{https://github.com/mhjabreel/CharCnn_Keras/tree/master/data/ag_news_csv}
 #' @keywords datasets
+#' @family topic
 #' @export
 #' @examples
 #' \donttest{
