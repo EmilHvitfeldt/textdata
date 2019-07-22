@@ -1,3 +1,5 @@
+# textdata (development version)
+
 # textdata 0.2.0
 
 * `dataset_imdb()` has been added to give access to the IMDb Large Movie Review Dataset.
