@@ -9,7 +9,7 @@
 status](https://travis-ci.org/EmilHvitfeldt/textdata.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/textdata)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/textdata)](https://CRAN.R-project.org/package=textdata)
-[![Downloads](http://cranlogs.r-pkg.org/badges/textdata)](http://cran.rstudio.com/package=textdata)
+[![Downloads](http://cranlogs.r-pkg.org/badges/textdata)](https://cran.r-project.org/package=textdata)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3244433.svg)](https://doi.org/10.5281/zenodo.3244433)
 <!-- badges: end -->
 
