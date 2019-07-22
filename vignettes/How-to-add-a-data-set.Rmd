@@ -47,4 +47,4 @@ What are the guidelines for adding datasets?
 
 # Classification datasets
 
-For datasets that comes with a testing and training dataset. Let the user pick whick one to retrive with a `split` argument similar to how `dataset_ag_news()` is doing.
+For datasets that comes with a testing and training dataset. Let the user pick which one to retrieve with a `split` argument similar to how `dataset_ag_news()` is doing.
