@@ -27,7 +27,7 @@ data. Defaults to "train".}
 A tibble with 120,000 or 30,000 rows for "train" and "test"
     respectively and 3 variables:
 \describe{
-  \item{index}{Integers denoting new class}
+  \item{class}{Character, denoting new class}
   \item{title}{Character, title of article}
   \item{description}{Character, description of article}
 }
@@ -40,12 +40,14 @@ samples and 1,900 testing samples. The total number of training samples is
 Version 3, Updated 09/09/2015
 }
 \details{
-The index variable refer to the following news classes
+The classes in this dataset are
 
-1 - World
-2 - Sports
-3 - Business
-4 - Sci/Tech
+\itemize{
+\item World
+\item Sports
+\item Business
+\item Sci/Tech
+}
 }
 \examples{
 \donttest{

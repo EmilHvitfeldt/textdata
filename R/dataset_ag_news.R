@@ -7,12 +7,14 @@
 
 #' Version 3, Updated 09/09/2015
 #'
-#' The index variable refer to the following news classes
+#' The classes in this dataset are
 #'
-#' 1 - World
-#' 2 - Sports
-#' 3 - Business
-#' 4 - Sci/Tech
+#'\itemize{
+#' \item World
+#' \item Sports
+#' \item Business
+#' \item Sci/Tech
+#' }
 #'
 #' @inheritParams lexicon_afinn
 #' @param split Character. Return training ("train") data or testing ("test")
@@ -20,7 +22,7 @@
 #' @return A tibble with 120,000 or 30,000 rows for "train" and "test"
 #'     respectively and 3 variables:
 #' \describe{
-#'   \item{index}{Integers denoting new class}
+#'   \item{class}{Character, denoting new class}
 #'   \item{title}{Character, title of article}
 #'   \item{description}{Character, description of article}
 #' }
@@ -81,18 +83,23 @@ process_ag_news <- function(folder_path, name_path) {
   file_path_test <- path(folder_path, "ag_news_test.csv")
   file_path_train <- path(folder_path, "ag_news_train.csv")
 
-  data_test <- read_csv(file_path_test, col_names = c("index", "title", "description"),
+  data_test <- read_csv(file_path_test, col_names = c("class", "title", "description"),
                         col_types = cols(
-                          index = col_double(),
+                          class = col_double(),
                           title = col_character(),
                           description = col_character()
                         ))
-  data_train <- read_csv(file_path_train, col_names = c("index", "title", "description"),
+  data_train <- read_csv(file_path_train, col_names = c("class", "title", "description"),
                          col_types = cols(
-                           index = col_double(),
+                           class = col_double(),
                            title = col_character(),
                            description = col_character()
                          ))
+
+  classes <- c("World", "Sports", "Business", "Sci/Tech")
+
+  data_test$class <- classes[data_test$class]
+  data_train$class <- classes[data_train$class]
 
   write_rds(data_test, path(folder_path, "ag_news_test.rds"))
   write_rds(data_train, path(folder_path, "ag_news_train.rds"))
