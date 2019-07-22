@@ -62,6 +62,14 @@ print_info <- list(
          size = "1.2 MB",
          type = "dataset",
          download_mech = "https",
+         description = ""),
+  imdb =
+    list(name = "IMDb Large Movie Review Dataset",
+         url = "http://ai.stanford.edu/~amaas/data/sentiment/",
+         license = "No license specified, the work may be protected by copyright.",
+         size = "376.4 MB",
+         type = "dataset",
+         download_mech = "http",
          description = "")
 )
 

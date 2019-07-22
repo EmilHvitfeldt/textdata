@@ -12,5 +12,6 @@ process_functions <- list(
   nrc = process_nrc,
   ag_news = process_ag_news,
   dbpedia = process_dbpedia,
-  trec = process_trec
+  trec = process_trec,
+  imdb = process_imdb
 )

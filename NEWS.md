@@ -1,5 +1,6 @@
 # textdata (development version)
 
+* `dataset_imdb()` has been added to give access to the IMDb Large Movie Review Dataset.
 * `dataset_trec()` has been added to give access to the TREC-6 and TREC-50 classification datasets.
 * `dataset_dbpedia()` has been added to give access to DBpedia Ontology classification dataset.
 * `dataset_ag_news()` has been added to give access to AG's News Topic classification dataset.

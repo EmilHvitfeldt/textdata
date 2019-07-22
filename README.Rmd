@@ -58,6 +58,7 @@ As of today, the datasets included in textdata are:
 | AG's News | `dataset_ag_news()` |
 | DBpedia ontology | `dataset_dbpedia()` |
 | Trec-6 and Trec-50 | `dataset_trec()` |
+| IMDb Large Movie Review Dataset	| `dataset_imdb()` |
 
 Check out each function's documentation for detailed information (including citations) for the relevant dataset.
 
