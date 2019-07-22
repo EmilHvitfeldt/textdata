@@ -1,4 +1,4 @@
-# textdata (development version)
+# textdata 0.2.0
 
 * `dataset_imdb()` has been added to give access to the IMDb Large Movie Review Dataset.
 * `dataset_trec()` has been added to give access to the TREC-6 and TREC-50 classification datasets.
