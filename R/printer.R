@@ -13,5 +13,10 @@ printer <- function(name) {
                   "Download mechanism:", print_info[[name]][["download_mech"]], "\n"
                )
 
+  if (!is.na(print_info[[name]][["citation"]])) {
+    title <- cat(title,
+                 print_info[[name]][["citation"]], "\n")
+  }
+
   menu(choices = c("Yes", "No"), title = title)
 }
