@@ -83,7 +83,12 @@ process_nrc <- function(folder_path, name_path) {
 
   data <- read_tsv(path(folder_path,
                         "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"),
-                   col_names = FALSE)
+                   col_names = FALSE, col_types = cols(
+                     X1 = col_character(),
+                     X2 = col_character(),
+                     X3 = col_double()
+                   )
+                   )
 
   data <- data[data$X3 == 1,]
   data <- tibble(word = data$X1,
