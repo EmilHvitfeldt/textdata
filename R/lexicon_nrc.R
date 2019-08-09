@@ -70,7 +70,7 @@ download_nrc <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://sentiment.nrc.ca/lexicons-for-research/NRC-Emotion-Lexicon.zip",
+  download.file(url = "http://saifmohammad.com/WebDocs/NRC-Emotion-Lexicon.zip",
                 destfile = file_path)
   unzip(path(folder_path, "NRC-Emotion-Lexicon.zip"),
         exdir = folder_path)
@@ -82,7 +82,7 @@ download_nrc <- function(folder_path) {
 process_nrc <- function(folder_path, name_path) {
 
   data <- read_tsv(path(folder_path,
-                        "NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"),
+                        "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"),
                    col_names = FALSE)
 
   data <- data[data$X3 == 1,]
