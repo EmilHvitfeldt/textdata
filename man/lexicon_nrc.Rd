@@ -33,6 +33,9 @@ with six possible sentiments or emotions: "negative", "positive", "anger",
 The annotations were manually done through Amazon's Mechanical Turk.
 }
 \details{
+License required for commercial use. Please contact Saif M. Mohammad
+(saif.mohammad@nrc-cnrc.gc.ca).
+
 Citation info:
 
 This dataset was published in Saif Mohammad and Peter Turney. (2013),
