@@ -49,17 +49,18 @@ After the first use, each time you use a function like `lexicon_afinn()`, the fu
 
 As of today, the datasets included in textdata are:
 
-| Dataset      | Function    |
-| ------------ | ----------- |
-| v1.0 sentence polarity dataset | `dataset_sentence_polarity()` |
-| AFINN-111 sentiment lexicon    | `lexicon_afinn()`             |
-| Hu and Liu's opinion lexicon   | `lexicon_bing()`              |
-| NRC word-emotion association lexicon | `lexicon_nrc()`         |
-| Loughran and McDonald's opinion lexicon for financial documents | `lexicon_loughran()` |
-| AG's News | `dataset_ag_news()` |
-| DBpedia ontology | `dataset_dbpedia()` |
-| Trec-6 and Trec-50 | `dataset_trec()` |
-| IMDb Large Movie Review Dataset	| `dataset_imdb()` |
+| Dataset                                                         | Function                      |
+| --------------------------------------------------------------- | ----------------------------- |
+| v1.0 sentence polarity dataset                                  | `dataset_sentence_polarity()` |
+| AFINN-111 sentiment lexicon                                     | `lexicon_afinn()`             |
+| Hu and Liu's opinion lexicon                                    | `lexicon_bing()`              |
+| NRC word-emotion association lexicon                            | `lexicon_nrc()`               |
+| NRC Emotion Intensity Lexicon                                   | `lexicon_nrc_eil()`           |
+| Loughran and McDonald's opinion lexicon for financial documents | `lexicon_loughran()`          |
+| AG's News                                                       | `dataset_ag_news()`           |
+| DBpedia ontology                                                | `dataset_dbpedia()`           |
+| Trec-6 and Trec-50                                              | `dataset_trec()`              |
+| IMDb Large Movie Review Dataset	                                | `dataset_imdb()`              |
 
 Check out each function's documentation for detailed information (including citations) for the relevant dataset.
 

@@ -60,6 +60,27 @@ eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-8640.2012.00460
 year = {2013}
 }
 If you use this lexicon, then please cite it."),
+  nrc_eil =
+    list(name = "NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon)",
+         url = "www.saifmohammad.com/WebPages/AffectIntensity.htm",
+         license = "License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca).",
+         size = "333 KB",
+         type = "lexicon",
+         download_mech = "http",
+         description = "",
+         citation = "Citation info:
+Details of the lexicon are in this paper.
+Word Affect Intensities. Saif M. Mohammad. arXiv preprint arXiv, April 2017.
+
+inproceedings{LREC18-AIL,
+author = {Mohammad, Saif M.},
+title = {Word Affect Intensities},
+booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)},
+year = {2018},
+address={Miyazaki, Japan}
+}
+
+If you use this lexicon, then please cite it."),
   ag_news =
     list(name = "AG News",
          url = "https://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",

@@ -1,5 +1,7 @@
 # textdata (development version)
 
+*  `lexicon_nrc_eil()` has been added to give access to the NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5.
+
 # textdata 0.2.0
 
 * `dataset_imdb()` has been added to give access to the IMDb Large Movie Review Dataset.

@@ -7,6 +7,7 @@ reference:
     - lexicon_afinn
     - lexicon_bing
     - lexicon_nrc
+    - lexicon_nrc_eil
     - lexicon_loughran
   - title: Data Sets
     contents:
