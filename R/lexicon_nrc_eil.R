@@ -55,11 +55,12 @@
 #' # Returning filepath of data
 #' lexicon_nrc_eil(return_path = TRUE)
 #' }
-lexicon_nrc_eil <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+lexicon_nrc_eil <- function(dir = NULL, delete = FALSE, return_path = FALSE,
+                            clean = FALSE) {
   load_dataset(data_name = "nrc_eil", name = "nrc_eil.rds",
                dir = dir,
                delete = delete,
-               return_path = return_path)
+               return_path = return_path, clean = clean)
 }
 
 #' @importFrom utils download.file

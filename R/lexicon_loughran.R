@@ -53,9 +53,10 @@
 #' # Returning filepath of data
 #' lexicon_loughran(return_path = TRUE)
 #' }
-lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE,
+                             clean = FALSE) {
   load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean)
 }
 
 #' @importFrom utils download.file

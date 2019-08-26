@@ -63,12 +63,14 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu untar
 dataset_imdb <- function(dir = NULL, split = c("train", "test"),
-                            delete = FALSE, return_path = FALSE) {
+                         delete = FALSE, return_path = FALSE, clean = FALSE) {
 
+  all_files <-  paste0("imdb_", c("train", "test"), ".rds")
   split <- match.arg(split)
   name <- paste0("imdb_", split, ".rds")
   load_dataset(data_name = "imdb", name = name, dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean,
+               clean_manual = all_files)
 }
 
 #' @importFrom utils download.file

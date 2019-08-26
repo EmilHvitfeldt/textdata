@@ -10,7 +10,7 @@
 }
 \usage{
 dataset_trec(dir = NULL, split = c("train", "test"), version = c("6",
-  "50"), delete = FALSE, return_path = FALSE)
+  "50"), delete = FALSE, return_path = FALSE, clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -25,6 +25,9 @@ data. Defaults to "train".}
 \item{delete}{Logical, set \code{TRUE} to delete dataset.}
 
 \item{return_path}{Logical, set \code{TRUE} to return the path of the dataset.}
+
+\item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.}
 }
 \value{
 A tibble with 5,452 or 500 rows for "train" and "test"

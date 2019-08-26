@@ -55,9 +55,10 @@
 #' # Returning filepath of data
 #' lexicon_bing(return_path = TRUE)
 #' }
-lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE,
+                         clean = FALSE) {
   load_dataset(data_name = "bing", name = "bing.rds", dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean)
 }
 
 

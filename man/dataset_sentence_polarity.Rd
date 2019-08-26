@@ -8,7 +8,7 @@
 }
 \usage{
 dataset_sentence_polarity(dir = NULL, delete = FALSE,
-  return_path = FALSE)
+  return_path = FALSE, clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -17,6 +17,9 @@ dataset_sentence_polarity(dir = NULL, delete = FALSE,
 \item{delete}{Logical, set \code{TRUE} to delete dataset.}
 
 \item{return_path}{Logical, set \code{TRUE} to return the path of the dataset.}
+
+\item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.}
 }
 \value{
 A tibble with 10,662 rows and 2 variables:

@@ -61,14 +61,17 @@
 #' @importFrom readr read_rds
 #' @importFrom utils menu untar
 dataset_trec <- function(dir = NULL, split = c("train", "test"),
-                           version = c("6", "50"),
-                            delete = FALSE, return_path = FALSE) {
+                         version = c("6", "50"), delete = FALSE,
+                         return_path = FALSE, clean = FALSE) {
 
+  all_files <- paste0("trec_", rep(c("6", "50"), 2), "_",
+                      rep(c("train", "test"), each = 2), ".rds")
   split <- match.arg(split)
   version <- match.arg(version)
   name <- paste0("trec_", version, "_", split, ".rds")
   load_dataset(data_name = "trec", name = name, dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean,
+               clean_manual = all_files)
 }
 
 #' @importFrom utils download.file

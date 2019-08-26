@@ -58,11 +58,12 @@
 #' # Returning filepath of data
 #' lexicon_nrc(return_path = TRUE)
 #' }
-lexicon_nrc <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+lexicon_nrc <- function(dir = NULL, delete = FALSE, return_path = FALSE,
+                        clean = FALSE) {
   load_dataset(data_name = "nrc", name = "NRCWordEmotion.rds",
                dir = dir,
                delete = delete,
-               return_path = return_path)
+               return_path = return_path, clean = clean)
 }
 
 #' @importFrom utils download.file

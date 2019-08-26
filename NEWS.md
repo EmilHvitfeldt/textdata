@@ -2,6 +2,7 @@
 
 *  `lexicon_nrc_eil()` has been added to give access to the NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5.
 *  `lexicon_nrc_vad()` has been added to give access to the The NRC Valence, Arousal, and Dominance Lexicon.
+* The argument `clean` have been added to all functions to allow deletion of intermediate files. 
 
 # textdata 0.2.0
 

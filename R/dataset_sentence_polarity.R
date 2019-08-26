@@ -45,9 +45,10 @@
 #' @importFrom fs file_exists dir_exists dir_create path
 #' @importFrom readr read_rds
 #' @importFrom utils menu
-dataset_sentence_polarity <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+dataset_sentence_polarity <- function(dir = NULL, delete = FALSE,
+                                      return_path = FALSE, clean = FALSE) {
   load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds", dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean)
 }
 
 #' @importFrom utils download.file
