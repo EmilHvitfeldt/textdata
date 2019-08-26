@@ -81,6 +81,25 @@ address={Miyazaki, Japan}
 }
 
 If you use this lexicon, then please cite it."),
+  nrc_vad =
+    list(name = "The NRC Valence, Arousal, and Dominance Lexicon",
+         url = "https://saifmohammad.com/WebPages/nrc-vad.html",
+         license = "License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca).",
+         size = "150.8 MB",
+         type = "lexicon",
+         download_mech = "http",
+         description = "",
+         citation = "Citation info:
+
+inproceedings{vad-acl2018,
+title={Obtaining Reliable Human Ratings of Valence, Arousal, and Dominance for 20,000 English Words},
+author={Mohammad, Saif M.},
+booktitle={Proceedings of The Annual Conference of the Association for Computational Linguistics (ACL)},
+year={2018},
+address={Melbourne, Australia}
+}
+
+If you use this lexicon, then please cite it."),
   ag_news =
     list(name = "AG News",
          url = "https://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html",

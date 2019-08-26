@@ -46,13 +46,13 @@ Word Affect Intensities. Saif M. Mohammad. In Proceedings of the 11th Edition
 of the Language Resources and Evaluation Conference (LREC-2018), May 2018,
 Miyazaki, Japan.
 
-inproceedings\{LREC18-AIL,
-author = \{Mohammad, Saif M.\},
-title = \{Word Affect Intensities\},
-booktitle = \{Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)\},
-year = \{2018\},
-address=\{Miyazaki, Japan\}
-\}
+inproceedings\{LREC18-AIL, \cr
+author = \{Mohammad, Saif M.\}, \cr
+title = \{Word Affect Intensities\}, \cr
+booktitle = \{Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)\}, \cr
+year = \{2018\}, \cr
+address=\{Miyazaki, Japan\} \cr
+\} \cr
 }
 \examples{
 \donttest{
@@ -71,7 +71,8 @@ lexicon_nrc_eil(return_path = TRUE)
 \seealso{
 Other lexicon: \code{\link{lexicon_afinn}},
   \code{\link{lexicon_bing}},
-  \code{\link{lexicon_loughran}}, \code{\link{lexicon_nrc}}
+  \code{\link{lexicon_loughran}},
+  \code{\link{lexicon_nrc_vad}}, \code{\link{lexicon_nrc}}
 }
 \concept{lexicon}
 \keyword{datasets}

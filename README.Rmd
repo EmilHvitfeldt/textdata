@@ -56,6 +56,7 @@ As of today, the datasets included in textdata are:
 | Hu and Liu's opinion lexicon                                    | `lexicon_bing()`              |
 | NRC word-emotion association lexicon                            | `lexicon_nrc()`               |
 | NRC Emotion Intensity Lexicon                                   | `lexicon_nrc_eil()`           |
+| The NRC Valence, Arousal, and Dominance Lexicon                 | `lexicon_nrc_vad()`           |
 | Loughran and McDonald's opinion lexicon for financial documents | `lexicon_loughran()`          |
 | AG's News                                                       | `dataset_ag_news()`           |
 | DBpedia ontology                                                | `dataset_dbpedia()`           |

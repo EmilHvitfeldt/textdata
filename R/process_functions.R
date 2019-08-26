@@ -11,6 +11,7 @@ process_functions <- list(
   bing = process_bing,
   nrc = process_nrc,
   nrc_eil = process_nrc_eil,
+  nrc_vad = process_nrc_vad,
   ag_news = process_ag_news,
   dbpedia = process_dbpedia,
   trec = process_trec,

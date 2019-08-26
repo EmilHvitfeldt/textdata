@@ -8,6 +8,7 @@ reference:
     - lexicon_bing
     - lexicon_nrc
     - lexicon_nrc_eil
+    - lexicon_nrc_vad
     - lexicon_loughran
   - title: Data Sets
     contents:

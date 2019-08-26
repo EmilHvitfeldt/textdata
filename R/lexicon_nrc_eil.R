@@ -18,13 +18,13 @@
 #' of the Language Resources and Evaluation Conference (LREC-2018), May 2018,
 #' Miyazaki, Japan.
 #'
-#' inproceedings\{LREC18-AIL,
-#' author = \{Mohammad, Saif M.\},
-#' title = \{Word Affect Intensities\},
-#' booktitle = \{Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)\},
-#' year = \{2018\},
-#' address=\{Miyazaki, Japan\}
-#' \}
+#' inproceedings\{LREC18-AIL, \cr
+#' author = \{Mohammad, Saif M.\}, \cr
+#' title = \{Word Affect Intensities\}, \cr
+#' booktitle = \{Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)\}, \cr
+#' year = \{2018\}, \cr
+#' address=\{Miyazaki, Japan\} \cr
+#' \} \cr
 #'
 #' @inheritParams lexicon_afinn
 #' @return A tibble with 5.814 rows and 3 variables:
