@@ -129,7 +129,8 @@ binary fashion, either positive or negative</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_bing</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>lexicon_bing</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,6 +147,11 @@ binary fashion, either positive or negative</p>
     <tr>
       <th>return_path</th>
       <td><p>Logical, set <code>TRUE</code> to return the path of the dataset.</p></td>
+    </tr>
+    <tr>
+      <th>clean</th>
+      <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.</p></td>
     </tr>
     </table>
     
@@ -189,7 +195,9 @@ keywords  = {reviews, sentiment classification, summarization, text mining}, <br
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other lexicon: <code><a href='lexicon_afinn.html'>lexicon_afinn</a></code>,
-  <code><a href='lexicon_loughran.html'>lexicon_loughran</a></code>, <code><a href='lexicon_nrc.html'>lexicon_nrc</a></code></p></div>
+  <code><a href='lexicon_loughran.html'>lexicon_loughran</a></code>,
+  <code><a href='lexicon_nrc_eil.html'>lexicon_nrc_eil</a></code>,
+  <code><a href='lexicon_nrc_vad.html'>lexicon_nrc_vad</a></code>, <code><a href='lexicon_nrc.html'>lexicon_nrc</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -197,14 +205,14 @@ keywords  = {reviews, sentiment classification, summarization, text mining}, <br
 #&gt;  Name: Bing Sentiment Lexicon 
 #&gt;  URL: https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html 
 #&gt;  License: May be used (research, commercial, etc) with attribution. 
-#&gt;  Size: 70 KB 
+#&gt;  Size: 287 KB (cleaned 220 KB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
 <span class='fu'>lexicon_bing</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: Bing Sentiment Lexicon 
 #&gt;  URL: https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html 
 #&gt;  License: May be used (research, commercial, etc) with attribution. 
-#&gt;  Size: 70 KB 
+#&gt;  Size: 287 KB (cleaned 220 KB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
 <span class='fu'>lexicon_bing</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/bing': no such file or directory</span></div><div class='input'>

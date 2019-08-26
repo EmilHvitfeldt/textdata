@@ -136,7 +136,7 @@ finer-grained labels. Models are evaluated based on accuracy.</p>
     </div>
 
     <pre class="usage"><span class='fu'>dataset_trec</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>split</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"train"</span>, <span class='st'>"test"</span>), <span class='kw'>version</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"6"</span>,
-  <span class='st'>"50"</span>), <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+  <span class='st'>"50"</span>), <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -163,6 +163,11 @@ data. Defaults to "train".</p></td>
     <tr>
       <th>return_path</th>
       <td><p>Logical, set <code>TRUE</code> to return the path of the dataset.</p></td>
+    </tr>
+    <tr>
+      <th>clean</th>
+      <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.</p></td>
     </tr>
     </table>
     
@@ -205,14 +210,14 @@ data. Defaults to "train".</p></td>
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
 <span class='fu'>dataset_trec</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
 <span class='fu'>dataset_trec</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/trec': no such file or directory</span></div><div class='input'>
@@ -223,23 +228,23 @@ data. Defaults to "train".</p></td>
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'><span class='no'>test_6</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_trec</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"test"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='no'>train_50</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_trec</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"train"</span>, <span class='kw'>version</span> <span class='kw'>=</span> <span class='st'>"50"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'><span class='no'>test_50</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_trec</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"test"</span>, <span class='kw'>version</span> <span class='kw'>=</span> <span class='st'>"50"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: TREC-6 &amp; TREC-50 
 #&gt;  URL: https://cogcomp.seas.upenn.edu/Data/QA/QC/ 
 #&gt;  License: Freely reusable public information licence 
-#&gt;  Size: 1.2 MB 
+#&gt;  Size: 1.2 MB (cleaned 827 KB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 </div></pre>
   </div>

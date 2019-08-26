@@ -132,7 +132,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>dataset_imdb</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>split</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"train"</span>, <span class='st'>"test"</span>), <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -154,6 +154,11 @@ data. Defaults to "train".</p></td>
     <tr>
       <th>return_path</th>
       <td><p>Logical, set <code>TRUE</code> to return the path of the dataset.</p></td>
+    </tr>
+    <tr>
+      <th>clean</th>
+      <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.</p></td>
     </tr>
     </table>
     
@@ -200,14 +205,14 @@ url       = {http://www.aclweb.org/anthology/P11-1015}
 #&gt;  Name: IMDb Large Movie Review Dataset 
 #&gt;  URL: http://ai.stanford.edu/~amaas/data/sentiment/ 
 #&gt;  License: No license specified, the work may be protected by copyright. 
-#&gt;  Size: 376.4 MB 
+#&gt;  Size: 376.4 MB (cleaned 71 MB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
 <span class='fu'>dataset_imdb</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: IMDb Large Movie Review Dataset 
 #&gt;  URL: http://ai.stanford.edu/~amaas/data/sentiment/ 
 #&gt;  License: No license specified, the work may be protected by copyright. 
-#&gt;  Size: 376.4 MB 
+#&gt;  Size: 376.4 MB (cleaned 71 MB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
 <span class='fu'>dataset_imdb</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/imdb': no such file or directory</span></div><div class='input'>
@@ -218,12 +223,12 @@ url       = {http://www.aclweb.org/anthology/P11-1015}
 #&gt;  Name: IMDb Large Movie Review Dataset 
 #&gt;  URL: http://ai.stanford.edu/~amaas/data/sentiment/ 
 #&gt;  License: No license specified, the work may be protected by copyright. 
-#&gt;  Size: 376.4 MB 
+#&gt;  Size: 376.4 MB (cleaned 71 MB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'><span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_imdb</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"test"</span>)</div><div class='output co'>#&gt; Do you want to download:
 #&gt;  Name: IMDb Large Movie Review Dataset 
 #&gt;  URL: http://ai.stanford.edu/~amaas/data/sentiment/ 
 #&gt;  License: No license specified, the work may be protected by copyright. 
-#&gt;  Size: 376.4 MB 
+#&gt;  Size: 376.4 MB (cleaned 71 MB) 
 #&gt;  Download mechanism: http </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 </div></pre>
   </div>

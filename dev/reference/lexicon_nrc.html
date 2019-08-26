@@ -133,7 +133,8 @@ The annotations were manually done through Amazon's Mechanical Turk.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_nrc</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>lexicon_nrc</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -150,6 +151,11 @@ The annotations were manually done through Amazon's Mechanical Turk.</p>
     <tr>
       <th>return_path</th>
       <td><p>Logical, set <code>TRUE</code> to return the path of the dataset.</p></td>
+    </tr>
+    <tr>
+      <th>clean</th>
+      <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.</p></td>
     </tr>
     </table>
     
@@ -192,7 +198,9 @@ year = {2013} <br />
 
     <div class='dont-index'><p>Other lexicon: <code><a href='lexicon_afinn.html'>lexicon_afinn</a></code>,
   <code><a href='lexicon_bing.html'>lexicon_bing</a></code>,
-  <code><a href='lexicon_loughran.html'>lexicon_loughran</a></code></p></div>
+  <code><a href='lexicon_loughran.html'>lexicon_loughran</a></code>,
+  <code><a href='lexicon_nrc_eil.html'>lexicon_nrc_eil</a></code>,
+  <code><a href='lexicon_nrc_vad.html'>lexicon_nrc_vad</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -200,7 +208,7 @@ year = {2013} <br />
 #&gt;  Name: NRC Word-Emotion Association Lexicon 
 #&gt;  URL: http://saifmohammad.com/WebPages/lexicons.html 
 #&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
-#&gt;  Size: 22.8 MB 
+#&gt;  Size: 22.8 MB (cleaned 424 KB) 
 #&gt;  Download mechanism: http 
 #&gt;  Citation info:
 #&gt; 
@@ -224,7 +232,7 @@ year = {2013} <br />
 #&gt;  Name: NRC Word-Emotion Association Lexicon 
 #&gt;  URL: http://saifmohammad.com/WebPages/lexicons.html 
 #&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
-#&gt;  Size: 22.8 MB 
+#&gt;  Size: 22.8 MB (cleaned 424 KB) 
 #&gt;  Download mechanism: http 
 #&gt;  Citation info:
 #&gt; 
