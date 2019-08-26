@@ -2,10 +2,10 @@
 #'
 #' These are not to be used directly by the users.
 #' @export
-#' @importFrom fs dir_delete path
+#' @importFrom fs dir_delete path file_delete
 #' @keywords internal
 load_dataset <- function(data_name, name, dir, delete, return_path, clean,
-                         clean_manual) {
+                         clean_manual = NULL) {
 
   dir <- ifelse(is.null(dir), rappdirs::user_cache_dir("textdata"), dir)
 
@@ -39,7 +39,12 @@ load_dataset <- function(data_name, name, dir, delete, return_path, clean,
   process_functions[[data_name]](folder_path, name_path)
 
   if (clean) {
-    intermediate_files <- setdiff(dir_ls(folder_path), name_path)
+    if (!is.null(clean_manual)) {
+      intermediate_files <- setdiff(dir_ls(folder_path),
+                                    path(folder_path, clean_manual))
+    } else {
+      intermediate_files <- setdiff(dir_ls(folder_path), name_path)
+    }
     file_delete(intermediate_files)
   }
 
