@@ -30,6 +30,8 @@
 #'     \code{NULL}, \link[rappdirs]{user_cache_dir} will be used to determine path.
 #' @param delete Logical, set \code{TRUE} to delete dataset.
 #' @param return_path Logical, set \code{TRUE} to return the path of the dataset.
+#' @param clean Logical, set \code{TRUE} to remove intermediate files. This can
+#'     greatly reduce the size. Defaults to FALSE.
 #' @return A tibble with 2,477 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
@@ -55,9 +57,10 @@
 #' # Returning filepath of data
 #' lexicon_afinn(return_path = TRUE)
 #' }
-lexicon_afinn <- function(dir = NULL, delete = FALSE, return_path = FALSE) {
+lexicon_afinn <- function(dir = NULL, delete = FALSE, return_path = FALSE,
+                          clean = FALSE) {
   load_dataset(data_name = "afinn", name = "afinn_111.rds", dir = dir,
-               delete = delete, return_path = return_path)
+               delete = delete, return_path = return_path, clean = clean)
 }
 
 #' @importFrom utils download.file

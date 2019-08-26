@@ -4,7 +4,8 @@
 \alias{lexicon_afinn}
 \title{AFINN-111 dataset}
 \usage{
-lexicon_afinn(dir = NULL, delete = FALSE, return_path = FALSE)
+lexicon_afinn(dir = NULL, delete = FALSE, return_path = FALSE,
+  clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -13,6 +14,9 @@ lexicon_afinn(dir = NULL, delete = FALSE, return_path = FALSE)
 \item{delete}{Logical, set \code{TRUE} to delete dataset.}
 
 \item{return_path}{Logical, set \code{TRUE} to return the path of the dataset.}
+
+\item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
+greatly reduce the size. Defaults to FALSE.}
 }
 \value{
 A tibble with 2,477 rows and 2 variables:

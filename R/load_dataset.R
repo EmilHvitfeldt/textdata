@@ -4,7 +4,8 @@
 #' @export
 #' @importFrom fs dir_delete path
 #' @keywords internal
-load_dataset <- function(data_name, name, dir, delete, return_path) {
+load_dataset <- function(data_name, name, dir, delete, return_path, clean,
+                         clean_manual) {
 
   dir <- ifelse(is.null(dir), rappdirs::user_cache_dir("textdata"), dir)
 
@@ -36,5 +37,11 @@ load_dataset <- function(data_name, name, dir, delete, return_path) {
   download_functions[[data_name]](folder_path)
 
   process_functions[[data_name]](folder_path, name_path)
+
+  if (clean) {
+    intermediate_files <- setdiff(dir_ls(folder_path), name_path)
+    file_delete(intermediate_files)
+  }
+
   read_rds(name_path)
 }

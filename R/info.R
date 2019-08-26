@@ -3,7 +3,7 @@ print_info <- list(
     list(name = "AFINN-111",
          url = "http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010",
          license = "Open Database License (ODbL) v1.0",
-         size = "78 KB",
+         size = "78 KB (cleaned 59 KB)",
          type = "lexicon",
          download_mech = "https",
          description = "",
