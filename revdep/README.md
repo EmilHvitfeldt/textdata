@@ -10,13 +10,15 @@
 |collate  |en_US.UTF-8                  |
 |ctype    |en_US.UTF-8                  |
 |tz       |America/Los_Angeles          |
-|date     |2019-07-22                   |
+|date     |2019-08-25                   |
 
 # Dependencies
 
 |package  |old   |new        |Δ  |
 |:--------|:-----|:----------|:--|
-|textdata |0.1.0 |0.1.0.9000 |*  |
+|textdata |0.2.0 |0.2.0.9000 |*  |
+|hms      |NA    |0.5.1      |*  |
+|vctrs    |NA    |0.2.0.9001 |*  |
 
 # Revdeps
 
