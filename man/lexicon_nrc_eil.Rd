@@ -4,7 +4,7 @@
 \alias{lexicon_nrc_eil}
 \title{NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5}
 \source{
-\url{www.saifmohammad.com/WebPages/AffectIntensity.htm}
+\url{https://saifmohammad.com/WebPages/AffectIntensity.htm}
 }
 \usage{
 lexicon_nrc_eil(dir = NULL, delete = FALSE, return_path = FALSE,

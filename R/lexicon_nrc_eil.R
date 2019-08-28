@@ -35,7 +35,7 @@
 #'                          "fear", "sadness", "joy")}
 #' }
 #'
-#' @source \url{www.saifmohammad.com/WebPages/AffectIntensity.htm}
+#' @source \url{https://saifmohammad.com/WebPages/AffectIntensity.htm}
 #' @keywords datasets
 #' @family lexicon
 #' @importFrom fs file_exists dir_exists dir_create path
