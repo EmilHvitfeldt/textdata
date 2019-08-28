@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loughran-McDonald sentiment lexicon — lexicon_loughran • textdata</title>
+<title>NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5 — lexicon_nrc_eil • textdata</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,12 +30,11 @@
 
 
 
-<meta property="og:title" content="Loughran-McDonald sentiment lexicon — lexicon_loughran" />
+<meta property="og:title" content="NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5 — lexicon_nrc_eil" />
 
-<meta property="og:description" content="English sentiment lexicon created for use with financial documents. This
-lexicon labels words with six possible sentiments important in financial
-contexts: &quot;negative&quot;, &quot;positive&quot;, &quot;litigious&quot;, &quot;uncertainty&quot;, &quot;constraining&quot;,
-or &quot;superfluous&quot;." />
+<meta property="og:description" content="General purpose English sentiment/emotion lexicon. The NRC Affect Intensity
+Lexicon is a list of English words and their associations with four basic
+emotions (anger, fear, sadness, joy)." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -119,21 +118,20 @@ or &quot;superfluous&quot;." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Loughran-McDonald sentiment lexicon</h1>
-    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/lexicon_loughran.R'><code>R/lexicon_loughran.R</code></a></small>
-    <div class="hidden name"><code>lexicon_loughran.Rd</code></div>
+    <h1>NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5</h1>
+    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/lexicon_nrc_eil.R'><code>R/lexicon_nrc_eil.R</code></a></small>
+    <div class="hidden name"><code>lexicon_nrc_eil.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>English sentiment lexicon created for use with financial documents. This
-lexicon labels words with six possible sentiments important in financial
-contexts: "negative", "positive", "litigious", "uncertainty", "constraining",
-or "superfluous".</p>
+    <p>General purpose English sentiment/emotion lexicon. The NRC Affect Intensity
+Lexicon is a list of English words and their associations with four basic
+emotions (anger, fear, sadness, joy).</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_loughran</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+    <pre class="usage"><span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -161,62 +159,90 @@ greatly reduce the size. Defaults to FALSE.</p></td>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://sraf.nd.edu/textual-analysis/resources/'>https://sraf.nd.edu/textual-analysis/resources/</a></p>
+    <p><a href='https://saifmohammad.com/WebPages/AffectIntensity.htm'>https://saifmohammad.com/WebPages/AffectIntensity.htm</a></p>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble with 4,150 rows and 2 variables:</p><dl class='dl-horizontal'>
-  <dt>word</dt><dd><p>An English word</p></dd>
-  <dt>sentiment</dt><dd><p>Indicator for sentiment: "negative", "positive",
-  "litigious", "uncertainty", "constraining", or "superfluous"</p></dd>
+    <p>A tibble with 5.814 rows and 3 variables:</p><dl class='dl-horizontal'>
+  <dt>term</dt><dd><p>An English word</p></dd>
+  <dt>score</dt><dd><p>Value between 0 and 1</p></dd>
+  <dt>AffectDimension</dt><dd><p>Indicator for sentiment or emotion: ("anger",
+                         "fear", "sadness", "joy")</p></dd>
 </dl>
 
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Citation info:</p>
-<p>This dataset was published in Loughran, T. and McDonald, B. (2011),
-``When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and
-10-Ks.'' The Journal of Finance, 66: 35-65.</p>
-<p>article{loughran11, <br />
-author  = {Loughran, Tim and McDonald, Bill}, <br />
-title   = {When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks}, <br />
-journal = {The Journal of Finance}, <br />
-volume  = {66}, <br />
-number  = {1}, <br />
-pages   = {35-65}, <br />
-doi     = {10.1111/j.1540-6261.2010.01625.x}, <br />
-url     = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x}, <br />
-eprint  = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.01625.x}, <br />
-year    = {2011} <br />
-}</p>
+    <p>For a given word and emotion X, the scores range from 0 to 1. A score of 1
+means that the word conveys the highest amount of emotion X.  A score of 0
+means that the word conveys the lowest amount of emotion X.</p>
+<p>License required for commercial use. Please contact Saif M. Mohammad
+(saif.mohammad@nrc-cnrc.gc.ca).</p>
+<p>Citation info:</p>
+<p>Details of the lexicon are in this paper.
+Word Affect Intensities. Saif M. Mohammad. In Proceedings of the 11th Edition
+of the Language Resources and Evaluation Conference (LREC-2018), May 2018,
+Miyazaki, Japan.</p>
+<p>inproceedings{LREC18-AIL, <br />
+author = {Mohammad, Saif M.}, <br />
+title = {Word Affect Intensities}, <br />
+booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)}, <br />
+year = {2018}, <br />
+address={Miyazaki, Japan} <br />
+} <br /></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other lexicon: <code><a href='lexicon_afinn.html'>lexicon_afinn</a></code>,
   <code><a href='lexicon_bing.html'>lexicon_bing</a></code>,
-  <code><a href='lexicon_nrc_eil.html'>lexicon_nrc_eil</a></code>,
+  <code><a href='lexicon_loughran.html'>lexicon_loughran</a></code>,
   <code><a href='lexicon_nrc_vad.html'>lexicon_nrc_vad</a></code>, <code><a href='lexicon_nrc.html'>lexicon_nrc</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>lexicon_loughran</span>()</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: Loughran-McDonald Sentiment lexicon 
-#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
-#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
-#&gt;  Size: 6.7 MB (cleaned 142 KB) 
-#&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>lexicon_nrc_eil</span>()</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) 
+#&gt;  URL: www.saifmohammad.com/WebPages/AffectIntensity.htm 
+#&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
+#&gt;  Size: 333 KB (cleaned 212 KB) 
+#&gt;  Download mechanism: http 
+#&gt;  Citation info:
+#&gt; Details of the lexicon are in this paper.
+#&gt; Word Affect Intensities. Saif M. Mohammad. arXiv preprint arXiv, April 2017.
+#&gt; 
+#&gt; inproceedings{LREC18-AIL,
+#&gt; author = {Mohammad, Saif M.},
+#&gt; title = {Word Affect Intensities},
+#&gt; booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)},
+#&gt; year = {2018},
+#&gt; address={Miyazaki, Japan}
+#&gt; }
+#&gt; 
+#&gt; If you use this lexicon, then please cite it. </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: Loughran-McDonald Sentiment lexicon 
-#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
-#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
-#&gt;  Size: 6.7 MB (cleaned 142 KB) 
-#&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) 
+#&gt;  URL: www.saifmohammad.com/WebPages/AffectIntensity.htm 
+#&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
+#&gt;  Size: 333 KB (cleaned 212 KB) 
+#&gt;  Download mechanism: http 
+#&gt;  Citation info:
+#&gt; Details of the lexicon are in this paper.
+#&gt; Word Affect Intensities. Saif M. Mohammad. arXiv preprint arXiv, April 2017.
+#&gt; 
+#&gt; inproceedings{LREC18-AIL,
+#&gt; author = {Mohammad, Saif M.},
+#&gt; title = {Word Affect Intensities},
+#&gt; booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)},
+#&gt; year = {2018},
+#&gt; address={Miyazaki, Japan}
+#&gt; }
+#&gt; 
+#&gt; If you use this lexicon, then please cite it. </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/loughran': no such file or directory</span></div><div class='input'>
+<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/nrc_eil': no such file or directory</span></div><div class='input'>
 <span class='co'># Returning filepath of data</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/loughran</div></pre>
+<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/nrc_eil</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

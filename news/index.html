@@ -32,6 +32,9 @@
 
 <meta property="og:title" content="Changelog" />
 
+<meta property="og:image" content="/logo.png" />
+<meta name="twitter:card" content="summary" />
+
 
 
 <!-- mathjax -->
@@ -60,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">textdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -115,6 +118,39 @@
       <small>Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="textdata-0-3-0" class="section level1">
+<h1 class="page-header">
+<a href="#textdata-0-3-0" class="anchor"></a>textdata 0.3.0<small> Unreleased </small>
+</h1>
+<ul>
+<li>
+<code><a href="../reference/lexicon_nrc_eil.html">lexicon_nrc_eil()</a></code> has been added to give access to the NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5.</li>
+<li>
+<code><a href="../reference/lexicon_nrc_vad.html">lexicon_nrc_vad()</a></code> has been added to give access to the The NRC Valence, Arousal, and Dominance Lexicon.</li>
+<li>The argument <code>clean</code> have been added to all functions to allow deletion of intermediate files.</li>
+<li>An optional information prompt is implemented. This will be turned off by default and turned on by original authors request.</li>
+<li>
+<code>dataset_nrc()</code> got improved url for faster and more reliable downloads.</li>
+</ul>
+</div>
+    <div id="textdata-0-2-0" class="section level1">
+<h1 class="page-header">
+<a href="#textdata-0-2-0" class="anchor"></a>textdata 0.2.0<small> 2019-07-22 </small>
+</h1>
+<ul>
+<li>
+<code><a href="../reference/dataset_imdb.html">dataset_imdb()</a></code> has been added to give access to the IMDb Large Movie Review Dataset.</li>
+<li>
+<code><a href="../reference/dataset_trec.html">dataset_trec()</a></code> has been added to give access to the TREC-6 and TREC-50 classification datasets.</li>
+<li>
+<code><a href="../reference/dataset_dbpedia.html">dataset_dbpedia()</a></code> has been added to give access to DBpedia Ontology classification dataset.</li>
+<li>
+<code><a href="../reference/dataset_ag_news.html">dataset_ag_news()</a></code> has been added to give access to AG’s News Topic classification dataset.</li>
+<li>Functions will now notify the user about the download mechanism used to download the data. http/https etc. (<a href='https://github.com/EmilHvitfeldt/textdata/issues/12'>#12</a>).</li>
+<li>
+<code><a href="../reference/lexicon_nrc.html">lexicon_nrc()</a></code> has been added to give access to the NRC Emotion lexicon (<a href='https://github.com/juliasilge'>@juliasilge</a>, <a href='https://github.com/EmilHvitfeldt/textdata/issues/11'>#11</a>).</li>
+</ul>
+</div>
     <div id="textdata-0-1-0" class="section level1">
 <h1 class="page-header">
 <a href="#textdata-0-1-0" class="anchor"></a>textdata 0.1.0<small> 2019-06-12 </small>
@@ -126,6 +162,8 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#textdata-0-3-0">0.3.0</a></li>
+        <li><a href="#textdata-0-2-0">0.2.0</a></li>
         <li><a href="#textdata-0-1-0">0.1.0</a></li>
       </ul>
     </div>

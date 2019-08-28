@@ -13,6 +13,7 @@
 <meta property="og:description" content="Provides a framework to download, parse, and store text datasets
     on the disk and load them when needed. Includes various sentiment lexicons
     and labeled text data sets for classification and analysis.">
+<meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -32,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">textdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -88,7 +89,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="textdata" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#textdata" class="anchor"></a>textdata</h1></div>
+<a href="#textdata" class="anchor"></a>textdata <img src="reference/figures/logo.png" align="right" height="139">
+</h1></div>
 <!-- badges: start -->
 
 <p>The goal of textdata is to provide access to text-related data sets for easy access without bundling them inside a package. Some text datasets are too large to store within an R package or are licensed in such a way that prevents them from being included in an OSS-licensed package. Instead, this package provides a framework to download, parse, and store the datasets on the disk and load them when needed.</p>
@@ -114,8 +116,8 @@
 <p>As of today, the datasets included in textdata are:</p>
 <table class="table table">
 <colgroup>
-<col width="52%">
-<col width="47%">
+<col width="68%">
+<col width="31%">
 </colgroup>
 <thead><tr class="header">
 <th>Dataset</th>
@@ -135,8 +137,36 @@
 <td><code><a href="reference/lexicon_bing.html">lexicon_bing()</a></code></td>
 </tr>
 <tr class="even">
+<td>NRC word-emotion association lexicon</td>
+<td><code><a href="reference/lexicon_nrc.html">lexicon_nrc()</a></code></td>
+</tr>
+<tr class="odd">
+<td>NRC Emotion Intensity Lexicon</td>
+<td><code><a href="reference/lexicon_nrc_eil.html">lexicon_nrc_eil()</a></code></td>
+</tr>
+<tr class="even">
+<td>The NRC Valence, Arousal, and Dominance Lexicon</td>
+<td><code><a href="reference/lexicon_nrc_vad.html">lexicon_nrc_vad()</a></code></td>
+</tr>
+<tr class="odd">
 <td>Loughran and McDonald’s opinion lexicon for financial documents</td>
 <td><code><a href="reference/lexicon_loughran.html">lexicon_loughran()</a></code></td>
+</tr>
+<tr class="even">
+<td>AG’s News</td>
+<td><code><a href="reference/dataset_ag_news.html">dataset_ag_news()</a></code></td>
+</tr>
+<tr class="odd">
+<td>DBpedia ontology</td>
+<td><code><a href="reference/dataset_dbpedia.html">dataset_dbpedia()</a></code></td>
+</tr>
+<tr class="even">
+<td>Trec-6 and Trec-50</td>
+<td><code><a href="reference/dataset_trec.html">dataset_trec()</a></code></td>
+</tr>
+<tr class="odd">
+<td>IMDb Large Movie Review Dataset</td>
+<td><code><a href="reference/dataset_imdb.html">dataset_imdb()</a></code></td>
 </tr>
 </tbody>
 </table>
@@ -181,6 +211,9 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/EmilHvitfeldt/textdata"><img src="https://travis-ci.org/EmilHvitfeldt/textdata.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://CRAN.R-project.org/package=textdata"><img src="https://www.r-pkg.org/badges/version/textdata" alt="CRAN status"></a></li>
+<li><a href="https://cran.r-project.org/package=textdata"><img src="http://cranlogs.r-pkg.org/badges/textdata" alt="Downloads"></a></li>
+<li><a href="https://doi.org/10.5281/zenodo.3244433"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3244433.svg" alt="DOI"></a></li>
 </ul>
 </div>
 </div>

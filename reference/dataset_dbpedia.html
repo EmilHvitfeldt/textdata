@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loughran-McDonald sentiment lexicon — lexicon_loughran • textdata</title>
+<title>DBpedia Ontology Dataset — dataset_dbpedia • textdata</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,12 +30,11 @@
 
 
 
-<meta property="og:title" content="Loughran-McDonald sentiment lexicon — lexicon_loughran" />
+<meta property="og:title" content="DBpedia Ontology Dataset — dataset_dbpedia" />
 
-<meta property="og:description" content="English sentiment lexicon created for use with financial documents. This
-lexicon labels words with six possible sentiments important in financial
-contexts: &quot;negative&quot;, &quot;positive&quot;, &quot;litigious&quot;, &quot;uncertainty&quot;, &quot;constraining&quot;,
-or &quot;superfluous&quot;." />
+<meta property="og:description" content="DBpedia ontology dataset classification dataset. It contains 560,000 training
+samples and 70,000 testing samples for each of 14 nonoverlapping classes
+from DBpedia." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -119,22 +118,21 @@ or &quot;superfluous&quot;." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Loughran-McDonald sentiment lexicon</h1>
-    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/lexicon_loughran.R'><code>R/lexicon_loughran.R</code></a></small>
-    <div class="hidden name"><code>lexicon_loughran.Rd</code></div>
+    <h1>DBpedia Ontology Dataset</h1>
+    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/dataset_dbpedia.R'><code>R/dataset_dbpedia.R</code></a></small>
+    <div class="hidden name"><code>dataset_dbpedia.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>English sentiment lexicon created for use with financial documents. This
-lexicon labels words with six possible sentiments important in financial
-contexts: "negative", "positive", "litigious", "uncertainty", "constraining",
-or "superfluous".</p>
+    <p>DBpedia ontology dataset classification dataset. It contains 560,000 training
+samples and 70,000 testing samples for each of 14 nonoverlapping classes
+from DBpedia.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_loughran</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>dataset_dbpedia</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>split</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"train"</span>, <span class='st'>"test"</span>),
+  <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -143,6 +141,11 @@ or "superfluous".</p>
       <th>dir</th>
       <td><p>Character, path to directory where data will be stored. If
 <code>NULL</code>, <a href='https://www.rdocumentation.org/packages/rappdirs/topics/user_cache_dir'>user_cache_dir</a> will be used to determine path.</p></td>
+    </tr>
+    <tr>
+      <th>split</th>
+      <td><p>Character. Return training ("train") data or testing ("test")
+data. Defaults to "train".</p></td>
     </tr>
     <tr>
       <th>delete</th>
@@ -161,62 +164,77 @@ greatly reduce the size. Defaults to FALSE.</p></td>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://sraf.nd.edu/textual-analysis/resources/'>https://sraf.nd.edu/textual-analysis/resources/</a></p>
+    <p><a href='https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf'>https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf</a></p>
+<p><a href='https://wiki.dbpedia.org/'>https://wiki.dbpedia.org/</a></p>
+<p><a href='https://github.com/le-scientifique/torchDatasets/raw/master/dbpedia_csv.tar.gz'>https://github.com/le-scientifique/torchDatasets/raw/master/dbpedia_csv.tar.gz</a></p>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble with 4,150 rows and 2 variables:</p><dl class='dl-horizontal'>
-  <dt>word</dt><dd><p>An English word</p></dd>
-  <dt>sentiment</dt><dd><p>Indicator for sentiment: "negative", "positive",
-  "litigious", "uncertainty", "constraining", or "superfluous"</p></dd>
+    <p>A tibble with 560,000 or 70,000 rows for "train" and "test"
+    respectively and 3 variables:</p><dl class='dl-horizontal'>
+  <dt>class</dt><dd><p>Character, denoting the class class</p></dd>
+  <dt>title</dt><dd><p>Character, title of article</p></dd>
+  <dt>description</dt><dd><p>Character, description of article</p></dd>
 </dl>
 
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Citation info:</p>
-<p>This dataset was published in Loughran, T. and McDonald, B. (2011),
-``When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and
-10-Ks.'' The Journal of Finance, 66: 35-65.</p>
-<p>article{loughran11, <br />
-author  = {Loughran, Tim and McDonald, Bill}, <br />
-title   = {When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks}, <br />
-journal = {The Journal of Finance}, <br />
-volume  = {66}, <br />
-number  = {1}, <br />
-pages   = {35-65}, <br />
-doi     = {10.1111/j.1540-6261.2010.01625.x}, <br />
-url     = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x}, <br />
-eprint  = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2010.01625.x}, <br />
-year    = {2011} <br />
-}</p>
+    <p>The classes are</p>
+<ul>
+<li><p>Company</p></li>
+<li><p>EducationalInstitution</p></li>
+<li><p>Artist</p></li>
+<li><p>Athlete</p></li>
+<li><p>OfficeHolder</p></li>
+<li><p>MeanOfTransportation</p></li>
+<li><p>Building</p></li>
+<li><p>NaturalPlace</p></li>
+<li><p>Village</p></li>
+<li><p>Animal</p></li>
+<li><p>Plant</p></li>
+<li><p>Album</p></li>
+<li><p>Film</p></li>
+<li><p>WrittenWork</p></li>
+</ul>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other lexicon: <code><a href='lexicon_afinn.html'>lexicon_afinn</a></code>,
-  <code><a href='lexicon_bing.html'>lexicon_bing</a></code>,
-  <code><a href='lexicon_nrc_eil.html'>lexicon_nrc_eil</a></code>,
-  <code><a href='lexicon_nrc_vad.html'>lexicon_nrc_vad</a></code>, <code><a href='lexicon_nrc.html'>lexicon_nrc</a></code></p></div>
+    <div class='dont-index'><p>Other topic: <code><a href='dataset_ag_news.html'>dataset_ag_news</a></code>,
+  <code><a href='dataset_trec.html'>dataset_trec</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>lexicon_loughran</span>()</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: Loughran-McDonald Sentiment lexicon 
-#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
-#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
-#&gt;  Size: 6.7 MB (cleaned 142 KB) 
+    <pre class="examples"><div class='input'><span class='fu'>dataset_dbpedia</span>()</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: DBpedia 
+#&gt;  URL: https://wiki.dbpedia.org/ 
+#&gt;  License: Creative Commons Attribution-ShareAlike 3.0 License 
+#&gt;  Size: 279.5 MB (cleaned 211.1 MB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: Loughran-McDonald Sentiment lexicon 
-#&gt;  URL: https://sraf.nd.edu/textual-analysis/resources/ 
-#&gt;  License: License required for commercial use. Please contact tloughra@nd.edu. 
-#&gt;  Size: 6.7 MB (cleaned 142 KB) 
+<span class='fu'>dataset_dbpedia</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: DBpedia 
+#&gt;  URL: https://wiki.dbpedia.org/ 
+#&gt;  License: Creative Commons Attribution-ShareAlike 3.0 License 
+#&gt;  Size: 279.5 MB (cleaned 211.1 MB) 
 #&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/loughran': no such file or directory</span></div><div class='input'>
+<span class='fu'>dataset_dbpedia</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/dbpedia': no such file or directory</span></div><div class='input'>
 <span class='co'># Returning filepath of data</span>
-<span class='fu'>lexicon_loughran</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/loughran</div></pre>
+<span class='fu'>dataset_dbpedia</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/dbpedia</div><div class='input'>
+<span class='co'># Access both training and testing dataset</span>
+<span class='no'>train</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_dbpedia</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"train"</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: DBpedia 
+#&gt;  URL: https://wiki.dbpedia.org/ 
+#&gt;  License: Creative Commons Attribution-ShareAlike 3.0 License 
+#&gt;  Size: 279.5 MB (cleaned 211.1 MB) 
+#&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'><span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'>dataset_dbpedia</span>(<span class='kw'>split</span> <span class='kw'>=</span> <span class='st'>"test"</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: DBpedia 
+#&gt;  URL: https://wiki.dbpedia.org/ 
+#&gt;  License: Creative Commons Attribution-ShareAlike 3.0 License 
+#&gt;  Size: 279.5 MB (cleaned 211.1 MB) 
+#&gt;  Download mechanism: https </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
