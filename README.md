@@ -67,6 +67,10 @@ are:
 | DBpedia ontology                                                | `dataset_dbpedia()`           |
 | Trec-6 and Trec-50                                              | `dataset_trec()`              |
 | IMDb Large Movie Review Dataset                                 | `dataset_imdb()`              |
+| Stanford NLP GloVe pre-trained word vectors                     | `embedding_glove6b()`         |
+|                                                                 | `embedding_glove27b()`        |
+|                                                                 | `embedding_glove42b()`        |
+|                                                                 | `embedding_glove840b()`       |
 
 Check out each function’s documentation for detailed information
 (including citations) for the relevant dataset.

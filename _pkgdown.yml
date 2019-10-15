@@ -17,6 +17,12 @@ reference:
     - dataset_dbpedia
     - dataset_trec
     - dataset_imdb
+  - title: Embeddings
+    contents:
+    - embedding_glove6b
+    - embedding_glove27b
+    - embedding_glove42b
+    - embedding_glove840b
   - title: Other
     contents:
     - catalogue

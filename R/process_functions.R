@@ -15,5 +15,9 @@ process_functions <- list(
   ag_news = process_ag_news,
   dbpedia = process_dbpedia,
   trec = process_trec,
-  imdb = process_imdb
+  imdb = process_imdb,
+  glove6b = process_glove6b,
+  glove27b = process_glove27b,
+  glove42b = process_glove42b,
+  glove840b = process_glove840b
 )
