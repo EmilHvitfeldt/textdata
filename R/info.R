@@ -135,7 +135,79 @@ If you use this lexicon, then please cite it."),
          type = "dataset",
          download_mech = "http",
          description = "",
-         citation = NA)
+         citation = NA),
+  glove6b =
+    list(name = "GloVe 6B",
+         url = "https://nlp.stanford.edu/projects/glove/",
+         license = "Public Domain Dedication and License v1.0",
+         size = "822.2 MB (158MB, 311MB, 616MB, and 921MB processed)",
+         type = "embeddings",
+         download_mech = "https",
+         description = "Wikipedia 2014 + Gigaword 5 (6B tokens, 400K vocab, uncased, 50d, 100d, 200d, & 300d vectors)",
+         citation = "Citation info:
+inproceedings{pennington2014glove,
+author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+title = {GloVe: Global Vectors for Word Representation},
+year = {2014},
+pages = {1532--1543},
+url = {http://www.aclweb.org/anthology/D14-1162},
+}"
+    ),
+  glove27b =
+    list(name = "GloVe Twitter 27B",
+         url = "https://nlp.stanford.edu/projects/glove/",
+         license = "Public Domain Dedication and License v1.0",
+         size = "1.42 GB (248MB, 476MB, 931MB, and 1.79GB processed)",
+         type = "embeddings",
+         download_mech = "https",
+         description = "Twitter (2B tweets, 27B tokens, 1.2M vocab, uncased, 25d, 50d, 100d, & 200d vectors)",
+         citation = "Citation info:
+inproceedings{pennington2014glove,
+author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+title = {GloVe: Global Vectors for Word Representation},
+year = {2014},
+pages = {1532--1543},
+url = {http://www.aclweb.org/anthology/D14-1162},
+}"
+    ),
+  glove42b =
+    list(name = "GloVe Common Crawl 42B",
+         url = "https://nlp.stanford.edu/projects/glove/",
+         license = "Public Domain Dedication and License v1.0",
+         size = "1.75 GB (4.31GB processed)",
+         type = "embeddings",
+         download_mech = "https",
+         description = "Common Crawl (42B tokens, 1.9M vocab, uncased, 300d vectors)",
+         citation = "Citation info:
+inproceedings{pennington2014glove,
+author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+title = {GloVe: Global Vectors for Word Representation},
+year = {2014},
+pages = {1532--1543},
+url = {http://www.aclweb.org/anthology/D14-1162},
+}"
+    ),
+  glove840b =
+    list(name = "GloVe Common Crawl 840B",
+         url = "https://nlp.stanford.edu/projects/glove/",
+         license = "Public Domain Dedication and License v1.0",
+         size = "2.03 GB (4.94GB processed)",
+         type = "embeddings",
+         download_mech = "https",
+         description = "Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors)",
+         citation = "Citation info:
+inproceedings{pennington2014glove,
+author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+title = {GloVe: Global Vectors for Word Representation},
+year = {2014},
+pages = {1532--1543},
+url = {http://www.aclweb.org/anthology/D14-1162},
+}"
+    )
 )
 
 #' Catalogue of all available data sources

@@ -29,6 +29,7 @@ Collate:
     'dataset_imdb.R'
     'dataset_sentence_polarity.R'
     'dataset_trec.R'
+    'embedding_glove.R'
     'lexicon_nrc_vad.R'
     'lexicon_nrc_eil.R'
     'lexicon_nrc.R'

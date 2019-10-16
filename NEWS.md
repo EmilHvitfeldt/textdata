@@ -1,5 +1,7 @@
 # textdata (development version)
 
+* `embedding_glove6b()`, `embedding_glove27b()`, `embedding_glove42b()`, and `embedding_glove840b()` have been added to give access to the Stanford NLP Global Vectors for Word Representations pre-trained word vectors (@jonthegeek, #26).
+
 # textdata 0.3.0
 
 *  `lexicon_nrc_eil()` has been added to give access to the NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5.
