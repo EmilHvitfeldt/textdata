@@ -7,8 +7,7 @@
 \url{http://saifmohammad.com/WebPages/lexicons.html}
 }
 \usage{
-lexicon_nrc(dir = NULL, delete = FALSE, return_path = FALSE,
-  clean = FALSE)
+lexicon_nrc(dir = NULL, delete = FALSE, return_path = FALSE, clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -74,11 +73,12 @@ lexicon_nrc(return_path = TRUE)
 }
 }
 \seealso{
-Other lexicon: \code{\link{lexicon_afinn}},
-  \code{\link{lexicon_bing}},
-  \code{\link{lexicon_loughran}},
-  \code{\link{lexicon_nrc_eil}},
-  \code{\link{lexicon_nrc_vad}}
+Other lexicon: 
+\code{\link{lexicon_afinn}()},
+\code{\link{lexicon_bing}()},
+\code{\link{lexicon_loughran}()},
+\code{\link{lexicon_nrc_eil}()},
+\code{\link{lexicon_nrc_vad}()}
 }
 \concept{lexicon}
 \keyword{datasets}

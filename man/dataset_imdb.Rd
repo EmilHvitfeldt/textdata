@@ -7,8 +7,13 @@
 \url{http://ai.stanford.edu/~amaas/data/sentiment/}
 }
 \usage{
-dataset_imdb(dir = NULL, split = c("train", "test"), delete = FALSE,
-  return_path = FALSE, clean = FALSE)
+dataset_imdb(
+  dir = NULL,
+  split = c("train", "test"),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If

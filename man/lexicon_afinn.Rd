@@ -4,8 +4,7 @@
 \alias{lexicon_afinn}
 \title{AFINN-111 dataset}
 \usage{
-lexicon_afinn(dir = NULL, delete = FALSE, return_path = FALSE,
-  clean = FALSE)
+lexicon_afinn(dir = NULL, delete = FALSE, return_path = FALSE, clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -68,10 +67,12 @@ lexicon_afinn(return_path = TRUE)
 }
 }
 \seealso{
-Other lexicon: \code{\link{lexicon_bing}},
-  \code{\link{lexicon_loughran}},
-  \code{\link{lexicon_nrc_eil}},
-  \code{\link{lexicon_nrc_vad}}, \code{\link{lexicon_nrc}}
+Other lexicon: 
+\code{\link{lexicon_bing}()},
+\code{\link{lexicon_loughran}()},
+\code{\link{lexicon_nrc_eil}()},
+\code{\link{lexicon_nrc_vad}()},
+\code{\link{lexicon_nrc}()}
 }
 \concept{lexicon}
 \keyword{datasets}

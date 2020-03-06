@@ -4,8 +4,15 @@
 \alias{load_dataset}
 \title{Internal Functions}
 \usage{
-load_dataset(data_name, name, dir, delete, return_path, clean,
-  clean_manual = NULL)
+load_dataset(
+  data_name,
+  name,
+  dir,
+  delete,
+  return_path,
+  clean,
+  clean_manual = NULL
+)
 }
 \description{
 These are not to be used directly by the users.

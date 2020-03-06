@@ -7,8 +7,7 @@
 \url{https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html}
 }
 \usage{
-lexicon_bing(dir = NULL, delete = FALSE, return_path = FALSE,
-  clean = FALSE)
+lexicon_bing(dir = NULL, delete = FALSE, return_path = FALSE, clean = FALSE)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -73,10 +72,12 @@ lexicon_bing(return_path = TRUE)
 }
 }
 \seealso{
-Other lexicon: \code{\link{lexicon_afinn}},
-  \code{\link{lexicon_loughran}},
-  \code{\link{lexicon_nrc_eil}},
-  \code{\link{lexicon_nrc_vad}}, \code{\link{lexicon_nrc}}
+Other lexicon: 
+\code{\link{lexicon_afinn}()},
+\code{\link{lexicon_loughran}()},
+\code{\link{lexicon_nrc_eil}()},
+\code{\link{lexicon_nrc_vad}()},
+\code{\link{lexicon_nrc}()}
 }
 \concept{lexicon}
 \keyword{datasets}

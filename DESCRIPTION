@@ -22,7 +22,7 @@ Imports:
     readr,
     tibble,
     rappdirs
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Collate: 
     'dataset_ag_news.R'
     'dataset_dbpedia.R'

@@ -9,8 +9,13 @@
 \url{https://github.com/mhjabreel/CharCnn_Keras/tree/master/data/ag_news_csv}
 }
 \usage{
-dataset_ag_news(dir = NULL, split = c("train", "test"),
-  delete = FALSE, return_path = FALSE, clean = FALSE)
+dataset_ag_news(
+  dir = NULL,
+  split = c("train", "test"),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -72,8 +77,9 @@ test <- dataset_ag_news(split = "test")
 
 }
 \seealso{
-Other topic: \code{\link{dataset_dbpedia}},
-  \code{\link{dataset_trec}}
+Other topic: 
+\code{\link{dataset_dbpedia}()},
+\code{\link{dataset_trec}()}
 }
 \concept{topic}
 \keyword{datasets}

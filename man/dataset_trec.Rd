@@ -9,8 +9,14 @@
 \url{https://trec.nist.gov/data/qa.html}
 }
 \usage{
-dataset_trec(dir = NULL, split = c("train", "test"), version = c("6",
-  "50"), delete = FALSE, return_path = FALSE, clean = FALSE)
+dataset_trec(
+  dir = NULL,
+  split = c("train", "test"),
+  version = c("6", "50"),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -82,8 +88,9 @@ test_50 <- dataset_trec(split = "test", version = "50")
 
 }
 \seealso{
-Other topic: \code{\link{dataset_ag_news}},
-  \code{\link{dataset_dbpedia}}
+Other topic: 
+\code{\link{dataset_ag_news}()},
+\code{\link{dataset_dbpedia}()}
 }
 \concept{topic}
 \keyword{datasets}

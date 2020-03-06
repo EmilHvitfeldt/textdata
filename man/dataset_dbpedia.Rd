@@ -11,8 +11,13 @@
 \url{https://github.com/le-scientifique/torchDatasets/raw/master/dbpedia_csv.tar.gz}
 }
 \usage{
-dataset_dbpedia(dir = NULL, split = c("train", "test"),
-  delete = FALSE, return_path = FALSE, clean = FALSE)
+dataset_dbpedia(
+  dir = NULL,
+  split = c("train", "test"),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -82,8 +87,9 @@ test <- dataset_dbpedia(split = "test")
 
 }
 \seealso{
-Other topic: \code{\link{dataset_ag_news}},
-  \code{\link{dataset_trec}}
+Other topic: 
+\code{\link{dataset_ag_news}()},
+\code{\link{dataset_trec}()}
 }
 \concept{topic}
 \keyword{datasets}

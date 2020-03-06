@@ -7,8 +7,12 @@
 \url{https://www.cs.cornell.edu/people/pabo/movie-review-data/}
 }
 \usage{
-dataset_sentence_polarity(dir = NULL, delete = FALSE,
-  return_path = FALSE, clean = FALSE)
+dataset_sentence_polarity(
+  dir = NULL,
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If

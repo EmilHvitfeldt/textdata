@@ -11,17 +11,35 @@
 \url{https://nlp.stanford.edu/projects/glove/}
 }
 \usage{
-embedding_glove6b(dir = NULL, dimensions = c(50, 100, 200, 300),
-  delete = FALSE, return_path = FALSE, clean = FALSE)
+embedding_glove6b(
+  dir = NULL,
+  dimensions = c(50, 100, 200, 300),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 
-embedding_glove27b(dir = NULL, dimensions = c(25, 50, 100, 200),
-  delete = FALSE, return_path = FALSE, clean = FALSE)
+embedding_glove27b(
+  dir = NULL,
+  dimensions = c(25, 50, 100, 200),
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 
-embedding_glove42b(dir = NULL, delete = FALSE, return_path = FALSE,
-  clean = FALSE)
+embedding_glove42b(
+  dir = NULL,
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 
-embedding_glove840b(dir = NULL, delete = FALSE, return_path = FALSE,
-  clean = FALSE)
+embedding_glove840b(
+  dir = NULL,
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
