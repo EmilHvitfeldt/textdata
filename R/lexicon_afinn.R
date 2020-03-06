@@ -35,7 +35,7 @@
 #' @return A tibble with 2,477 rows and 2 variables:
 #' \describe{
 #'   \item{word}{An English word}
-#'   \item{sentiment}{Indicator for sentiment: integer between -5 and +5}
+#'   \item{score}{Indicator for sentiment: integer between -5 and +5}
 #' }
 #'
 #' @keywords datasets
@@ -79,7 +79,7 @@ process_afinn <- function(folder_path, name_path) {
   data <- read_tsv(file,
                    col_types = cols(
                      word = col_character(),
-                     value = col_double()
+                     score = col_double()
                    ),
                    col_names = c("word", "value"))
   write_rds(data, name_path)

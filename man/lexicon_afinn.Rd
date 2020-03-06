@@ -21,7 +21,7 @@ greatly reduce the size. Defaults to FALSE.}
 A tibble with 2,477 rows and 2 variables:
 \describe{
   \item{word}{An English word}
-  \item{sentiment}{Indicator for sentiment: integer between -5 and +5}
+  \item{score}{Indicator for sentiment: integer between -5 and +5}
 }
 }
 \description{
