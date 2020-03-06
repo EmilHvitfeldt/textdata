@@ -151,7 +151,8 @@ finer-grained labels. Models are evaluated based on accuracy.</p>
   <span class='kw'>version</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"6"</span>, <span class='st'>"50"</span>),
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -184,6 +185,12 @@ data. Defaults to "train".</p></td>
       <th>clean</th>
       <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.</p></td>
+    </tr>
+    <tr>
+      <th>manual_download</th>
+      <td><p>Logical, set <code>TRUE</code> if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with <code>return_path = TRUE</code>.</p></td>
     </tr>
     </table>
 

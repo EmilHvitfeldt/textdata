@@ -151,7 +151,13 @@ show that the ratings obtained are substantially more reliable than those in
 existing lexicons.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_nrc_vad</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>lexicon_nrc_vad</span>(
+  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -173,6 +179,12 @@ existing lexicons.</p>
       <th>clean</th>
       <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.</p></td>
+    </tr>
+    <tr>
+      <th>manual_download</th>
+      <td><p>Logical, set <code>TRUE</code> if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with <code>return_path = TRUE</code>.</p></td>
     </tr>
     </table>
 

@@ -144,7 +144,8 @@ varying numbers of tokens.</p>
   <span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50</span>, <span class='fl'>100</span>, <span class='fl'>200</span>, <span class='fl'>300</span>),
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )
 
 <span class='fu'>embedding_glove27b</span>(
@@ -152,21 +153,24 @@ varying numbers of tokens.</p>
   <span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>, <span class='fl'>50</span>, <span class='fl'>100</span>, <span class='fl'>200</span>),
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )
 
 <span class='fu'>embedding_glove42b</span>(
   <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )
 
 <span class='fu'>embedding_glove840b</span>(
   <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -195,6 +199,12 @@ glove27b.</p></td>
       <th>clean</th>
       <td><p>Logical, set <code>TRUE</code> to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.</p></td>
+    </tr>
+    <tr>
+      <th>manual_download</th>
+      <td><p>Logical, set <code>TRUE</code> if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with <code>return_path = TRUE</code>.</p></td>
     </tr>
     </table>
 
