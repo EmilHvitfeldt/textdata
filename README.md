@@ -5,12 +5,16 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/EmilHvitfeldt/textdata.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/textdata)
+[![R build
+status](https://github.com/EmilHvitfeldt/textdata/workflows/R-CMD-check/badge.svg)](https://github.com/EmilHvitfeldt/textdata/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/textdata)](https://CRAN.R-project.org/package=textdata)
 [![Downloads](http://cranlogs.r-pkg.org/badges/textdata)](https://cran.r-project.org/package=textdata)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3244433.svg)](https://doi.org/10.5281/zenodo.3244433)
+[![Codecov test
+coverage](https://codecov.io/gh/EmilHvitfeldt/textdata/branch/master/graph/badge.svg)](https://codecov.io/gh/EmilHvitfeldt/textdata?branch=master)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 <!-- badges: end -->
 
 The goal of textdata is to provide access to text-related data sets for
