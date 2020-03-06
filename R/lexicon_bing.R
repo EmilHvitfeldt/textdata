@@ -56,9 +56,10 @@
 #' lexicon_bing(return_path = TRUE)
 #' }
 lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE,
-                         clean = FALSE) {
+                         clean = FALSE, manual_download = FALSE) {
   load_dataset(data_name = "bing", name = "bing.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean)
+               delete = delete, return_path = return_path, clean = clean,
+               manual_download = manual_download)
 }
 
 

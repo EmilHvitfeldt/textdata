@@ -54,14 +54,15 @@
 #' @importFrom utils menu
 dataset_ag_news <- function(dir = NULL, split = c("train", "test"),
                             delete = FALSE, return_path = FALSE,
-                            clean = FALSE) {
+                            clean = FALSE, manual_download = FALSE) {
 
   all_files <-  paste0("ag_news_", c("train", "test"), ".rds")
   split <- match.arg(split)
   name <- paste0("ag_news_", split, ".rds")
   load_dataset(data_name = "ag_news", name = name, dir = dir,
                delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files)
+               clean_manual = all_files,
+               manual_download = manual_download)
 }
 
 #' @importFrom utils download.file

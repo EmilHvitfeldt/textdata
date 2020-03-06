@@ -11,7 +11,8 @@ load_dataset(
   delete,
   return_path,
   clean,
-  clean_manual = NULL
+  clean_manual = NULL,
+  manual_download
 )
 }
 \description{

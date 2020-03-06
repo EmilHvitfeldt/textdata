@@ -16,7 +16,8 @@ embedding_glove6b(
   dimensions = c(50, 100, 200, 300),
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 
 embedding_glove27b(
@@ -24,21 +25,24 @@ embedding_glove27b(
   dimensions = c(25, 50, 100, 200),
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 
 embedding_glove42b(
   dir = NULL,
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 
 embedding_glove840b(
   dir = NULL,
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 }
 \arguments{
@@ -55,6 +59,10 @@ glove27b.}
 
 \item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.}
+
+\item{manual_download}{Logical, set \code{TRUE} if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with \code{return_path = TRUE}.}
 }
 \value{
 A tibble with 400k, 1.9m, 2.2m, or 1.2m rows (one row for each unique

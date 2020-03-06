@@ -11,7 +11,8 @@ lexicon_loughran(
   dir = NULL,
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 }
 \arguments{
@@ -24,6 +25,10 @@ lexicon_loughran(
 
 \item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.}
+
+\item{manual_download}{Logical, set \code{TRUE} if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with \code{return_path = TRUE}.}
 }
 \value{
 A tibble with 4,150 rows and 2 variables:

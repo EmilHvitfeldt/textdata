@@ -56,7 +56,8 @@ embedding_glove6b <- function(dir = NULL,
                               dimensions = c(50, 100, 200, 300),
                               delete = FALSE,
                               return_path = FALSE,
-                              clean = FALSE) {
+                              clean = FALSE,
+                              manual_download = FALSE) {
   this_glove <- "6b"
   available_dims <- c(50, 100, 200, 300)
   all_names <- construct_glove_name(this_glove, available_dims)
@@ -65,7 +66,8 @@ embedding_glove6b <- function(dir = NULL,
   name <- construct_glove_name(this_glove, dimensions)
   load_dataset(data_name = "glove6b", name = name, dir = dir,
                delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_names)
+               clean_manual = all_names,
+               manual_download = manual_download)
 }
 
 #' @keywords internal
@@ -98,7 +100,8 @@ embedding_glove27b <- function(dir = NULL,
                                dimensions = c(25, 50, 100, 200),
                                delete = FALSE,
                                return_path = FALSE,
-                               clean = FALSE) {
+                               clean = FALSE,
+                               manual_download = FALSE) {
   this_glove <- "27b"
   available_dims <- c(25, 50, 100, 200)
   all_names <- construct_glove_name(this_glove, available_dims)
@@ -107,7 +110,8 @@ embedding_glove27b <- function(dir = NULL,
   name <- construct_glove_name(this_glove, dimensions)
   load_dataset(data_name = "glove27b", name = name, dir = dir,
                delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_names)
+               clean_manual = all_names,
+               manual_download = manual_download)
 }
 
 #' @rdname embedding_glove
@@ -118,10 +122,12 @@ embedding_glove27b <- function(dir = NULL,
 embedding_glove42b <- function(dir = NULL,
                                delete = FALSE,
                                return_path = FALSE,
-                               clean = FALSE) {
+                               clean = FALSE,
+                               manual_download = FALSE) {
   name <- "glove_42b.rds"
   load_dataset(data_name = "glove42b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean)
+               delete = delete, return_path = return_path, clean = clean,
+               manual_download = manual_download)
 }
 
 #' @rdname embedding_glove
@@ -132,10 +138,12 @@ embedding_glove42b <- function(dir = NULL,
 embedding_glove840b <- function(dir = NULL,
                                delete = FALSE,
                                return_path = FALSE,
-                               clean = FALSE) {
+                               clean = FALSE,
+                               manual_download = FALSE) {
   name <- "glove_840b.rds"
   load_dataset(data_name = "glove840b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean)
+               delete = delete, return_path = return_path, clean = clean,
+               manual_download = manual_download)
 }
 
 #' @importFrom utils download.file

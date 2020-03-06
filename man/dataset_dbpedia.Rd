@@ -16,7 +16,8 @@ dataset_dbpedia(
   split = c("train", "test"),
   delete = FALSE,
   return_path = FALSE,
-  clean = FALSE
+  clean = FALSE,
+  manual_download = FALSE
 )
 }
 \arguments{
@@ -32,6 +33,10 @@ data. Defaults to "train".}
 
 \item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.}
+
+\item{manual_download}{Logical, set \code{TRUE} if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with \code{return_path = TRUE}.}
 }
 \value{
 A tibble with 560,000 or 70,000 rows for "train" and "test"

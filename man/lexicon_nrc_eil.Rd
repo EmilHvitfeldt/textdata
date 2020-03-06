@@ -7,7 +7,13 @@
 \url{https://saifmohammad.com/WebPages/AffectIntensity.htm}
 }
 \usage{
-lexicon_nrc_eil(dir = NULL, delete = FALSE, return_path = FALSE, clean = FALSE)
+lexicon_nrc_eil(
+  dir = NULL,
+  delete = FALSE,
+  return_path = FALSE,
+  clean = FALSE,
+  manual_download = FALSE
+)
 }
 \arguments{
 \item{dir}{Character, path to directory where data will be stored. If
@@ -19,6 +25,10 @@ lexicon_nrc_eil(dir = NULL, delete = FALSE, return_path = FALSE, clean = FALSE)
 
 \item{clean}{Logical, set \code{TRUE} to remove intermediate files. This can
 greatly reduce the size. Defaults to FALSE.}
+
+\item{manual_download}{Logical, set \code{TRUE} if you have manually
+downloaded the file and placed it in the folder designated by running
+this function with \code{return_path = TRUE}.}
 }
 \value{
 A tibble with 5.814 rows and 3 variables:

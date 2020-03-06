@@ -62,14 +62,15 @@
 #' @importFrom utils menu untar
 dataset_dbpedia <- function(dir = NULL, split = c("train", "test"),
                             delete = FALSE, return_path = FALSE,
-                            clean = FALSE) {
+                            clean = FALSE, manual_download = FALSE) {
 
   all_files <-  paste0("dbpedia_", c("train", "test"), ".rds")
   split <- match.arg(split)
   name <- paste0("dbpedia_", split, ".rds")
   load_dataset(data_name = "dbpedia", name = name, dir = dir,
                delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files)
+               clean_manual = all_files,
+               manual_download = manual_download)
 }
 
 #' @importFrom utils download.file

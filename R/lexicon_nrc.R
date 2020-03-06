@@ -59,11 +59,10 @@
 #' lexicon_nrc(return_path = TRUE)
 #' }
 lexicon_nrc <- function(dir = NULL, delete = FALSE, return_path = FALSE,
-                        clean = FALSE) {
-  load_dataset(data_name = "nrc", name = "NRCWordEmotion.rds",
-               dir = dir,
-               delete = delete,
-               return_path = return_path, clean = clean)
+                        clean = FALSE, manual_download = FALSE) {
+  load_dataset(data_name = "nrc", name = "NRCWordEmotion.rds", dir = dir,
+               delete = delete, return_path = return_path, clean = clean,
+               manual_download = manual_download)
 }
 
 #' @importFrom utils download.file

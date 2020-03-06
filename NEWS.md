@@ -1,6 +1,7 @@
 # textdata (development version)
 
 * `embedding_glove6b()`, `embedding_glove27b()`, `embedding_glove42b()`, and `embedding_glove840b()` have been added to give access to the Stanford NLP Global Vectors for Word Representations pre-trained word vectors (@jonthegeek, #26).
+* `manual_download` argument have been added to all functions to allow the user to manual place file download at right place.
 
 # textdata 0.3.0
 

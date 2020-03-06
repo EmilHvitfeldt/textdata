@@ -62,7 +62,8 @@
 #' @importFrom utils menu untar
 dataset_trec <- function(dir = NULL, split = c("train", "test"),
                          version = c("6", "50"), delete = FALSE,
-                         return_path = FALSE, clean = FALSE) {
+                         return_path = FALSE, clean = FALSE,
+                         manual_download = FALSE) {
 
   all_files <- paste0("trec_", rep(c("6", "50"), 2), "_",
                       rep(c("train", "test"), each = 2), ".rds")
@@ -71,7 +72,8 @@ dataset_trec <- function(dir = NULL, split = c("train", "test"),
   name <- paste0("trec_", version, "_", split, ".rds")
   load_dataset(data_name = "trec", name = name, dir = dir,
                delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files)
+               clean_manual = all_files,
+               manual_download = manual_download)
 }
 
 #' @importFrom utils download.file
