@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5 — lexicon_nrc_eil • textdata</title>
+<title>Global Vectors for Word Representation — embedding_glove • textdata</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,10 +42,9 @@
 
 
 
-<meta property="og:title" content="NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5 — lexicon_nrc_eil" />
-<meta property="og:description" content="General purpose English sentiment/emotion lexicon. The NRC Affect Intensity
-Lexicon is a list of English words and their associations with four basic
-emotions (anger, fear, sadness, joy)." />
+<meta property="og:title" content="Global Vectors for Word Representation — embedding_glove" />
+<meta property="og:description" content="The GloVe pre-trained word vectors provide word embeddings created using
+varying numbers of tokens." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -130,18 +129,43 @@ emotions (anger, fear, sadness, joy)." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) v0.5</h1>
-    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/lexicon_nrc_eil.R'><code>R/lexicon_nrc_eil.R</code></a></small>
-    <div class="hidden name"><code>lexicon_nrc_eil.Rd</code></div>
+    <h1>Global Vectors for Word Representation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/EmilHvitfeldt/textdata/blob/master/R/embedding_glove.R'><code>R/embedding_glove.R</code></a></small>
+    <div class="hidden name"><code>embedding_glove.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>General purpose English sentiment/emotion lexicon. The NRC Affect Intensity
-Lexicon is a list of English words and their associations with four basic
-emotions (anger, fear, sadness, joy).</p>
+    <p>The GloVe pre-trained word vectors provide word embeddings created using
+varying numbers of tokens.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>lexicon_nrc_eil</span>(
+    <pre class="usage"><span class='fu'>embedding_glove6b</span>(
+  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50</span>, <span class='fl'>100</span>, <span class='fl'>200</span>, <span class='fl'>300</span>),
+  <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+)
+
+<span class='fu'>embedding_glove27b</span>(
+  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>, <span class='fl'>50</span>, <span class='fl'>100</span>, <span class='fl'>200</span>),
+  <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+)
+
+<span class='fu'>embedding_glove42b</span>(
+  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>manual_download</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+)
+
+<span class='fu'>embedding_glove840b</span>(
   <span class='kw'>dir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
@@ -156,6 +180,12 @@ emotions (anger, fear, sadness, joy).</p>
       <th>dir</th>
       <td><p>Character, path to directory where data will be stored. If
 <code>NULL</code>, <a href='https://rdrr.io/pkg/rappdirs/man/user_cache_dir.html'>user_cache_dir</a> will be used to determine path.</p></td>
+    </tr>
+    <tr>
+      <th>dimensions</th>
+      <td><p>A number indicating the number of vectors to include. One
+of 50, 100, 200, or 300 for glove6b, or one of 25, 50, 100, or 200 for
+glove27b.</p></td>
     </tr>
     <tr>
       <th>delete</th>
@@ -180,90 +210,70 @@ this function with <code>return_path = TRUE</code>.</p></td>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://saifmohammad.com/WebPages/AffectIntensity.htm'>https://saifmohammad.com/WebPages/AffectIntensity.htm</a></p>
+    <p><a href='https://nlp.stanford.edu/projects/glove/'>https://nlp.stanford.edu/projects/glove/</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble with 5.814 rows and 3 variables:</p><dl class='dl-horizontal'>
-  <dt>term</dt><dd><p>An English word</p></dd>
-  <dt>score</dt><dd><p>Value between 0 and 1</p></dd>
-  <dt>AffectDimension</dt><dd><p>Indicator for sentiment or emotion: ("anger",
-                         "fear", "sadness", "joy")</p></dd>
+    <p>A tibble with 400k, 1.9m, 2.2m, or 1.2m rows (one row for each unique
+  token in the vocabulary) and the following variables:</p><dl class='dl-horizontal'>
+  <dt>token</dt><dd><p>An individual token (usually a word)</p></dd>
+  <dt>d1, d2, etc</dt><dd><p>The embeddings for that token.</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>For a given word and emotion X, the scores range from 0 to 1. A score of 1
-means that the word conveys the highest amount of emotion X.  A score of 0
-means that the word conveys the lowest amount of emotion X.</p>
-<p>License required for commercial use. Please contact Saif M. Mohammad
-(saif.mohammad@nrc-cnrc.gc.ca).</p>
-<p>Citation info:</p>
-<p>Details of the lexicon are in this paper.
-Word Affect Intensities. Saif M. Mohammad. In Proceedings of the 11th Edition
-of the Language Resources and Evaluation Conference (LREC-2018), May 2018,
-Miyazaki, Japan.</p>
-<p>inproceedings{LREC18-AIL, <br />
-author = {Mohammad, Saif M.}, <br />
-title = {Word Affect Intensities}, <br />
-booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)}, <br />
-year = {2018}, <br />
-address={Miyazaki, Japan} <br />
-} <br /></p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <p>Citation info:</p>
+<p>InProceedings{pennington2014glove, <br />
+author     = {Jeffrey Pennington and Richard Socher and Christopher D. <br />
+               Manning}, <br />
+title      = {GloVe: Global Vectors for Word Representation}, <br />
+booktitle  = {Empirical Methods in Natural Language Processing (EMNLP)}, <br />
+year       = 2014 <br />
+pages      = {1532-1543} <br />
+url        = {http://www.aclweb.org/anthology/D14-1162} <br />
+}</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <div class='dont-index'><p>Other lexicon: 
-<code><a href='lexicon_afinn.html'>lexicon_afinn</a>()</code>,
-<code><a href='lexicon_bing.html'>lexicon_bing</a>()</code>,
-<code><a href='lexicon_loughran.html'>lexicon_loughran</a>()</code>,
-<code><a href='lexicon_nrc_vad.html'>lexicon_nrc_vad</a>()</code>,
-<code><a href='lexicon_nrc.html'>lexicon_nrc</a>()</code></p></div>
+    <p>Jeffrey Pennington, Richard Socher, and Christopher D. Manning.
+  2014. GloVe: Global Vectors for Word Representation.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>lexicon_nrc_eil</span>()</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) 
-#&gt;  URL: www.saifmohammad.com/WebPages/AffectIntensity.htm 
-#&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
-#&gt;  Size: 333 KB (cleaned 212 KB) 
-#&gt;  Download mechanism: http 
+<span class='fu'>embedding_glove6b</span>(<span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fl'>50</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: GloVe 6B 
+#&gt;  URL: https://nlp.stanford.edu/projects/glove/ 
+#&gt;  License: Public Domain Dedication and License v1.0 
+#&gt;  Size: 822.2 MB (158MB, 311MB, 616MB, and 921MB processed) 
+#&gt;  Download mechanism: https 
 #&gt;  Citation info:
-#&gt; Details of the lexicon are in this paper.
-#&gt; Word Affect Intensities. Saif M. Mohammad. arXiv preprint arXiv, April 2017.
-#&gt; 
-#&gt; inproceedings{LREC18-AIL,
-#&gt; author = {Mohammad, Saif M.},
-#&gt; title = {Word Affect Intensities},
-#&gt; booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)},
-#&gt; year = {2018},
-#&gt; address={Miyazaki, Japan}
-#&gt; }
-#&gt; 
-#&gt; If you use this lexicon, then please cite it. </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+#&gt; inproceedings{pennington2014glove,
+#&gt; author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+#&gt; booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+#&gt; title = {GloVe: Global Vectors for Word Representation},
+#&gt; year = {2014},
+#&gt; pages = {1532--1543},
+#&gt; url = {http://www.aclweb.org/anthology/D14-1162},
+#&gt; } </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Custom directory</span>
-<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
-#&gt;  Name: NRC Emotion Intensity Lexicon (aka Affect Intensity Lexicon) 
-#&gt;  URL: www.saifmohammad.com/WebPages/AffectIntensity.htm 
-#&gt;  License: License required for commercial use. Please contact Saif M. Mohammad (saif.mohammad@nrc-cnrc.gc.ca). 
-#&gt;  Size: 333 KB (cleaned 212 KB) 
-#&gt;  Download mechanism: http 
+<span class='fu'>embedding_glove42b</span>(<span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)</div><div class='output co'>#&gt; Do you want to download:
+#&gt;  Name: GloVe Common Crawl 42B 
+#&gt;  URL: https://nlp.stanford.edu/projects/glove/ 
+#&gt;  License: Public Domain Dedication and License v1.0 
+#&gt;  Size: 1.75 GB (4.31GB processed) 
+#&gt;  Download mechanism: https 
 #&gt;  Citation info:
-#&gt; Details of the lexicon are in this paper.
-#&gt; Word Affect Intensities. Saif M. Mohammad. arXiv preprint arXiv, April 2017.
-#&gt; 
-#&gt; inproceedings{LREC18-AIL,
-#&gt; author = {Mohammad, Saif M.},
-#&gt; title = {Word Affect Intensities},
-#&gt; booktitle = {Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)},
-#&gt; year = {2018},
-#&gt; address={Miyazaki, Japan}
-#&gt; }
-#&gt; 
-#&gt; If you use this lexicon, then please cite it. </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
+#&gt; inproceedings{pennington2014glove,
+#&gt; author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+#&gt; booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+#&gt; title = {GloVe: Global Vectors for Word Representation},
+#&gt; year = {2014},
+#&gt; pages = {1532--1543},
+#&gt; url = {http://www.aclweb.org/anthology/D14-1162},
+#&gt; } </div><div class='output co'>#&gt; <span class='error'>Error in menu(choices = c("Yes", "No"), title = title): menu() cannot be used non-interactively</span></div><div class='input'>
 <span class='co'># Deleting dataset</span>
-<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/nrc_eil': no such file or directory</span></div><div class='input'>
+<span class='fu'>embedding_glove6b</span>(<span class='kw'>delete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>dimensions</span> <span class='kw'>=</span> <span class='fl'>300</span>)</div><div class='output co'>#&gt; <span class='error'>Error: [ENOENT] Failed to search directory '/home/travis/.cache/textdata/glove6b': no such file or directory</span></div><div class='input'>
 <span class='co'># Returning filepath of data</span>
-<span class='fu'>lexicon_nrc_eil</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/nrc_eil</div><div class='input'># }
+<span class='fu'>embedding_glove840b</span>(<span class='kw'>return_path</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; /home/travis/.cache/textdata/glove840b</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -273,7 +283,7 @@ address={Miyazaki, Japan} <br />
       <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#references">References</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
