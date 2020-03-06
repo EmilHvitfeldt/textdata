@@ -5,5 +5,9 @@
 .DS_Store
 inst/doc
 docs/
-revdep/library.noindex/
-revdep/checks.noindex/
+
+revdep/checks
+revdep/library
+revdep/checks.noindex
+revdep/library.noindex
+revdep/data.sqlite
