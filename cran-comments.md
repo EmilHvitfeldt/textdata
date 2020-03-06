@@ -1,11 +1,7 @@
-## Resubmission
-This is a resubmission. In this version I have:
+## Release Summary
 
-* fully specified URL (https://saifmohammad.com/WebPages/AffectIntensity.htm) in lexicon_nrc_eil.R. (The url correctly ends in .htm not html.)
+This is the 4th CRAN release of textdata. It includes a handful of new functions and bug fixes.
 
-> Is there some reference about the method you can add in the Description field in the form Authors (year) <doi:.....>?
-
-There is no reference to the way the package operates. The datasets  should all have appropiate references in documentation and download prompts. 
 
 ## Test environments
 * local OS X install, R 3.6.0
