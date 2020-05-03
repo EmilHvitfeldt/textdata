@@ -73,7 +73,7 @@ download_afinn <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "https://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
+  download.file(url = "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
                 destfile = file_path)
 }
 
@@ -83,7 +83,7 @@ process_afinn <- function(folder_path, name_path) {
   data <- read_tsv(file,
                    col_types = cols(
                      word = col_character(),
-                     score = col_double()
+                     value = col_double()
                    ),
                    col_names = c("word", "value"))
   write_rds(data, name_path)
