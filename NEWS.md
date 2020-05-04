@@ -1,4 +1,4 @@
-# textdata (development version)
+# textdata 0.4.1
 
 # textdata 0.4.0
 
