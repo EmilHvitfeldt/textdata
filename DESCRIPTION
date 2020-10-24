@@ -1,6 +1,6 @@
 Package: textdata
 Title: Download and Load Various Text Datasets
-Version: 0.4.1
+Version: 0.4.1.9000
 Authors@R: c(person(given = "Emil",
                     family = "Hvitfeldt",
                     role = c("aut", "cre"),
@@ -22,8 +22,9 @@ Imports:
     readr,
     tibble,
     rappdirs
-RoxygenNote: 7.1.0.9000
+RoxygenNote: 7.1.1
 Collate: 
+    'cache_info.R'
     'dataset_ag_news.R'
     'dataset_dbpedia.R'
     'dataset_imdb.R'
