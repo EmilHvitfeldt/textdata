@@ -1,5 +1,7 @@
 # textdata (development version)
 
+* `cache_info()` function has to added to allow for quick overview of cacheing size.
+
 # textdata 0.4.1
 
 # textdata 0.4.0
