@@ -60,42 +60,51 @@
 #' }
 lexicon_nrc <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                         clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "nrc", name = "NRCWordEmotion.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "nrc", name = "NRCWordEmotion.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
 download_nrc <- function(folder_path) {
-
-  file_path <- path(folder_path,
-                    "NRC-Emotion-Lexicon.zip")
+  file_path <- path(
+    folder_path,
+    "NRC-Emotion-Lexicon.zip"
+  )
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://saifmohammad.com/WebDocs/Lexicons/NRC-Emotion-Lexicon.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://saifmohammad.com/WebDocs/Lexicons/NRC-Emotion-Lexicon.zip",
+    destfile = file_path
+  )
   unzip(path(folder_path, "NRC-Emotion-Lexicon.zip"),
-        exdir = folder_path)
+    exdir = folder_path
+  )
 }
 
 #' @importFrom readr read_tsv
 #' @importFrom utils unzip
 
 process_nrc <- function(folder_path, name_path) {
+  data <- read_tsv(path(
+    folder_path,
+    "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
+  ),
+  col_names = FALSE, col_types = cols(
+    X1 = col_character(),
+    X2 = col_character(),
+    X3 = col_double()
+  )
+  )
 
-  data <- read_tsv(path(folder_path,
-                        "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"),
-                   col_names = FALSE, col_types = cols(
-                     X1 = col_character(),
-                     X2 = col_character(),
-                     X3 = col_double()
-                   )
-                   )
-
-  data <- data[data$X3 == 1,]
-  data <- tibble(word = data$X1,
-                 sentiment = data$X2)
+  data <- data[data$X3 == 1, ]
+  data <- tibble(
+    word = data$X1,
+    sentiment = data$X2
+  )
 
   write_rds(data, name_path)
 }

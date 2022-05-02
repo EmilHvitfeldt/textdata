@@ -57,9 +57,11 @@
 #' }
 lexicon_bing <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                          clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "bing", name = "bing.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "bing", name = "bing.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 
@@ -73,10 +75,14 @@ download_bing <- function(folder_path) {
     return(invisible())
   }
 
-  download.file(url = "http://ptrckprry.com/course/ssd/data/negative-words.txt",
-                destfile = file_path_neg)
-  download.file(url = "http://ptrckprry.com/course/ssd/data/positive-words.txt",
-                destfile = file_path_pos)
+  download.file(
+    url = "http://ptrckprry.com/course/ssd/data/negative-words.txt",
+    destfile = file_path_neg
+  )
+  download.file(
+    url = "http://ptrckprry.com/course/ssd/data/positive-words.txt",
+    destfile = file_path_pos
+  )
 }
 
 #' @importFrom readr read_lines
@@ -87,9 +93,13 @@ process_bing <- function(folder_path, name_path) {
   neg_words <- read_lines(file_path_neg, skip = 35)
   pos_words <- read_lines(file_path_pos, skip = 35)
 
-  data <- tibble(word = c(neg_words, pos_words),
-                 sentiment = rep(c("negative", "positive"),
-                                 c(length(neg_words), length(pos_words))))
+  data <- tibble(
+    word = c(neg_words, pos_words),
+    sentiment = rep(
+      c("negative", "positive"),
+      c(length(neg_words), length(pos_words))
+    )
+  )
 
   write_rds(data, name_path)
 }

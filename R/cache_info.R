@@ -34,5 +34,3 @@ cache_info <- function(dir = NULL) {
 folder_size <- function(x) {
   sum(fs::dir_info(x)$size)
 }
-
-

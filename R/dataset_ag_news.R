@@ -9,7 +9,7 @@
 #'
 #' The classes in this dataset are
 #'
-#'\itemize{
+#' \itemize{
 #' \item World
 #' \item Sports
 #' \item Business
@@ -55,14 +55,15 @@
 dataset_ag_news <- function(dir = NULL, split = c("train", "test"),
                             delete = FALSE, return_path = FALSE,
                             clean = FALSE, manual_download = FALSE) {
-
-  all_files <-  paste0("ag_news_", c("train", "test"), ".rds")
+  all_files <- paste0("ag_news_", c("train", "test"), ".rds")
   split <- match.arg(split)
   name <- paste0("ag_news_", split, ".rds")
-  load_dataset(data_name = "ag_news", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "ag_news", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    clean_manual = all_files,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -74,31 +75,38 @@ download_ag_news <- function(folder_path) {
     return(invisible())
   }
 
-  download.file(url = "https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/test.csv",
-                destfile = file_path_test)
-  download.file(url = "https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv",
-                destfile = file_path_train)
+  download.file(
+    url = "https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/test.csv",
+    destfile = file_path_test
+  )
+  download.file(
+    url = "https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv",
+    destfile = file_path_train
+  )
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 #' @importFrom tibble tibble
 process_ag_news <- function(folder_path, name_path) {
-
   file_path_test <- path(folder_path, "ag_news_test.csv")
   file_path_train <- path(folder_path, "ag_news_train.csv")
 
-  data_test <- read_csv(file_path_test, col_names = c("class", "title", "description"),
-                        col_types = cols(
-                          class = col_double(),
-                          title = col_character(),
-                          description = col_character()
-                        ))
-  data_train <- read_csv(file_path_train, col_names = c("class", "title", "description"),
-                         col_types = cols(
-                           class = col_double(),
-                           title = col_character(),
-                           description = col_character()
-                         ))
+  data_test <- read_csv(file_path_test,
+    col_names = c("class", "title", "description"),
+    col_types = cols(
+      class = col_double(),
+      title = col_character(),
+      description = col_character()
+    )
+  )
+  data_train <- read_csv(file_path_train,
+    col_names = c("class", "title", "description"),
+    col_types = cols(
+      class = col_double(),
+      title = col_character(),
+      description = col_character()
+    )
+  )
 
   classes <- c("World", "Sports", "Business", "Sci/Tech")
 

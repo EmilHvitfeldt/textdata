@@ -60,38 +60,45 @@
 #' }
 lexicon_nrc_vad <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                             clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "nrc_vad", name = "nrc_vad.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "nrc_vad", name = "nrc_vad.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
 download_nrc_vad <- function(folder_path) {
-
-  file_path <- path(folder_path,
-                    "NRC-VAD-Lexicon-Aug2018Release.zip")
+  file_path <- path(
+    folder_path,
+    "NRC-VAD-Lexicon-Aug2018Release.zip"
+  )
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://saifmohammad.com/WebDocs/VAD/NRC-VAD-Lexicon-Aug2018Release.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://saifmohammad.com/WebDocs/VAD/NRC-VAD-Lexicon-Aug2018Release.zip",
+    destfile = file_path
+  )
   unzip(path(folder_path, "NRC-VAD-Lexicon-Aug2018Release.zip"),
-        exdir = folder_path)
+    exdir = folder_path
+  )
 }
 
 #' @importFrom readr read_tsv
 #' @importFrom utils unzip
 
 process_nrc_vad <- function(folder_path, name_path) {
-
-  data <- read_tsv(path(folder_path,
-                        "NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon.txt"),
-                   col_types = cols(
-                     Word = col_character(),
-                     Valence = col_double(),
-                     Arousal = col_double(),
-                     Dominance = col_double()
-                   )
+  data <- read_tsv(path(
+    folder_path,
+    "NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon.txt"
+  ),
+  col_types = cols(
+    Word = col_character(),
+    Valence = col_double(),
+    Arousal = col_double(),
+    Dominance = col_double()
+  )
   )
 
   write_rds(data, name_path)

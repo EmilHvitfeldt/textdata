@@ -6,7 +6,6 @@
 #' @keywords internal
 load_dataset <- function(data_name, name, dir, delete, return_path, clean,
                          clean_manual = NULL, manual_download) {
-
   dir <- ifelse(is.null(dir), rappdirs::user_cache_dir("textdata"), dir)
 
   name_path <- path(dir, data_name, name)
@@ -41,8 +40,10 @@ load_dataset <- function(data_name, name, dir, delete, return_path, clean,
 
   if (clean) {
     if (!is.null(clean_manual)) {
-      intermediate_files <- setdiff(dir_ls(folder_path),
-                                    path(folder_path, clean_manual))
+      intermediate_files <- setdiff(
+        dir_ls(folder_path),
+        path(folder_path, clean_manual)
+      )
     } else {
       intermediate_files <- setdiff(dir_ls(folder_path), name_path)
     }

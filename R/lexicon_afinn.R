@@ -62,9 +62,11 @@
 #' }
 lexicon_afinn <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                           clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "afinn", name = "afinn_111.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "afinn", name = "afinn_111.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -73,18 +75,21 @@ download_afinn <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6010/zip/imm6010.zip",
+    destfile = file_path
+  )
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 process_afinn <- function(folder_path, name_path) {
   file <- unz(path(folder_path, "imm6010.zip"), "AFINN/AFINN-111.txt")
   data <- read_tsv(file,
-                   col_types = cols(
-                     word = col_character(),
-                     value = col_double()
-                   ),
-                   col_names = c("word", "value"))
+    col_types = cols(
+      word = col_character(),
+      value = col_double()
+    ),
+    col_names = c("word", "value")
+  )
   write_rds(data, name_path)
 }

@@ -64,16 +64,19 @@ dataset_trec <- function(dir = NULL, split = c("train", "test"),
                          version = c("6", "50"), delete = FALSE,
                          return_path = FALSE, clean = FALSE,
                          manual_download = FALSE) {
-
-  all_files <- paste0("trec_", rep(c("6", "50"), 2), "_",
-                      rep(c("train", "test"), each = 2), ".rds")
+  all_files <- paste0(
+    "trec_", rep(c("6", "50"), 2), "_",
+    rep(c("train", "test"), each = 2), ".rds"
+  )
   split <- match.arg(split)
   version <- match.arg(version)
   name <- paste0("trec_", version, "_", split, ".rds")
-  load_dataset(data_name = "trec", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "trec", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    clean_manual = all_files,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -84,17 +87,19 @@ download_trec <- function(folder_path) {
   if (file_exists(file_path_train) & file_exists(file_path_test)) {
     return(invisible())
   }
-  download.file(url = "https://cogcomp.seas.upenn.edu/Data/QA/QC/train_5500.label",
-                destfile = file_path_train)
-  download.file(url = "https://cogcomp.seas.upenn.edu/Data/QA/QC/TREC_10.label",
-                destfile = file_path_test)
-
+  download.file(
+    url = "https://cogcomp.seas.upenn.edu/Data/QA/QC/train_5500.label",
+    destfile = file_path_train
+  )
+  download.file(
+    url = "https://cogcomp.seas.upenn.edu/Data/QA/QC/TREC_10.label",
+    destfile = file_path_test
+  )
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 #' @importFrom tibble tibble
 process_trec <- function(folder_path, name_path) {
-
   file_path_train <- path(folder_path, "train_5500.label")
   file_path_test <- path(folder_path, "TREC_10.label")
 
@@ -103,29 +108,37 @@ process_trec <- function(folder_path, name_path) {
 
   text_test <- gsub("^\\S* ", "", data_test)
 
-  label_test <- sub("\\s.*","", data_test)
+  label_test <- sub("\\s.*", "", data_test)
 
   trec6_label_test <- sapply(strsplit(label_test, ":"), function(x) x[1])
   trec50_label_test <- sapply(strsplit(label_test, ":"), function(x) x[2])
 
-  trec_6_test <- tibble(class = trec6_label_test,
-                        text = text_test)
-  trec_50_test <- tibble(class = trec50_label_test,
-                        text = text_test)
+  trec_6_test <- tibble(
+    class = trec6_label_test,
+    text = text_test
+  )
+  trec_50_test <- tibble(
+    class = trec50_label_test,
+    text = text_test
+  )
   # train data
   data_train <- read_lines(file_path_train)
 
   text_train <- gsub("^\\S* ", "", data_train)
 
-  label_train <- sub("\\s.*","", data_train)
+  label_train <- sub("\\s.*", "", data_train)
 
   trec6_label_train <- sapply(strsplit(label_train, ":"), function(x) x[1])
   trec50_label_train <- sapply(strsplit(label_train, ":"), function(x) x[2])
 
-  trec_6_train <- tibble(class = trec6_label_train,
-                         text = text_train)
-  trec_50_train <- tibble(class = trec50_label_train,
-                          text = text_train)
+  trec_6_train <- tibble(
+    class = trec6_label_train,
+    text = text_train
+  )
+  trec_50_train <- tibble(
+    class = trec50_label_train,
+    text = text_train
+  )
 
   write_rds(trec_6_test, path(folder_path, "trec_6_test.rds"))
   write_rds(trec_6_train, path(folder_path, "trec_6_train.rds"))

@@ -57,34 +57,40 @@
 #' }
 lexicon_nrc_eil <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                             clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "nrc_eil", name = "nrc_eil.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "nrc_eil", name = "nrc_eil.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
 download_nrc_eil <- function(folder_path) {
-
-  file_path <- path(folder_path,
-                    "NRC-AffectIntensity-Lexicon.txt")
+  file_path <- path(
+    folder_path,
+    "NRC-AffectIntensity-Lexicon.txt"
+  )
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://saifmohammad.com/WebDocs/NRC-AffectIntensity-Lexicon.txt",
-                destfile = file_path)
+  download.file(
+    url = "http://saifmohammad.com/WebDocs/NRC-AffectIntensity-Lexicon.txt",
+    destfile = file_path
+  )
 }
 
 #' @importFrom readr read_tsv
 #' @importFrom utils unzip
 
 process_nrc_eil <- function(folder_path, name_path) {
-
-  data <- read_tsv(file = path(folder_path, "NRC-AffectIntensity-Lexicon.txt"),
-                   skip = 36,
-                   col_types = cols(
-    term = col_character(),
-    score = col_double(),
-    AffectDimension = col_character()
-  ))
+  data <- read_tsv(
+    file = path(folder_path, "NRC-AffectIntensity-Lexicon.txt"),
+    skip = 36,
+    col_types = cols(
+      term = col_character(),
+      score = col_double(),
+      AffectDimension = col_character()
+    )
+  )
   write_rds(data, name_path)
 }

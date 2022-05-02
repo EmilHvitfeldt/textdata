@@ -4,7 +4,6 @@ processs <- setdiff(
 )
 
 test_that("All process functions are included in process_functions", {
-
   expect_equal(
     length(processs),
     length(textdata:::process_functions)

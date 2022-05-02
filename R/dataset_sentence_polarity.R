@@ -48,9 +48,11 @@
 dataset_sentence_polarity <- function(dir = NULL, delete = FALSE,
                                       return_path = FALSE, clean = FALSE,
                                       manual_download = FALSE) {
-  load_dataset(data_name = "sentence_polarity", name = "rt-polarity.rds",
-               dir = dir, delete = delete, return_path = return_path,
-               clean = clean, manual_download = manual_download)
+  load_dataset(
+    data_name = "sentence_polarity", name = "rt-polarity.rds",
+    dir = dir, delete = delete, return_path = return_path,
+    clean = clean, manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -59,14 +61,15 @@ download_sentence_polarity <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "https://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz",
-                destfile = file_path)
+  download.file(
+    url = "https://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz",
+    destfile = file_path
+  )
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 #' @importFrom tibble tibble
 process_sentence_polarity <- function(folder_path, name_path) {
-
   full_text <- read_lines(path(folder_path, "rt-polaritydata.tar.gz"))
 
   neq_text <- full_text[55:5385]
@@ -74,8 +77,12 @@ process_sentence_polarity <- function(folder_path, name_path) {
   pos_text <- full_text[5386:10716]
   pos_text[1] <- "othe rock is destined to be the 21st century's new \" conan \" and that he's going to make a splash even greater than arnold schwarzenegger , jean-claud van damme or steven segal . "
 
-  data <- tibble(text = c(neq_text, pos_text),
-                 sentiment = c(rep("neg", length(neq_text)),
-                               rep("pos", length(pos_text))))
+  data <- tibble(
+    text = c(neq_text, pos_text),
+    sentiment = c(
+      rep("neg", length(neq_text)),
+      rep("pos", length(pos_text))
+    )
+  )
   write_rds(data, name_path)
 }

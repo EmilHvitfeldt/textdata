@@ -55,39 +55,49 @@
 #' }
 lexicon_loughran <- function(dir = NULL, delete = FALSE, return_path = FALSE,
                              clean = FALSE, manual_download = FALSE) {
-  load_dataset(data_name = "loughran", name = "LoughranMcDonald.rds", dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "loughran", name = "LoughranMcDonald.rds", dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
 download_loughran <- function(folder_path) {
-
-  file_path <- path(folder_path,
-                    "LoughranMcDonald_MasterDictionary_2018 - LoughranMcDonald_MasterDictionary_2018.csv")
+  file_path <- path(
+    folder_path,
+    "LoughranMcDonald_MasterDictionary_2018 - LoughranMcDonald_MasterDictionary_2018.csv"
+  )
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "https://drive.google.com/uc?id=12ECPJMxV2wSalXG8ykMmkpa1fq_ur0Rf&export=download",
-                destfile = file_path)
+  download.file(
+    url = "https://drive.google.com/uc?id=12ECPJMxV2wSalXG8ykMmkpa1fq_ur0Rf&export=download",
+    destfile = file_path
+  )
 }
 #' @importFrom readr read_csv cols_only col_character col_double
 process_loughran <- function(folder_path, name_path) {
   data <- read_csv(path(folder_path, "LoughranMcDonald_MasterDictionary_2018 - LoughranMcDonald_MasterDictionary_2018.csv"),
-                   col_types = cols_only(Word = col_character(),
-                                         Negative = col_double(),
-                                         Positive = col_double(),
-                                         Uncertainty = col_double(),
-                                         Litigious = col_double(),
-                                         Constraining = col_double(),
-                                         Superfluous = col_double()))
+    col_types = cols_only(
+      Word = col_character(),
+      Negative = col_double(),
+      Positive = col_double(),
+      Uncertainty = col_double(),
+      Litigious = col_double(),
+      Constraining = col_double(),
+      Superfluous = col_double()
+    )
+  )
 
   types <- c("Negative", "Positive", "Uncertainty", "Litigious", "Constraining", "Superfluous")
 
   out <- list()
   for (type in types) {
-    out[[type]] <- tibble(word = tolower(as.character(data$Word[data[[type]] != 0])),
-                          sentiment = tolower(type))
+    out[[type]] <- tibble(
+      word = tolower(as.character(data$Word[data[[type]] != 0])),
+      sentiment = tolower(type)
+    )
   }
 
   write_rds(Reduce(rbind, out), name_path)

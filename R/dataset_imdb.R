@@ -65,14 +65,15 @@
 dataset_imdb <- function(dir = NULL, split = c("train", "test"),
                          delete = FALSE, return_path = FALSE, clean = FALSE,
                          manual_download = FALSE) {
-
-  all_files <-  paste0("imdb_", c("train", "test"), ".rds")
+  all_files <- paste0("imdb_", c("train", "test"), ".rds")
   split <- match.arg(split)
   name <- paste0("imdb_", split, ".rds")
-  load_dataset(data_name = "imdb", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_files,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "imdb", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    clean_manual = all_files,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -81,15 +82,16 @@ download_imdb <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz",
-                destfile = file_path)
+  download.file(
+    url = "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz",
+    destfile = file_path
+  )
 }
 
 #' @importFrom readr read_tsv write_rds cols col_character col_double
 #' @importFrom fs dir_ls
 #' @importFrom tibble tibble
 process_imdb <- function(folder_path, name_path) {
-
   file_path_test <- path(folder_path, "imdb_csv/test.csv")
   file_path_train <- path(folder_path, "imdb_csv/train.csv")
 
@@ -100,20 +102,36 @@ process_imdb <- function(folder_path, name_path) {
   files_test_neg <- dir_ls(path(folder_path, "aclimdb", "test", "neg"))
   files_test_pos <- dir_ls(path(folder_path, "aclimdb", "test", "pos"))
 
-  data_test <- tibble(sentiment = rep(c("neg", "pos"),
-                                      c(length(files_test_neg),
-                                        length(files_test_pos))),
-                      text = c(vapply(files_test_neg, read_lines, character(1)),
-                               vapply(files_test_pos, read_lines, character(1))))
+  data_test <- tibble(
+    sentiment = rep(
+      c("neg", "pos"),
+      c(
+        length(files_test_neg),
+        length(files_test_pos)
+      )
+    ),
+    text = c(
+      vapply(files_test_neg, read_lines, character(1)),
+      vapply(files_test_pos, read_lines, character(1))
+    )
+  )
 
   files_train_neg <- dir_ls(path(folder_path, "aclimdb", "train", "neg"))
   files_train_pos <- dir_ls(path(folder_path, "aclimdb", "train", "pos"))
 
-  data_train <- tibble(sentiment = rep(c("neg", "pos"),
-                                       c(length(files_train_neg),
-                                         length(files_train_pos))),
-                       text = c(vapply(files_train_neg, read_lines, character(1)),
-                                vapply(files_train_pos, read_lines, character(1))))
+  data_train <- tibble(
+    sentiment = rep(
+      c("neg", "pos"),
+      c(
+        length(files_train_neg),
+        length(files_train_pos)
+      )
+    ),
+    text = c(
+      vapply(files_train_neg, read_lines, character(1)),
+      vapply(files_train_pos, read_lines, character(1))
+    )
+  )
 
   write_rds(data_test, path(folder_path, "imdb_test.rds"))
   write_rds(data_train, path(folder_path, "imdb_train.rds"))

@@ -64,10 +64,12 @@ embedding_glove6b <- function(dir = NULL,
   dimensions <- as.character(dimensions)
   dimensions <- match.arg(dimensions, as.character(available_dims))
   name <- construct_glove_name(this_glove, dimensions)
-  load_dataset(data_name = "glove6b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_names,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "glove6b", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    clean_manual = all_names,
+    manual_download = manual_download
+  )
 }
 
 #' @keywords internal
@@ -108,10 +110,12 @@ embedding_glove27b <- function(dir = NULL,
   dimensions <- as.character(dimensions)
   dimensions <- match.arg(dimensions, as.character(available_dims))
   name <- construct_glove_name(this_glove, dimensions)
-  load_dataset(data_name = "glove27b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               clean_manual = all_names,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "glove27b", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    clean_manual = all_names,
+    manual_download = manual_download
+  )
 }
 
 #' @rdname embedding_glove
@@ -125,9 +129,11 @@ embedding_glove42b <- function(dir = NULL,
                                clean = FALSE,
                                manual_download = FALSE) {
   name <- "glove_42b.rds"
-  load_dataset(data_name = "glove42b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "glove42b", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @rdname embedding_glove
@@ -136,14 +142,16 @@ embedding_glove42b <- function(dir = NULL,
 #' @importFrom readr read_rds
 #' @importFrom utils menu
 embedding_glove840b <- function(dir = NULL,
-                               delete = FALSE,
-                               return_path = FALSE,
-                               clean = FALSE,
-                               manual_download = FALSE) {
+                                delete = FALSE,
+                                return_path = FALSE,
+                                clean = FALSE,
+                                manual_download = FALSE) {
   name <- "glove_840b.rds"
-  load_dataset(data_name = "glove840b", name = name, dir = dir,
-               delete = delete, return_path = return_path, clean = clean,
-               manual_download = manual_download)
+  load_dataset(
+    data_name = "glove840b", name = name, dir = dir,
+    delete = delete, return_path = return_path, clean = clean,
+    manual_download = manual_download
+  )
 }
 
 #' @importFrom utils download.file
@@ -153,8 +161,10 @@ download_glove6b <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://nlp.stanford.edu/data/glove.6B.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://nlp.stanford.edu/data/glove.6B.zip",
+    destfile = file_path
+  )
 }
 
 #' @importFrom utils download.file
@@ -164,8 +174,10 @@ download_glove42b <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://nlp.stanford.edu/data/glove.42B.300d.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://nlp.stanford.edu/data/glove.42B.300d.zip",
+    destfile = file_path
+  )
 }
 
 #' @importFrom utils download.file
@@ -175,8 +187,10 @@ download_glove840b <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://nlp.stanford.edu/data/glove.840B.300d.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://nlp.stanford.edu/data/glove.840B.300d.zip",
+    destfile = file_path
+  )
 }
 
 #' @importFrom utils download.file
@@ -186,8 +200,10 @@ download_glove27b <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://nlp.stanford.edu/data/glove.twitter.27B.zip",
-                destfile = file_path)
+  download.file(
+    url = "http://nlp.stanford.edu/data/glove.twitter.27B.zip",
+    destfile = file_path
+  )
 }
 
 #' @keywords internal

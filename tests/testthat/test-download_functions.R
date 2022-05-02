@@ -1,10 +1,9 @@
 downloads <- setdiff(
   ls(getNamespace("textdata"), pattern = "^download_"),
   "download_functions"
-  )
+)
 
 test_that("All download functions are included in download_functions", {
-
   expect_equal(
     length(downloads),
     length(textdata:::download_functions)
