@@ -1,8 +1,8 @@
 ---
-title: "How-to-add-a-data-set"
+title: "How to add a data set"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How-to-add-a-data-set}
+  %\VignetteIndexEntry{How to add a data set}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

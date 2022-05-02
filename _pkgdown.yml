@@ -1,3 +1,6 @@
+template:
+  bootstrap: 5
+
 development:
   mode: auto
 
@@ -26,3 +29,4 @@ reference:
   - title: Other
     contents:
     - catalogue
+    - cache_info
