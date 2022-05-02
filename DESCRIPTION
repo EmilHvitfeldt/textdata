@@ -1,27 +1,33 @@
 Package: textdata
 Title: Download and Load Various Text Datasets
 Version: 0.4.1.9000
-Authors@R: c(person(given = "Emil",
-                    family = "Hvitfeldt",
-                    role = c("aut", "cre"),
-                    email = "emilhhvitfeldt@gmail.com",
-                    comment = c(ORCID = "0000-0002-0679-1945")),
-             person(given = "Julia", 
-                    family = "Silge", 
-                    role = c("ctb"), 
-                    email = "julia.silge@gmail.com", 
-                    comment = c(ORCID = "0000-0002-3671-836X")))
-Description: Provides a framework to download, parse, and store text datasets
-    on the disk and load them when needed. Includes various sentiment lexicons
-    and labeled text data sets for classification and analysis.
+Authors@R: c(
+    person("Emil", "Hvitfeldt", , "emilhhvitfeldt@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0679-1945")),
+    person("Julia", "Silge", , "julia.silge@gmail.com", role = "ctb",
+           comment = c(ORCID = "0000-0002-3671-836X"))
+  )
+Description: Provides a framework to download, parse, and store text
+    datasets on the disk and load them when needed. Includes various
+    sentiment lexicons and labeled text data sets for classification and
+    analysis.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+URL: https://github.com/EmilHvitfeldt/textdata
+BugReports: https://github.com/EmilHvitfeldt/textdata/issues
 Imports: 
     fs,
+    rappdirs,
     readr,
-    tibble,
-    rappdirs
+    tibble
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 7.1.2.9000
 Collate: 
     'cache_info.R'
@@ -42,11 +48,3 @@ Collate:
     'load_dataset.R'
     'printer.R'
     'process_functions.R'
-Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 2.1.0),
-    covr
-VignetteBuilder: knitr
-URL: https://github.com/EmilHvitfeldt/textdata
-BugReports: https://github.com/EmilHvitfeldt/textdata/issues
