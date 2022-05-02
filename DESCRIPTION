@@ -48,3 +48,4 @@ Collate:
     'load_dataset.R'
     'printer.R'
     'process_functions.R'
+    'textdata-package.R'
