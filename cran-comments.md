@@ -1,12 +1,6 @@
 ## Release Summary
 
-This is the 4th CRAN release of textdata. It includes a handful of new functions and bug fixes.
-
-
-## Test environments
-* local OS X install, R 3.6.0
-* ubuntu 14.04 (on travis-ci), R 3.6.0
-* win-builder (devel and release)
+This is the 5th CRAN release of textdata. Fixes a bug related to wrong URL.
 
 ## R CMD check results
 
@@ -14,4 +8,4 @@ This is the 4th CRAN release of textdata. It includes a handful of new functions
 
 ## Downstream dependencies
 
-I ran R CMD check on the 2 downstream dependencies and there were no problems related to textdata.
+I ran R CMD check on the 3 downstream dependencies and there were no problems related to textdata.

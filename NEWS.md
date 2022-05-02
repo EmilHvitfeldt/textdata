@@ -1,6 +1,7 @@
 # textdata (development version)
 
 * `cache_info()` function has to added to allow for quick overview of cacheing size.
+* Update download url for `lexicon_nrc()`.
 
 # textdata 0.4.1
 
