@@ -73,7 +73,7 @@ download_nrc <- function(folder_path) {
   if (file_exists(file_path)) {
     return(invisible())
   }
-  download.file(url = "http://saifmohammad.com/WebDocs/NRC-Emotion-Lexicon.zip",
+  download.file(url = "http://saifmohammad.com/WebDocs/Lexicons/NRC-Emotion-Lexicon.zip",
                 destfile = file_path)
   unzip(path(folder_path, "NRC-Emotion-Lexicon.zip"),
         exdir = folder_path)
