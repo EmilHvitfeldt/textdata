@@ -4,9 +4,9 @@
 \alias{dataset_ag_news}
 \title{AG's News Topic Classification Dataset}
 \source{
-\url{http://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html}
+\url{http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html}
 
-\url{https://github.com/mhjabreel/CharCnn_Keras/tree/master/data/ag_news_csv}
+\url{https://github.com/srhrshr/torchDatasets/raw/master/dbpedia_csv.tar.gz}
 }
 \usage{
 dataset_ag_news(

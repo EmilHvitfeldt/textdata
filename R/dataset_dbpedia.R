@@ -24,8 +24,8 @@
 #' }
 #'
 #' @source \url{https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf}
-#' @source \url{https://wiki.dbpedia.org/}
-#' @source \url{https://github.com/le-scientifique/torchDatasets/raw/master/dbpedia_csv.tar.gz}
+#' @source \url{https://www.dbpedia.org/}
+#' @source \url{https://github.com/srhrshr/torchDatasets/raw/master/dbpedia_csv.tar.gz}
 #' @inheritParams lexicon_afinn
 #' @param split Character. Return training ("train") data or testing ("test")
 #'     data. Defaults to "train".

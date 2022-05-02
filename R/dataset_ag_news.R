@@ -26,8 +26,8 @@
 #'   \item{title}{Character, title of article}
 #'   \item{description}{Character, description of article}
 #' }
-#' @source \url{http://www.di.unipi.it/~gulli/AG_corpus_of_news_articles.html}
-#' @source \url{https://github.com/mhjabreel/CharCnn_Keras/tree/master/data/ag_news_csv}
+#' @source \url{http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html}
+#' @source \url{https://github.com/srhrshr/torchDatasets/raw/master/dbpedia_csv.tar.gz}
 #' @keywords datasets
 #' @family topic
 #' @export

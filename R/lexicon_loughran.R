@@ -33,7 +33,7 @@
 #'   "litigious", "uncertainty", "constraining", or "superfluous"}
 #' }
 #'
-#' @source \url{https://sraf.nd.edu/textual-analysis/resources/}
+#' @source \url{https://sraf.nd.edu/loughranmcdonald-master-dictionary/}
 #' @keywords datasets
 #' @family lexicon
 #' @importFrom fs file_exists dir_exists dir_create path

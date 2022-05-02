@@ -6,9 +6,9 @@
 \source{
 \url{https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf}
 
-\url{https://wiki.dbpedia.org/}
+\url{https://www.dbpedia.org/}
 
-\url{https://github.com/le-scientifique/torchDatasets/raw/master/dbpedia_csv.tar.gz}
+\url{https://github.com/srhrshr/torchDatasets/raw/master/dbpedia_csv.tar.gz}
 }
 \usage{
 dataset_dbpedia(

@@ -4,7 +4,7 @@
 \alias{lexicon_loughran}
 \title{Loughran-McDonald sentiment lexicon}
 \source{
-\url{https://sraf.nd.edu/textual-analysis/resources/}
+\url{https://sraf.nd.edu/loughranmcdonald-master-dictionary/}
 }
 \usage{
 lexicon_loughran(
