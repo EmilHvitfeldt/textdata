@@ -68,7 +68,7 @@ keywords  = \{reviews, sentiment classification, summarization, text mining\}, \
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_bing()
 
 # Custom directory

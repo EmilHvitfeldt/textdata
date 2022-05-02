@@ -42,7 +42,7 @@
 #' @family topic sentiment
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' dataset_imdb()
 #'
 #' # Custom directory

@@ -32,7 +32,7 @@
 #' @keywords datasets
 #' @family embeddings
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' embedding_glove6b(dimensions = 50)
 #'
 #' # Custom directory

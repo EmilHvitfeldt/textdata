@@ -73,7 +73,7 @@ url       = \{http://www.aclweb.org/anthology/P11-1015\}
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 dataset_imdb()
 
 # Custom directory

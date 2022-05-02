@@ -58,7 +58,7 @@ year      = 2005 \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 dataset_sentence_polarity()
 
 # Custom directory

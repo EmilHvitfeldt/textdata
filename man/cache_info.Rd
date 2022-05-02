@@ -22,7 +22,7 @@ This function will return a tibble with the name and sizes of all folder in
 specified directory. Will default to textdata's default cache.
 }
 \examples{
-\donttest{
+\dontrun{
 cache_info()
 }
 }

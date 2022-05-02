@@ -68,7 +68,7 @@ address=\{Miyazaki, Japan\} \cr
 \} \cr
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_nrc_eil()
 
 # Custom directory

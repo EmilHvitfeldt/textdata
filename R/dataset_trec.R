@@ -37,7 +37,7 @@
 #' @family topic
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' dataset_trec()
 #'
 #' # Custom directory

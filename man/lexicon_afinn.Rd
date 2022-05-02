@@ -63,7 +63,7 @@ bibsource = \{dblp computer science bibliography, https://dblp.org\} \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_afinn()
 
 # Custom directory

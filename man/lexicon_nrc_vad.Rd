@@ -71,7 +71,7 @@ address=\{Melbourne, Australia\} \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_nrc_vad()
 
 # Custom directory

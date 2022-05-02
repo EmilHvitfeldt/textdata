@@ -46,7 +46,7 @@
 #' @importFrom utils menu
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' lexicon_nrc()
 #'
 #' # Custom directory

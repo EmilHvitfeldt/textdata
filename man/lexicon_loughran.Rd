@@ -65,7 +65,7 @@ year    = \{2011\} \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_loughran()
 
 # Custom directory

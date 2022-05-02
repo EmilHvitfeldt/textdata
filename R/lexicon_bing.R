@@ -43,7 +43,7 @@
 #' @importFrom utils menu
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' lexicon_bing()
 #'
 #' # Custom directory

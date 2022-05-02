@@ -29,7 +29,7 @@
 #' @family sentiment
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' dataset_sentence_polarity()
 #'
 #' # Custom directory

@@ -71,7 +71,7 @@ the classes in TREC-50 can be found here
 \url{https://cogcomp.seas.upenn.edu/Data/QA/QC/definition.html}.
 }
 \examples{
-\donttest{
+\dontrun{
 dataset_trec()
 
 # Custom directory

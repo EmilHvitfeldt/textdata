@@ -63,7 +63,7 @@ The classes in this dataset are
 }
 }
 \examples{
-\donttest{
+\dontrun{
 dataset_ag_news()
 
 # Custom directory

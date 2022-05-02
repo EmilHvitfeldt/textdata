@@ -32,7 +32,7 @@
 #' @family topic
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' dataset_ag_news()
 #'
 #' # Custom directory

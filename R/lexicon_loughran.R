@@ -41,7 +41,7 @@
 #' @importFrom utils menu
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' lexicon_loughran()
 #'
 #' # Custom directory

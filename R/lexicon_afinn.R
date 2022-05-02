@@ -48,7 +48,7 @@
 #' @importFrom utils menu
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' lexicon_afinn()
 #'
 #' # Custom directory

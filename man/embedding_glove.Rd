@@ -90,7 +90,7 @@ url        = \{http://www.aclweb.org/anthology/D14-1162\} \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 embedding_glove6b(dimensions = 50)
 
 # Custom directory

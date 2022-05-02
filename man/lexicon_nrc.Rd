@@ -69,7 +69,7 @@ year = \{2013\} \cr
 \}
 }
 \examples{
-\donttest{
+\dontrun{
 lexicon_nrc()
 
 # Custom directory

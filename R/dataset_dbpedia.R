@@ -40,7 +40,7 @@
 #' @family topic
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' dataset_dbpedia()
 #'
 #' # Custom directory

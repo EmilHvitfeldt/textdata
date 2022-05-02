@@ -22,7 +22,7 @@ Imports:
     readr,
     tibble,
     rappdirs
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2.9000
 Collate: 
     'cache_info.R'
     'dataset_ag_news.R'

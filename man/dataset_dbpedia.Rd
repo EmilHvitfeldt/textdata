@@ -73,7 +73,7 @@ The classes are
 }
 }
 \examples{
-\donttest{
+\dontrun{
 dataset_dbpedia()
 
 # Custom directory

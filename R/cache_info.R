@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' cache_info()
 #' }
 cache_info <- function(dir = NULL) {
