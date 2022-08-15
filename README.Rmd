@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# textdata <img src='man/figures/logo.png' align="right" height="139" />
+# textdata <img src='man/figures/logo.png' style="float:right" height="139" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/EmilHvitfeldt/textdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/EmilHvitfeldt/textdata/actions/workflows/R-CMD-check.yaml)
