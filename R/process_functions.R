@@ -2,8 +2,11 @@
 #'
 #' @format Named list of all process functions
 #' @include download_functions.R
+#'
+#' @name process_functions
 #' @noRd
-"process_functions"
+NULL
+
 process_functions <- list(
   afinn = process_afinn,
   sentence_polarity = process_sentence_polarity,

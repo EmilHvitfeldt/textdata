@@ -5,8 +5,11 @@
 #' @include dataset_sentence_polarity.R dataset_ag_news.R dataset_dbpedia.R
 #' @include dataset_trec.R dataset_imdb.R lexicon_nrc_eil.R lexicon_nrc_vad.R
 #' @include embedding_glove.R
+#'
+#' @name download_functions
 #' @noRd
-"download_functions"
+NULL
+
 download_functions <- list(
   afinn = download_afinn,
   sentence_polarity = download_sentence_polarity,
