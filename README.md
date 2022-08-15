@@ -11,7 +11,7 @@ status](https://www.r-pkg.org/badges/version/textdata)](https://CRAN.R-project.o
 [![Downloads](http://cranlogs.r-pkg.org/badges/textdata)](https://cran.r-project.org/package=textdata)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3244433.svg)](https://doi.org/10.5281/zenodo.3244433)
 [![Codecov test
-coverage](https://codecov.io/gh/EmilHvitfeldt/textdata/branch/master/graph/badge.svg)](https://app.codecov.io/gh/EmilHvitfeldt/textdata?branch=master)
+coverage](https://codecov.io/gh/EmilHvitfeldt/textdata/branch/main/graph/badge.svg)](https://app.codecov.io/gh/EmilHvitfeldt/textdata?branch=main)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
@@ -80,7 +80,7 @@ Check out each function’s documentation for detailed information
 ## Community Guidelines
 
 Note that this project is released with a [Contributor Code of
-Conduct](https://github.com/EmilHvitfeldt/textdata/blob/master/CODE_OF_CONDUCT.md).
+Conduct](https://github.com/EmilHvitfeldt/textdata/blob/main/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
 Feedback, bug reports (and fixes!), and feature requests are welcome;
 file issues or seek support
