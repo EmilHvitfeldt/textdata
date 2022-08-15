@@ -1,4 +1,4 @@
-# textdata (development version)
+# textdata 0.4.3
 
 * Fixed documentation to be HTML5 friendly.
 
