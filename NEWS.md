@@ -1,3 +1,5 @@
+# textdata (development version)
+
 # textdata 0.4.4
 
 * Update path to correctly path source for NRC lexicon.
