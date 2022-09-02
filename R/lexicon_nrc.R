@@ -91,7 +91,7 @@ download_nrc <- function(folder_path) {
 process_nrc <- function(folder_path, name_path) {
   data <- read_tsv(path(
     folder_path,
-    "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-v0.92/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
+    "NRC-Emotion-Lexicon/NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
   ),
   col_names = FALSE, col_types = cols(
     X1 = col_character(),
