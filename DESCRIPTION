@@ -1,6 +1,6 @@
 Package: textdata
 Title: Download and Load Various Text Datasets
-Version: 0.4.3.9000
+Version: 0.4.4
 Authors@R: c(
     person("Emil", "Hvitfeldt", , "emilhhvitfeldt@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-0679-1945")),
