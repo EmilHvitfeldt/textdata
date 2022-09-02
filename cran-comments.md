@@ -1,6 +1,6 @@
 ## Release Summary
 
-This is the 5th CRAN release of textdata. Fixes a bug related to wrong URL.
+This is the 6th CRAN release of textdata. Fixes a bug related to wrong URL.
 
 ## R CMD check results
 
