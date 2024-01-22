@@ -93,13 +93,9 @@ process_nrc_vad <- function(folder_path, name_path) {
     folder_path,
     "NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon.txt"
   ),
-  col_types = cols(
-    Word = col_character(),
-    Valence = col_double(),
-    Arousal = col_double(),
-    Dominance = col_double()
-  )
-  )
+  col_names = FALSE, 
+  show_col_types = FALSE) |>
+  setNames(c("Word", "Valence", "Arousal", "Dominance"))
 
   write_rds(data, name_path)
 }
