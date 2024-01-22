@@ -1,7 +1,7 @@
-pandoc: 2.14.2
-pkgdown: 2.0.6
+pandoc: 2.19.2
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   How-to-add-a-data-set: How-to-add-a-data-set.html
-last_built: 2022-09-02T13:55Z
+last_built: 2024-01-22T16:57Z
 
