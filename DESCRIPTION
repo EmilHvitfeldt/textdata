@@ -12,7 +12,7 @@ Description: Provides a framework to download, parse, and store text
     sentiment lexicons and labeled text data sets for classification and
     analysis.
 License: MIT + file LICENSE
-URL: https://github.com/EmilHvitfeldt/textdata
+URL: https://emilhvitfeldt.github.io/textdata/, https://github.com/EmilHvitfeldt/textdata
 BugReports: https://github.com/EmilHvitfeldt/textdata/issues
 Imports: 
     fs,
