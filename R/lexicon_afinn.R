@@ -9,13 +9,13 @@
 #' Citation info:
 #'
 #' This dataset was published in Finn Ärup Nielsen (2011),
-#' ``A new {ANEW:} Evaluation of a word list for sentiment analysis in
+#' ``A new Evaluation of a word list for sentiment analysis in
 #' microblogs'', Proceedings of the ESWC2011 Workshop on
 #' 'Making Sense of Microposts': Big things come in small packages (2011) 93-98.
 #'
 #' article\{nielsen11, \cr
 #' author    = \{Finn Äruprup Nielsen\}, \cr
-#' title     = \{A new {ANEW:} Evaluation of a word list for sentiment analysis in microblogs\}, \cr
+#' title     = \{A new Evaluation of a word list for sentiment analysis in microblogs\}, \cr
 #' journal   = \{CoRR\}, \cr
 #' volume    = \{abs/1103.2903\}, \cr
 #' year      = \{2011\}, \cr

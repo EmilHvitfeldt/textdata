@@ -13,6 +13,7 @@ Provides a framework to download, parse, and store text datasets on the disk and
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://emilhvitfeldt.github.io/textdata/}
   \item \url{https://github.com/EmilHvitfeldt/textdata}
   \item Report bugs at \url{https://github.com/EmilHvitfeldt/textdata/issues}
 }
