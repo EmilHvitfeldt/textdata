@@ -95,7 +95,7 @@ process_nrc_vad <- function(folder_path, name_path) {
   ),
   col_names = FALSE, 
   show_col_types = FALSE) |>
-  setNames(c("Word", "Valence", "Arousal", "Dominance"))
+  stats::setNames(c("Word", "Valence", "Arousal", "Dominance"))
 
   write_rds(data, name_path)
 }
