@@ -45,13 +45,13 @@ This dataset is the newest version with 2477 words and phrases.
 Citation info:
 
 This dataset was published in Finn Ärup Nielsen (2011),
-``A new {ANEW:} Evaluation of a word list for sentiment analysis in
+``A new Evaluation of a word list for sentiment analysis in
 microblogs'', Proceedings of the ESWC2011 Workshop on
 'Making Sense of Microposts': Big things come in small packages (2011) 93-98.
 
 article\{nielsen11, \cr
 author    = \{Finn Äruprup Nielsen\}, \cr
-title     = \{A new {ANEW:} Evaluation of a word list for sentiment analysis in microblogs\}, \cr
+title     = \{A new Evaluation of a word list for sentiment analysis in microblogs\}, \cr
 journal   = \{CoRR\}, \cr
 volume    = \{abs/1103.2903\}, \cr
 year      = \{2011\}, \cr
@@ -80,9 +80,9 @@ lexicon_afinn(return_path = TRUE)
 Other lexicon: 
 \code{\link{lexicon_bing}()},
 \code{\link{lexicon_loughran}()},
+\code{\link{lexicon_nrc}()},
 \code{\link{lexicon_nrc_eil}()},
-\code{\link{lexicon_nrc_vad}()},
-\code{\link{lexicon_nrc}()}
+\code{\link{lexicon_nrc_vad}()}
 }
 \concept{lexicon}
 \keyword{datasets}

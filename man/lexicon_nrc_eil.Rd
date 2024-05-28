@@ -86,8 +86,8 @@ Other lexicon:
 \code{\link{lexicon_afinn}()},
 \code{\link{lexicon_bing}()},
 \code{\link{lexicon_loughran}()},
-\code{\link{lexicon_nrc_vad}()},
-\code{\link{lexicon_nrc}()}
+\code{\link{lexicon_nrc}()},
+\code{\link{lexicon_nrc_vad}()}
 }
 \concept{lexicon}
 \keyword{datasets}
