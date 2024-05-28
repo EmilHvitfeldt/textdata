@@ -1,3 +1,5 @@
+# textdata (development version)
+
 # textdata 0.4.5
 
 * Fixed bug where `lexicon_nrc_vad()` didn't have column names. (#53)
